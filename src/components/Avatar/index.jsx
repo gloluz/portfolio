@@ -1,0 +1,83 @@
+import React from "react";
+import styled from "styled-components";
+
+const r = "#E32934";
+
+const br = "#442525";
+const b = "#000";
+const t = "transparent";
+const be = "#d8b190";
+const w = "#ffffff";
+
+const hair = `
+  radial-gradient(28em 20em at 50% 14em, ${br} 49.9%, ${t} 50%) 50% -4em,
+  linear-gradient(${br}, ${br}) 50% 9em / 24em 24em
+`;
+
+const curly = `
+  radial-gradient(6em 6em at 50% 14em, ${br} 49.5%, ${t} 50%) -11.6em 4em,
+  radial-gradient(6em 6em at 50% 14em, ${br} 49.5%, ${t} 50%) 11.6em 4em,
+  radial-gradient(6em 6em at 50% 14em, ${br} 49.5%, ${t} 50%) -11.6em 10em,
+  radial-gradient(6em 6em at 50% 14em, ${br} 49.5%, ${t} 50%) 11.6em 10em,
+  radial-gradient(6em 6em at 50% 14em, ${br} 49.5%, ${t} 50%) 11.6em 16em,
+  radial-gradient(6em 6em at 50% 14em, ${br} 49.5%, ${t} 50%) -11.6em 16em
+`;
+
+const face = `
+  radial-gradient(18em 20em at 50% 14em, ${be} 49.5%, ${t} 50%) 50% 0em
+
+`;
+
+const eyes = `
+  radial-gradient(0.8em 0.8em at 50% 12em, ${w} 49%, ${t} 50%) 2.9em 0em,
+  radial-gradient(0.8em 0.8em at 50% 12em, ${w} 49%, ${t} 50%) -4.1em 0em,
+  radial-gradient(2.5em 2.5em at 50% 12.5em, ${b} 49%, ${t} 50%) 3.1em 0em,
+  radial-gradient(2.5em 2.5em at 50% 12.5em, ${b} 49%, ${t} 50%) -3.9em 0em,
+  radial-gradient(4.5em 4.5em at 50% 13em, ${w} 49%, ${t} 50%) 3.5em 0em,
+  radial-gradient(4.5em 4.5em at 50% 13em, ${w} 49%, ${t} 50%) -3.5em 0em
+`;
+
+const mouth = `
+  linear-gradient(${be}, ${be}) 50% 10em / 8em 8em,
+  radial-gradient(8em 8em at 50% 17.5em, ${w} 49%, ${t} 50%)
+`;
+
+const strand = `
+  radial-gradient(10em 6em at 14.8rem 7em, ${br} 49.5%, ${t} 50%),
+  radial-gradient(8em 8em at 16rem 5.4em, ${br} 49.5%, ${t} 50%)
+`;
+
+const widthBody = 17;
+const topPositionBody = 20;
+const skirtWidth = 16;
+
+const body = `
+  radial-gradient(${widthBody}em ${widthBody}em at 50% 14em, ${r} 49.5%, ${t} 50%) 50% ${topPositionBody}em,
+  linear-gradient(${r}, ${r}) 50% ${topPositionBody +
+  14}em / ${widthBody}em 18em,
+  linear-gradient(-50deg, ${r} 45%, transparent 10%) calc(50% - ${skirtWidth /
+  2}em) ${topPositionBody + 14}em / 19em 19em,
+  linear-gradient(50deg, ${r} 45%, transparent 10%) calc(50% + ${skirtWidth /
+  2}em) ${topPositionBody + 14}em / 19em 19em
+  
+`;
+
+// eyes : radial-gradient(100% 200% at 50% 0, $oT 0.95em, $o 1em, $o 1.95em, $do 2em, $do 2.95em, $doT 3em) 14em 26em / 6em 3em,
+
+const Character = styled.div`
+  background: ${strand}, ${eyes}, ${mouth}, ${face}, ${body}, ${curly}, ${hair};
+  background-repeat: no-repeat;
+  font-size: 10px;
+  height: 60em;
+  width: 60em;
+
+  position: fixed;
+  bottom: 0em;
+  left: 10vw;
+`;
+
+const Avatar = () => {
+  return <Character />;
+};
+
+export default Avatar;
