@@ -6,7 +6,7 @@ const r = "#E32934";
 const br = "#442525";
 const b = "#000";
 const t = "transparent";
-const be = "#d8b190";
+const be = "#e4c6ab";
 const w = "#ffffff";
 
 const hair = `
@@ -62,10 +62,19 @@ const body = `
   
 `;
 
-// eyes : radial-gradient(100% 200% at 50% 0, $oT 0.95em, $o 1em, $o 1.95em, $do 2em, $do 2.95em, $doT 3em) 14em 26em / 6em 3em,
+const foot = `
+  radial-gradient(11em 9em at calc(42%) calc(50% + 30em),#000 38%,transparent 40%), 
+  radial-gradient(11em 9em at calc(58%) calc(50% + 30em),#000 38%,transparent 40%)
+`;
+
+const hand = `
+  radial-gradient(8em 8em at calc(28%) calc(50% + 7em),${be} 38%,transparent 40%),
+  radial-gradient(8em 8em at calc(72%) calc(50% + 7em),${be} 38%,transparent 40%)  
+`;
 
 const Character = styled.div`
-  background: ${strand}, ${eyes}, ${mouth}, ${face}, ${body}, ${curly}, ${hair};
+  background: ${hand}, ${foot}, ${strand}, ${eyes}, ${mouth}, ${face}, ${body},
+    ${curly}, ${hair};
   background-repeat: no-repeat;
   font-size: 10px;
   height: 60em;

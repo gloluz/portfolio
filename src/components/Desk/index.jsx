@@ -5,12 +5,18 @@ const o = "orange";
 const darkOrange = "#e2970e";
 const darkOrange2 = "#d08a0c";
 const t = "transparent";
-const r = "#710202";
+const r = "red";
+const be = "#ffe0b3";
+const be2 = "#fbd7a3";
 const grey = "#d9d9d9";
 const darkGrey = "#b7b7b7";
 const grey2 = "#444444";
 const black = "black";
 const white = "#fff";
+const green = "#5ee65e";
+const green2 = "#0d8c0d";
+const pink = "#fa8072";
+const brown = "#f4a460";
 
 const topDesk = `
   linear-gradient(to bottom, ${t} 44%, ${darkOrange} 44%, ${darkOrange} 49%, ${t} 49%),
@@ -52,7 +58,26 @@ const bottomLaptop = `
   linear-gradient(-64deg,${grey} 21%,${t} 0%) -27% 81% / 32% 50%,
   linear-gradient(${grey},${grey}) 50% 87% / 73% 27%
 
-  
+`;
+
+const pot = `
+  radial-gradient(12em 3em at calc(50%) calc(50% + 6.5em), ${be2} 38%, transparent 40%), // round top pot
+  radial-gradient(12em 3em at calc(50%) calc(50% + 13em), ${be} 38%, transparent 40%),// round bottom pot
+  linear-gradient(${be},${be}) 50% 91% / 47% 21% // main pot
+`;
+
+const cactus = `
+  radial-gradient(0.5em 0.5em at calc(50%) calc(50% + 0em), ${white} 38%, transparent 40%),
+  radial-gradient(0.5em 0.5em at calc(60%) calc(50% + 1em), ${white} 38%, transparent 40%),
+  radial-gradient(0.5em 0.5em at calc(40%) calc(50% + 1em), ${white} 38%, transparent 40%),
+  radial-gradient(0.5em 0.5em at calc(57%) calc(50% + 3em), ${white} 38%, transparent 40%),
+  radial-gradient(0.5em 0.5em at calc(43%) calc(50% + 4em), ${white} 38%, transparent 40%),
+  radial-gradient(0.5em 0.5em at calc(48%) calc(50% + 2em), ${white} 38%, transparent 40%),
+  radial-gradient(0.5em 0.5em at calc(54%) calc(50% + 5em), ${white} 38%, transparent 40%),
+  radial-gradient(0.5em 0.5em at calc(50%) calc(50% + 6.5em), ${white} 38%, transparent 40%),
+  radial-gradient(9em 12em at calc(50%) calc(50% + 2.5em),${green} 38%,transparent 40%),
+  radial-gradient(3em 4em at calc(50%) calc(50% + -2.5em),${pink} 38%,transparent 40%),
+  radial-gradient(11em 2em at calc(50%) calc(50% + 6.9em),${brown} 38%,transparent 40%)
 `;
 
 const DeskStyle = styled.div`
@@ -94,10 +119,10 @@ const Laptop = styled.div`
   }
 `;
 
-const Plant = styled.div`
-  border: 1px solid red;
+const Cactus = styled.div`
+  background: ${cactus}, ${pot};
   background-repeat: no-repeat;
-  width: 15em;
+  width: 20em;
   height: 30em;
 
   position: fixed;
@@ -109,7 +134,7 @@ const Desk = () => {
   return (
     <DeskStyle>
       <Laptop />
-      <Plant />
+      <Cactus />
     </DeskStyle>
   );
 };
