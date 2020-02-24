@@ -3,6 +3,8 @@ import { createGlobalStyle } from "styled-components";
 
 import Avatar from "./components/Avatar";
 import Desk from "./components/Desk";
+import Menu from "./components/Menu";
+import Description from "./components/Description";
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -25,6 +27,8 @@ function App() {
       <GlobalStyle />
       <Avatar />
       <Desk />
+      <Menu />
+      <Description />
     </div>
   );
 }
