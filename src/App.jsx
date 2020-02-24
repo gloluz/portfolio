@@ -8,7 +8,7 @@ import Description from "./components/Description";
 
 const GlobalStyle = createGlobalStyle`
   body {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Open Sans", sans-serif;
     margin: 0;
     background: #aaddff;
     /* overflow: hidden; */
