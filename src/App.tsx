@@ -4,7 +4,7 @@ import { createGlobalStyle } from "styled-components";
 import Avatar from "./components/Avatar";
 import Desk from "./components/Desk";
 import Menu from "./components/Menu";
-import Description from "./components/Description";
+import BubbleLeft from "./components/BubbleLeft";
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -28,7 +28,8 @@ function App() {
       <Avatar />
       <Desk />
       <Menu />
-      <Description />
+      <BubbleLeft>Hello I'm Gloria Luzio, web developer</BubbleLeft>
+      <Menu />
     </div>
   );
 }

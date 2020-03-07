@@ -79,10 +79,10 @@ const Character = styled.div`
   font-size: 10px;
   height: 60em;
   width: 60em;
-
   position: fixed;
   bottom: 0em;
   left: 10vw;
+  z-index: 4;
 `;
 
 const Avatar = () => {
