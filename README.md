@@ -8,8 +8,6 @@ Desktop version only.
 
 To do : finish this website and do the responsive.
 
-![](capture.png)
-
 ## Read
 
 In the project directory, you can run:
