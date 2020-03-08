@@ -14,7 +14,7 @@ const Button = styled.button`
   margin-top: 20px;
   margin-bottom: 20px;
   color: #000;
-  font-size: 30px;
+  font-size: 26px;
   text-transform: uppercase;
   font-weight: 800;
   padding: 10px 20px;
@@ -27,12 +27,13 @@ const Button = styled.button`
 
 export interface ItemProps {
   children: ReactNode;
+  onClick: () => any;
 }
 
-const Item = ({ children }: ItemProps) => {
+const Item = ({ children, onClick }: ItemProps) => {
   return (
     <ListItem>
-      <Button>{children}</Button>
+      <Button onClick={onClick}>{children}</Button>
     </ListItem>
   );
 };

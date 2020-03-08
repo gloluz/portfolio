@@ -7,17 +7,23 @@ const MenuList = styled.div`
   height: 15em;
   width: 35em;
   justify-content: flex-end;
-  position: fixed;
+  position: absolute;
   top: 40px;
   right: 0;
 `;
 
-const Menu = () => {
+export type ItemMenu = "skills" | "projects" | "education";
+
+export interface MenuProps {
+  onClick: (itemMenu: ItemMenu) => any;
+}
+
+const Menu = ({ onClick }: MenuProps) => {
   return (
     <MenuList>
-      <Item>Skills</Item>
-      <Item>Projects</Item>
-      <Item>Education</Item>
+      <Item onClick={() => onClick("skills")}>Compétences</Item>
+      <Item onClick={() => onClick("projects")}>Projets</Item>
+      <Item onClick={() => onClick("education")}>Formation</Item>
     </MenuList>
   );
 };

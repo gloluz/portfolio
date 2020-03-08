@@ -79,10 +79,20 @@ const Character = styled.div`
   font-size: 10px;
   height: 60em;
   width: 60em;
-  position: fixed;
+  position: absolute;
   bottom: 0em;
   left: 10vw;
   z-index: 4;
+  transition: all 0.3s ease;
+  transform-origin: bottom left;
+
+  @media screen and (max-height: 720px) {
+    transform: scale(0.5);
+  }
+
+  @media screen and (max-width: 768px) {
+    transform: scale(0.5);
+  }
 `;
 
 const Avatar = () => {

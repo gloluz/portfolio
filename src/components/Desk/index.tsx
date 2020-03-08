@@ -86,10 +86,18 @@ const DeskStyle = styled.div`
   font-size: 10px;
   height: 25em;
   width: 80em;
-
-  position: fixed;
+  position: absolute;
   bottom: 0;
   right: 0;
+  transform-origin: bottom right;
+
+  @media screen and (max-height: 720px) {
+    transform: scale(0.5);
+  }
+
+  @media screen and (max-width: 768px) {
+    transform: scale(0.5);
+  }
 `;
 
 const Laptop = styled.div`
@@ -98,8 +106,7 @@ const Laptop = styled.div`
   font-size: 10px;
   height: 25em;
   width: 35em;
-
-  position: fixed;
+  position: absolute;
   bottom: 16em;
   right: 30em;
   perspective: 50em;
@@ -125,7 +132,7 @@ const Cactus = styled.div`
   width: 20em;
   height: 30em;
 
-  position: fixed;
+  position: absolute;
   right: 6em;
   bottom: 22em;
 `;
