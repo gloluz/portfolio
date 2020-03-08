@@ -12,6 +12,10 @@ To do : finish this website and do the responsive.
 
 In the project directory, you can run:
 
+`yarn add`
+
+then
+
 `yarn start`
 
 Or with this link: [https://gifted-hugle-d505fd.netlify.com/]

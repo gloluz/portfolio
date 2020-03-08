@@ -6,7 +6,7 @@ const r = "#E32934";
 const br = "#442525";
 const b = "#000";
 const t = "transparent";
-const be = "#e4c6ab";
+const be = "#eacaad";
 const w = "#ffffff";
 
 const hair = `

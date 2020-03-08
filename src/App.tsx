@@ -4,14 +4,18 @@ import styled, { createGlobalStyle } from "styled-components";
 import Avatar from "./components/Avatar";
 import Desk from "./components/Desk";
 import Menu, { ItemMenu } from "./components/Menu";
-import Bubble from "./components/Bubble";
 import ScrollingTextBubble from "./components/ScrollingTextBubble";
+import Skills from "./components/Skills";
+import Projects from "./components/Projects";
+import Profile from "./components/Profile";
 
 const GlobalStyle = createGlobalStyle`
+  
   body {
     font-family: "Open Sans", sans-serif;
     margin: 0;
-    /* overflow: hidden; */
+    background-color: #fafafa;
+
   }
 
   ul {
@@ -23,13 +27,18 @@ const GlobalStyle = createGlobalStyle`
 
 const SplashScreen = styled.div`
   position: relative;
-  background: #aaddff;
+  background-color: #bce4ff;
   min-height: 400px;
 
   @media screen and (min-width: 768px) {
     height: 100vh;
     width: 100vw;
   }
+`;
+
+const Container = styled.div`
+  max-width: 1200px;
+  margin: 0 auto;
 `;
 
 function App() {
@@ -63,7 +72,7 @@ function App() {
             position="right"
             scrollingTexts={[
               "React, React Native, Javascript, HTML/CSS",
-              "Node.JS, Express, MongoDB"
+              "Node.JS, Express, MongoDB, TypeScript, SCSS."
             ]}
           />
         )}
@@ -88,6 +97,11 @@ function App() {
           />
         )}
       </SplashScreen>
+      <Container>
+        <Skills />
+        <Projects />
+        <Profile />
+      </Container>
     </>
   );
 }

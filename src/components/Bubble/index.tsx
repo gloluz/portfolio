@@ -46,7 +46,7 @@ const BubbleStyles = styled.div<BubbleStylesProps>`
     background: radial-gradient(
         50% 100% at ${({ position }) => (position === "left" ? "100%" : "0%")}
           0%,
-        #abddff 100%,
+        #bce4ff 100%,
         transparent 100%
       ),
       radial-gradient(
