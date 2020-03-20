@@ -63,7 +63,7 @@ function App() {
             scrollingTexts={[
               "Bonjour je m'appelle Gloria Luzio,",
               "bienvenue sur mon portfolio !",
-              "Scrollez pour découvrir mon profil."
+              "Rendez-vous dans le menu pour en découvrir plus sur mon profil."
             ]}
           />
         )}
@@ -71,8 +71,8 @@ function App() {
           <ScrollingTextBubble
             position="right"
             scrollingTexts={[
-              "React, React Native, Javascript, HTML/CSS",
-              "Node.JS, Express, MongoDB, TypeScript, SCSS."
+              "J'ai acquéri plusieurs compétences durant ma formation",
+              "Scrollez pour les découvrir."
             ]}
           />
         )}
@@ -98,9 +98,9 @@ function App() {
         )}
       </SplashScreen>
       <Container>
-        <Skills />
-        <Projects />
-        <Profile />
+        {itemMenuSelected === "skills" && <Skills />}
+        {itemMenuSelected === "projects" && <Projects />}
+        {itemMenuSelected === "education" && <Profile />}
       </Container>
     </>
   );
