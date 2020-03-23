@@ -5,15 +5,9 @@ export const Container = styled.div`
   flex-direction: row;
 `;
 
-export const ContainerProjects = styled.div`
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-`;
-
 export const Title = styled.h1`
-  margin-top: 100px;
-  margin-bottom: 50px;
+  margin-top: 70px;
+  margin-bottom: 60px;
   font-size: 38px;
   text-transform: uppercase;
   font-weight: 800;
@@ -37,6 +31,11 @@ export const Paragraph = styled.p`
   font-weight: 400;
   margin-top: 20px;
   margin-left: 20px;
+`;
+
+export const ColumnSkills = styled.article`
+  width: 50%;
+  margin: 0 20px 20px 0;
 `;
 
 export const Column = styled.article`

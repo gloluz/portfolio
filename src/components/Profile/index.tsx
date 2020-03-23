@@ -4,7 +4,7 @@ import { Title, Container, Paragraph } from "../Layout";
 const Profile = () => {
   return (
     <>
-      <Title>Profil</Title>
+      <Title>Formation</Title>
 
       <Container>
         <Paragraph>
