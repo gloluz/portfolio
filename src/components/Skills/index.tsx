@@ -1,5 +1,5 @@
 import React from "react";
-import { Title, Container, ColumnSkills } from "../Layout";
+import { Title, Container, Column } from "../Layout";
 import styled from "styled-components";
 import Icon from "../Icon";
 
@@ -29,14 +29,14 @@ const Skills = () => {
       <Title>Compétences</Title>
 
       <Container>
-        <ColumnSkills>
+        <Column>
           <IconStyled color={blue} size={80} icon="html-five" />
           <IconStyled color={blue} size={80} icon="css3" />
           <IconStyled color={blue} size={80} icon="react" />
           <IconStyled color={blue} size={80} icon="javascript" />
           <IconStyled color={blue} size={80} icon="node-dot-js" />
           <IconStyled color={blue} size={80} icon="mongodb" />
-        </ColumnSkills>
+        </Column>
 
         <ColumnParagraph>
           <ParagraphSkills>

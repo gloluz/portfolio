@@ -1,4 +1,3 @@
-import React, { ReactNode } from "react";
 import styled from "styled-components";
 
 interface FlexProps {
@@ -11,6 +10,7 @@ interface FlexProps {
     | "space-around";
   align?: "center" | "flex-start" | "flex-end";
   wrap?: "wrap" | "nowrap";
+  flex?: "0" | "1";
 }
 
 const Flex = styled.div<FlexProps>`
@@ -19,6 +19,7 @@ const Flex = styled.div<FlexProps>`
   justify-content: ${({ justify }) => justify || "flex-start"};
   align-items: ${({ align }) => align || "flex-start"};
   flex-wrap: ${({ wrap }) => wrap || "nowrap"};
+  flex: ${({ flex }) => flex || "0"};
 `;
 
 export default Flex;

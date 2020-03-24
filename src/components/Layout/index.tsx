@@ -33,23 +33,27 @@ export const Paragraph = styled.p`
   margin-left: 20px;
 `;
 
-export const ColumnSkills = styled.article`
+export const ColumnSkills = styled.div`
+  width: calc(50% - 10px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const Column = styled.article`
   width: 50%;
   margin: 0 20px 20px 0;
 `;
 
-export const Column = styled.article`
-  width: calc(33% - 10px);
-  margin: 0 10px 40px 0;
-`;
-
 export const Picture = styled.img`
-  width: 350px;
-  height: 200px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  position: relative;
+  transition: 0.3s all ease;
 `;
 
 export const Link = styled.a`
   text-decoration: none;
-  color: #999999;
+  margin-bottom: 12px;
 `;
