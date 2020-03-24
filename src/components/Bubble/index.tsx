@@ -20,7 +20,7 @@ const BubbleStyles = styled.div<BubbleStylesProps>`
   height: 12em;
   width: 20em;
   position: absolute;
-  top: 6em;
+  top: 4em;
   left: ${({ position }) => (position === "left" ? "2em" : "24em")};
   animation: 0.4s ${bubbleAppear} cubic-bezier(0.5, 0.9, 0.6, 1.5);
 

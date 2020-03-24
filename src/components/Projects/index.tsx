@@ -20,22 +20,18 @@ const Projects = () => {
               <Picture src={TypeForm} alt="capture écran de mon site" />
             </Link>
 
-            <Link href="https://dazzling-raman-a7be69.netlify.com">
-              <Picture src={Deliveroo} alt="capture écran de mon site" />
-            </Link>
-
-            <Link href="https://sad-pare-6b708d.netlify.com">
-              <Picture src={Marvel} alt="capture écran de mon site" />
+            <Link href="https://boring-bardeen-4d94ae.netlify.com">
+              <Picture src={Tripadvisor} alt="capture écran de mon site" />
             </Link>
           </ColumnSkills>
 
           <ColumnSkills>
-            <Link href="https://boring-bardeen-4d94ae.netlify.com">
-              <Picture src={Tripadvisor} alt="capture écran de mon site" />
-            </Link>
-
             <Link href="https://amazing-aryabhata-c805ca.netlify.com">
               <Picture src={LeBonCoin} alt="capture écran de mon site" />
+            </Link>
+
+            <Link href="https://dazzling-raman-a7be69.netlify.com">
+              <Picture src={Deliveroo} alt="capture écran de mon site" />
             </Link>
           </ColumnSkills>
         </Flex>

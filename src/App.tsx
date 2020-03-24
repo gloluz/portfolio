@@ -71,7 +71,7 @@ function App() {
           <ScrollingTextBubble
             position="right"
             scrollingTexts={[
-              "J'ai acquéri plusieurs compétences durant ma formation",
+              "J'ai acquis plusieurs compétences durant ma formation",
               "Scrollez pour les découvrir."
             ]}
           />
