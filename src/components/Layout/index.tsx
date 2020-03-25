@@ -49,11 +49,56 @@ export const Picture = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
-  position: relative;
+`;
+
+export const Overlay = styled.div`
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+
+  background-color: rgba(0, 0, 0, 0.4);
   transition: 0.3s all ease;
+`;
+
+export const Text = styled.span`
+  font-size: 28px;
+  line-height: 28px;
+  color: #fff;
+  transition: 0.3s all ease;
+  position: absolute;
+  bottom: -30px;
+  left: 10px;
+`;
+
+export const PictureSubTite = styled.span`
+  font-size: 20px;
+  line-height: 20px;
+  color: #fff;
+  transition: 0.3s all ease;
+  position: absolute;
+  bottom: -30px;
+  left: 10px;
 `;
 
 export const Link = styled.a`
   text-decoration: none;
   margin-bottom: 12px;
+  position: relative;
+  line-height: 0;
+  overflow: hidden;
+
+  &:hover ${Overlay} {
+    opacity: 1;
+  }
+
+  &:hover ${Text} {
+    bottom: 75px;
+  }
+
+  &:hover ${PictureSubTite} {
+    bottom: 35px;
+  }
 `;

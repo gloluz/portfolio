@@ -1,12 +1,19 @@
 import React from "react";
-import { Title, Container, Picture, Link, ColumnSkills } from "../Layout";
+import {
+  Title,
+  Container,
+  Picture,
+  Link,
+  ColumnSkills,
+  Overlay
+} from "../Layout";
 
 import TypeForm from "../../assets/Pictures/typeform.png";
 import Deliveroo from "../../assets/Pictures/deliveroo.png";
 import Tripadvisor from "../../assets/Pictures/tripadvisor.png";
-import Marvel from "../../assets/Pictures/marvel.png";
 import LeBonCoin from "../../assets/Pictures/leboncoin.png";
 import Flex from "../Layout/Flex";
+import Project from "../Layout/Project";
 
 const Projects = () => {
   return (
@@ -16,23 +23,35 @@ const Projects = () => {
       <Container>
         <Flex direction="row" justify="space-between" flex="1">
           <ColumnSkills>
-            <Link href="https://typeform-certif.netlify.com">
-              <Picture src={TypeForm} alt="capture écran de mon site" />
-            </Link>
+            <Project
+              websiteUrl="https://typeform-certif.netlify.com"
+              pictureSrc={TypeForm}
+              title="Gestionnaire de formulaires"
+              subTitle="Création et modifications de questions / réponses, "
+            />
 
-            <Link href="https://boring-bardeen-4d94ae.netlify.com">
-              <Picture src={Tripadvisor} alt="capture écran de mon site" />
-            </Link>
+            <Project
+              websiteUrl="https://boring-bardeen-4d94ae.netlify.com"
+              pictureSrc={Tripadvisor}
+              title="Réplique d'une page Tripadvisor"
+              subTitle="Fait en HTML/CSS uniquement"
+            />
           </ColumnSkills>
 
           <ColumnSkills>
-            <Link href="https://amazing-aryabhata-c805ca.netlify.com">
-              <Picture src={LeBonCoin} alt="capture écran de mon site" />
-            </Link>
+            <Project
+              websiteUrl="https://amazing-aryabhata-c805ca.netlify.com"
+              pictureSrc={LeBonCoin}
+              title="Réplique de LeBonCoin"
+              subTitle="Création de comptes, connexion, dépôt d'annonces, paiement"
+            />
 
-            <Link href="https://dazzling-raman-a7be69.netlify.com">
-              <Picture src={Deliveroo} alt="capture écran de mon site" />
-            </Link>
+            <Project
+              websiteUrl="https://dazzling-raman-a7be69.netlify.com"
+              pictureSrc={Deliveroo}
+              title="Réplique d'une page Deliveroo"
+              subTitle="Ajout/ suppression d'articles dans le panier"
+            />
           </ColumnSkills>
         </Flex>
       </Container>
