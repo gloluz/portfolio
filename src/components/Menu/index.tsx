@@ -23,7 +23,7 @@ const Menu = ({ onClick }: MenuProps) => {
     <MenuList>
       <Item onClick={() => onClick("skills")}>Compétences</Item>
       <Item onClick={() => onClick("projects")}>Projets</Item>
-      <Item onClick={() => onClick("education")}>Formation</Item>
+      <Item onClick={() => onClick("education")}>Expériences</Item>
     </MenuList>
   );
 };

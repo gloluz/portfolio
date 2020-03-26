@@ -54,9 +54,9 @@ const bottomLaptop = `
   linear-gradient(64deg,${black} 10%,transparent 0%) 121% 54% / 34% 50%, //right side keyboard
   linear-gradient(-64deg,${black} 10%,transparent 0%) -17% 54% / 32% 50%, //left side keyboard
   
-  linear-gradient(64deg,${grey} 21%,${t} 0%) 127% 81% / 32% 50%, 
-  linear-gradient(-64deg,${grey} 21%,${t} 0%) -27% 81% / 32% 50%,
-  linear-gradient(${grey},${grey}) 50% 87% / 73% 27%
+  linear-gradient(64deg,${grey} 21%,${t} 0%) 127% 82% / 32% 50%, 
+  linear-gradient(-64deg,${grey} 21%,${t} 0%) -27% 82% / 32% 50%,
+  linear-gradient(${grey},${grey}) 50% 90% / 74% 29%
 
 `;
 
