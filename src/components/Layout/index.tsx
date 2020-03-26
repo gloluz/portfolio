@@ -63,9 +63,11 @@ export const Overlay = styled.div`
   transition: 0.3s all ease;
 `;
 
-export const Text = styled.span`
+export const PictureTitle = styled.span`
   font-size: 28px;
+  font-weight: bold;
   line-height: 28px;
+  text-transform: uppercase;
   color: #fff;
   transition: 0.3s all ease;
   position: absolute;
@@ -77,7 +79,7 @@ export const PictureSubTite = styled.span`
   font-size: 20px;
   line-height: 20px;
   color: #fff;
-  transition: 0.3s all ease;
+  transition: 0.4s all ease;
   position: absolute;
   bottom: -30px;
   left: 10px;
@@ -85,7 +87,7 @@ export const PictureSubTite = styled.span`
 
 export const Link = styled.a`
   text-decoration: none;
-  margin-bottom: 12px;
+  margin-bottom: 20px;
   position: relative;
   line-height: 0;
   overflow: hidden;
@@ -94,11 +96,12 @@ export const Link = styled.a`
     opacity: 1;
   }
 
-  &:hover ${Text} {
-    bottom: 75px;
+  &:hover ${PictureTitle} {
+    bottom: 50%;
   }
 
   &:hover ${PictureSubTite} {
-    bottom: 35px;
+    bottom: 40%;
+    line-height: 26px;
   }
 `;

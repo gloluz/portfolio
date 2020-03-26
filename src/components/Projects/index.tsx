@@ -27,14 +27,14 @@ const Projects = () => {
               websiteUrl="https://typeform-certif.netlify.com"
               pictureSrc={TypeForm}
               title="Gestionnaire de formulaires"
-              subTitle="Création et modifications de questions / réponses, "
+              subTitle="Création et modifications de questions / réponses "
             />
 
             <Project
               websiteUrl="https://boring-bardeen-4d94ae.netlify.com"
               pictureSrc={Tripadvisor}
               title="Réplique d'une page Tripadvisor"
-              subTitle="Fait en HTML/CSS uniquement"
+              subTitle="Intégration HTML/CSS uniquement"
             />
           </ColumnSkills>
 
@@ -43,7 +43,12 @@ const Projects = () => {
               websiteUrl="https://amazing-aryabhata-c805ca.netlify.com"
               pictureSrc={LeBonCoin}
               title="Réplique de LeBonCoin"
-              subTitle="Création de comptes, connexion, dépôt d'annonces, paiement"
+              subTitle={
+                <>
+                  Création de comptes, connexion, dépôt d'annonces, <br />
+                  paiement
+                </>
+              }
             />
 
             <Project

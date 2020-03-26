@@ -36,17 +36,17 @@ linear-gradient(${black} 80%,transparent 0) 50% 19% / 72% 68%, // black screen
 radial-gradient(3em 3em at 82.6% 6.7%,${black} 39%,transparent 40%), // round top right 
 radial-gradient(3em 3em at 17.4% 6.7%,black 39%,transparent 40%), // round top left
 linear-gradient(${grey} 80%,transparent 0) 50% -1.4% / 68% 5.5%, //border top
-radial-gradient(3em 3em at 16% 4.5%,${grey} 37%,transparent 40%), // round top left
-radial-gradient(3em 3em at 84.2% 4.5%,${grey} 37%,transparent 40%), // round top right
+radial-gradient(3em 3em at 16% 4.5%,${grey} 40%,transparent 40%), // round top left
+radial-gradient(3em 3em at 84.2% 4.5%,${grey} 40%,transparent 40%), // round top right
 linear-gradient(${grey} 80%,transparent 0) 50% 23% / 75% 79%
 `;
 
 const bottomLaptop = `
-  radial-gradient(1.1em 1.1em at 95.5% 91%,${grey} 36%,transparent 40%), // round bottom right
-  radial-gradient(1.1em 1.1em at 4.5% 91%,${grey} 36%,transparent 40%), // round bottom left
+  radial-gradient(1em 1em at 95.5% 91%,${grey} 40%,transparent 40%), // round bottom right
+  radial-gradient(1em 1em at 4.5% 91%,${grey} 40%,transparent 40%), // round bottom left
   linear-gradient(${grey} 89%,transparent 0) 50% 92.6% / 91% 2.5%, //border bottom
-  radial-gradient(1.1em 1.1em at 95.8% 93%,${darkGrey} 36%,transparent 40%),
-  radial-gradient(1.1em 1.1em at 4.3% 93%,${darkGrey} 36%,transparent 40%),
+  radial-gradient(1em 1em at 95.8% 93%,${darkGrey} 40%,transparent 40%),
+  radial-gradient(1em 1em at 4.3% 93%,${darkGrey} 40%,transparent 40%),
   linear-gradient(${darkGrey} 89%,transparent 0) 50% 94.6% / 91% 2.5%,
  
   linear-gradient(${grey2},${grey2}) 50.5% 64% / 59.5% 2%, //border top keyboard
@@ -62,7 +62,7 @@ const bottomLaptop = `
 
 const pot = `
   radial-gradient(12em 3em at calc(50%) calc(50% + 6.5em), ${be2} 38%, transparent 40%), // round top pot
-  radial-gradient(12em 3em at calc(50%) calc(50% + 13em), ${be} 38%, transparent 40%),// round bottom pot
+  radial-gradient(12em 3em at calc(50%) calc(50% + 13em), ${be} 40%, transparent 40%),// round bottom pot
   linear-gradient(${be},${be}) 50% 91% / 47% 21% // main pot
 `;
 
@@ -92,7 +92,7 @@ const DeskStyle = styled.div`
   transform-origin: bottom right;
 
   @media screen and (max-height: 720px) {
-    transform: scale(0.5);
+    transform: scale(0.8);
   }
 
   @media screen and (max-width: 768px) {

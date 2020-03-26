@@ -1,11 +1,11 @@
-import React from "react";
-import { Link, Picture, Overlay, Text, PictureSubTite } from ".";
+import React, { ReactNode } from "react";
+import { Link, Picture, Overlay, PictureTitle, PictureSubTite } from ".";
 
 export interface ProjectProps {
   websiteUrl: string;
   pictureSrc: string;
   title: string;
-  subTitle: string;
+  subTitle: string | ReactNode;
 }
 
 const Project = ({ websiteUrl, pictureSrc, title, subTitle }: ProjectProps) => {
@@ -13,7 +13,7 @@ const Project = ({ websiteUrl, pictureSrc, title, subTitle }: ProjectProps) => {
     <Link href={websiteUrl}>
       <Picture src={pictureSrc} alt={title} />
       <Overlay>
-        <Text>{title}</Text>
+        <PictureTitle>{title}</PictureTitle>
         <PictureSubTite>{subTitle}</PictureSubTite>
       </Overlay>
     </Link>

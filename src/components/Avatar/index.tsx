@@ -10,17 +10,17 @@ const be = "#eacaad";
 const w = "#ffffff";
 
 const hair = `
-  radial-gradient(28em 20em at 50% 14em, ${br} 49.9%, ${t} 50%) 50% -4em,
+  radial-gradient(28em 20em at 50% 14em, ${br} 50%, ${t} 50%) 50% -4em,
   linear-gradient(${br}, ${br}) 50% 9em / 24em 24em
 `;
 
 const curly = `
-  radial-gradient(6em 6em at 50% 14em, ${br} 49.5%, ${t} 50%) -11.6em 4em,
-  radial-gradient(6em 6em at 50% 14em, ${br} 49.5%, ${t} 50%) 11.6em 4em,
-  radial-gradient(6em 6em at 50% 14em, ${br} 49.5%, ${t} 50%) -11.6em 10em,
-  radial-gradient(6em 6em at 50% 14em, ${br} 49.5%, ${t} 50%) 11.6em 10em,
-  radial-gradient(6em 6em at 50% 14em, ${br} 49.5%, ${t} 50%) 11.6em 16em,
-  radial-gradient(6em 6em at 50% 14em, ${br} 49.5%, ${t} 50%) -11.6em 16em
+  radial-gradient(6em 6em at 50% 14em, ${br} 50%, ${t} 50%) -11.6em 4em,
+  radial-gradient(6em 6em at 50% 14em, ${br} 50%, ${t} 50%) 11.6em 4em,
+  radial-gradient(6em 6em at 50% 14em, ${br} 50%, ${t} 50%) -11.6em 10em,
+  radial-gradient(6em 6em at 50% 14em, ${br} 50%, ${t} 50%) 11.6em 10em,
+  radial-gradient(6em 6em at 50% 14em, ${br} 50%, ${t} 50%) 11.6em 16em,
+  radial-gradient(6em 6em at 50% 14em, ${br} 50%, ${t} 50%) -11.6em 16em
 `;
 
 const face = `
@@ -43,8 +43,8 @@ const mouth = `
 `;
 
 const strand = `
-  radial-gradient(10em 6em at 14.8rem 7em, ${br} 49.5%, ${t} 50%),
-  radial-gradient(8em 8em at 16rem 5.4em, ${br} 49.5%, ${t} 50%)
+  radial-gradient(10em 6em at 14.8rem 7em, ${br} 50%, ${t} 50%),
+  radial-gradient(8em 8em at 16rem 5.4em, ${br} 50%, ${t} 50%)
 `;
 
 const widthBody = 17;
@@ -52,7 +52,7 @@ const topPositionBody = 20;
 const skirtWidth = 16;
 
 const body = `
-  radial-gradient(${widthBody}em ${widthBody}em at 50% 14em, ${r} 49.5%, ${t} 50%) 50% ${topPositionBody}em,
+  radial-gradient(${widthBody}em ${widthBody}em at 50% 14em, ${r} 50%, ${t} 50%) 50% ${topPositionBody}em,
   linear-gradient(${r}, ${r}) 50% ${topPositionBody +
   14}em / ${widthBody}em 18em,
   linear-gradient(-50deg, ${r} 45%, transparent 10%) calc(50% - ${skirtWidth /
@@ -87,7 +87,7 @@ const Character = styled.div`
   transform-origin: bottom left;
 
   @media screen and (max-height: 720px) {
-    transform: scale(0.5);
+    transform: scale(0.8);
   }
 
   @media screen and (max-width: 768px) {
