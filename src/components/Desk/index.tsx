@@ -5,7 +5,6 @@ const o = "orange";
 const darkOrange = "#e2970e";
 const darkOrange2 = "#d08a0c";
 const t = "transparent";
-const r = "red";
 const be = "#ffe0b3";
 const be2 = "#fbd7a3";
 const grey = "#d9d9d9";
@@ -14,7 +13,6 @@ const grey2 = "#444444";
 const black = "black";
 const white = "#fff";
 const green = "#5ee65e";
-const green2 = "#0d8c0d";
 const pink = "#fa8072";
 const brown = "#f4a460";
 
@@ -62,7 +60,7 @@ const bottomLaptop = `
 
 const pot = `
   radial-gradient(12em 3em at calc(50%) calc(50% + 6.5em), ${be2} 38%, transparent 40%), // round top pot
-  radial-gradient(12em 3em at calc(50%) calc(50% + 13em), ${be} 40%, transparent 40%),// round bottom pot
+  radial-gradient(12em 3em at calc(50%) calc(50% + 13em), ${be} 37%, transparent 40%),// round bottom pot
   linear-gradient(${be},${be}) 50% 91% / 47% 21% // main pot
 `;
 

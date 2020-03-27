@@ -1,52 +1,54 @@
-import React from "react";
-import { Title, Container, Column } from "../Layout";
-import styled from "styled-components";
+import React, { useEffect, useState } from "react";
+import { Column } from "../Layout";
+import styled, { css } from "styled-components";
 import Icon from "../Icon";
+import Flex from "../Layout/Flex";
 
-const IconStyled = styled(Icon)`
+interface IconStyledProps {
+  show: boolean;
+}
+
+const IconStyled = styled(Icon)<IconStyledProps>`
   margin: 30px 20px 30px 70px;
-`;
+  transform: translate(100vw);
+  transition: 0.4s all ease;
 
-const ParagraphSkills = styled.p`
-  color: #4f4f4f;
-  font-size: 20px;
-  line-height: 40px;
-  font-weight: 400;
-`;
-
-const ColumnParagraph = styled.div`
-  width: 50%;
-  margin: 0 20px;
-  display: flex;
-  align-items: center;
+  ${({ show }) =>
+    show &&
+    css`
+      transform: translate(0);
+    `}
 `;
 
 const blue = "#82bae0";
 
 const Skills = () => {
+  const [icon1, setIcon1] = useState<boolean>(false);
+  const [icon2, setIcon2] = useState<boolean>(false);
+  const [icon3, setIcon3] = useState<boolean>(false);
+  const [icon4, setIcon4] = useState<boolean>(false);
+  const [icon5, setIcon5] = useState<boolean>(false);
+  const [icon6, setIcon6] = useState<boolean>(false);
+
+  useEffect(() => {
+    setIcon1(true);
+    setTimeout(() => setIcon2(true), 200);
+    setTimeout(() => setIcon3(true), 400);
+    setTimeout(() => setIcon4(true), 600);
+    setTimeout(() => setIcon5(true), 800);
+    setTimeout(() => setIcon6(true), 1000);
+  }, []);
   return (
-    <>
-      <Title>Compétences</Title>
-
-      <Container>
-        <Column>
-          <IconStyled color={blue} size={80} icon="html-five" />
-          <IconStyled color={blue} size={80} icon="css3" />
-          <IconStyled color={blue} size={80} icon="react" />
-          <IconStyled color={blue} size={80} icon="javascript" />
-          <IconStyled color={blue} size={80} icon="node-dot-js" />
-          <IconStyled color={blue} size={80} icon="mongodb" />
-        </Column>
-
-        <ColumnParagraph>
-          <ParagraphSkills>
-            Durant ma formation j'ai pu acquérir des compétences sur différentes
-            technos telles que: React, React Native, Javacscript, HTML/CSS,
-            Node.JS, Express, MongoDB. J'ai ainsi pu réaliser plusieurs projets.
-          </ParagraphSkills>
-        </ColumnParagraph>
-      </Container>
-    </>
+    <Flex direction="row" justify="center" align="center" flex="1">
+      <Column>
+        <IconStyled show={icon1} color={blue} size={80} icon="html-five" />
+        <IconStyled show={icon2} color={blue} size={80} icon="css3" />
+        <IconStyled show={icon3} color={blue} size={80} icon="react" />
+        <IconStyled show={icon4} color={blue} size={80} icon="javascript" />
+        <IconStyled show={icon5} color={blue} size={80} icon="node-dot-js" />
+        <IconStyled show={icon6} color={blue} size={80} icon="mongodb" />
+      </Column>
+    </Flex>
   );
 };
 

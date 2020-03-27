@@ -29,12 +29,12 @@ const face = `
 `;
 
 const eyes = `
-  radial-gradient(0.8em 0.8em at 50% 12em, ${w} 49%, ${t} 50%) 2.9em 0em,
-  radial-gradient(0.8em 0.8em at 50% 12em, ${w} 49%, ${t} 50%) -4.1em 0em,
-  radial-gradient(2.5em 2.5em at 50% 12.5em, ${b} 49%, ${t} 50%) 3.1em 0em,
-  radial-gradient(2.5em 2.5em at 50% 12.5em, ${b} 49%, ${t} 50%) -3.9em 0em,
-  radial-gradient(4.5em 4.5em at 50% 13em, ${w} 49%, ${t} 50%) 3.5em 0em,
-  radial-gradient(4.5em 4.5em at 50% 13em, ${w} 49%, ${t} 50%) -3.5em 0em
+  radial-gradient(0.8em 0.8em at 50% 12em, ${w} 45%, ${t} 50%) 2.9em 0em,
+  radial-gradient(0.8em 0.8em at 50% 12em, ${w} 45%, ${t} 50%) -4.1em 0em,
+  radial-gradient(2.5em 2.5em at 50% 12.5em, ${b} 45%, ${t} 50%) 3.1em 0em,
+  radial-gradient(2.5em 2.5em at 50% 12.5em, ${b} 45%, ${t} 50%) -3.9em 0em,
+  radial-gradient(4.5em 4.5em at 50% 13em, ${w} 45%, ${t} 50%) 3.5em 0em,
+  radial-gradient(4.5em 4.5em at 50% 13em, ${w} 45%, ${t} 50%) -3.5em 0em
 `;
 
 const mouth = `
@@ -79,9 +79,9 @@ const Character = styled.div`
   font-size: 10px;
   height: 60em;
   width: 60em;
-  position: absolute;
+  position: fixed;
   bottom: 0em;
-  left: 10vw;
+  left: 4vw;
   z-index: 4;
   transition: all 0.3s ease;
   transform-origin: bottom left;

@@ -1,9 +1,14 @@
 import React, { ReactNode } from "react";
 import styled from "styled-components";
 
-const ListItem = styled.div`
+interface ListItemProps {
+  rotate: string;
+}
+
+const ListItem = styled.div<ListItemProps>`
   display: flex;
   justify-content: center;
+  transform: rotate(${({ rotate }) => rotate}deg);
 `;
 
 const Button = styled.button`
@@ -11,10 +16,9 @@ const Button = styled.button`
   border-radius: 5px;
   border: none;
   background: #fff;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin: 20px 40px 20px 0;
   color: #000;
-  font-size: 26px;
+  font-size: 22px;
   text-transform: uppercase;
   font-weight: 800;
   padding: 10px 20px;
@@ -28,11 +32,12 @@ const Button = styled.button`
 export interface ItemProps {
   children: ReactNode;
   onClick: () => any;
+  rotate: string;
 }
 
-const Item = ({ children, onClick }: ItemProps) => {
+const Item = ({ children, onClick, rotate }: ItemProps) => {
   return (
-    <ListItem>
+    <ListItem rotate={rotate}>
       <Button onClick={onClick}>{children}</Button>
     </ListItem>
   );

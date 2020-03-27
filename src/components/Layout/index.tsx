@@ -3,10 +3,16 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   flex-direction: row;
+  overflow: auto;
+  position: fixed;
+  top: 140px;
+  bottom: 0;
+  right: 0;
+  width: 60%;
 `;
 
-export const Title = styled.h1`
-  margin-top: 70px;
+export const Title = styled.h2`
+  margin-top: 50px;
   margin-bottom: 60px;
   font-size: 38px;
   text-transform: uppercase;
@@ -33,15 +39,15 @@ export const Paragraph = styled.p`
   margin-left: 20px;
 `;
 
-export const ColumnSkills = styled.div`
-  width: calc(50% - 10px);
+export const ColumnProject = styled.div`
+  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
 `;
 
 export const Column = styled.article`
-  width: 50%;
+  width: 70%;
   margin: 0 20px 20px 0;
 `;
 
@@ -64,30 +70,29 @@ export const Overlay = styled.div`
 `;
 
 export const PictureTitle = styled.span`
-  font-size: 28px;
+  font-size: 20px;
   font-weight: bold;
-  line-height: 28px;
+  line-height: 24px;
   text-transform: uppercase;
   color: #fff;
   transition: 0.3s all ease;
   position: absolute;
   bottom: -30px;
-  left: 40px;
+  left: 20px;
 `;
 
 export const PictureSubTite = styled.span`
-  font-size: 20px;
-  line-height: 20px;
+  font-size: 16px;
+  line-height: 16px;
   color: #fff;
   transition: 0.4s all ease;
   position: absolute;
   bottom: -30px;
-  left: 40px;
+  left: 20px;
 `;
 
 export const Link = styled.a`
   text-decoration: none;
-  margin-bottom: 20px;
   position: relative;
   line-height: 0;
   overflow: hidden;
@@ -105,12 +110,12 @@ export const Link = styled.a`
   }
 
   &:hover ${PictureSubTite} {
-    bottom: 40%;
-    line-height: 26px;
+    bottom: 35%;
+    line-height: 22px;
   }
 `;
 
-export const Education = styled.div`
+export const EducationStyled = styled.div`
   display: flex;
   flex: 1;
   align-items: center;
@@ -139,7 +144,7 @@ export const EducationResume = styled.p`
 
 export const HorizontalBorder = styled.div`
   width: 3px;
-  background-color: #d1d1e0;
+  background-color: #fff;
   position: absolute;
   top: 0;
   bottom: 0;

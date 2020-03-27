@@ -2,17 +2,18 @@ import React from "react";
 import styled from "styled-components";
 
 import Item from "../Item";
+import Flex from "../Layout/Flex";
 
 const MenuList = styled.div`
   height: 15em;
-  width: 35em;
+  width: 100%;
   justify-content: flex-end;
   position: absolute;
-  top: 40px;
-  right: 0;
+  top: 10px;
+  right: 20px;
 `;
 
-export type ItemMenu = "skills" | "projects" | "education";
+export type ItemMenu = "skills" | "projects" | "education" | "profile";
 
 export interface MenuProps {
   onClick: (itemMenu: ItemMenu) => any;
@@ -21,9 +22,20 @@ export interface MenuProps {
 const Menu = ({ onClick }: MenuProps) => {
   return (
     <MenuList>
-      <Item onClick={() => onClick("skills")}>Compétences</Item>
-      <Item onClick={() => onClick("projects")}>Projets</Item>
-      <Item onClick={() => onClick("education")}>Expériences</Item>
+      <Flex direction="row" justify="flex-end">
+        <Item rotate="3" onClick={() => onClick("profile")}>
+          Profil
+        </Item>
+        <Item rotate="-1" onClick={() => onClick("skills")}>
+          Compétences
+        </Item>
+        <Item rotate="2" onClick={() => onClick("projects")}>
+          Projets
+        </Item>
+        <Item rotate="-2" onClick={() => onClick("education")}>
+          Expériences
+        </Item>
+      </Flex>
     </MenuList>
   );
 };

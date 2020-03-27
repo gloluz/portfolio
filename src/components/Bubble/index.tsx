@@ -17,56 +17,27 @@ const bubbleAppear = keyframes`
 `;
 
 const BubbleStyles = styled.div<BubbleStylesProps>`
-  height: 12em;
-  width: 20em;
-  position: absolute;
-  top: 4em;
-  left: ${({ position }) => (position === "left" ? "2em" : "28em")};
+  height: 10em;
+  width: 18em;
+  position: fixed;
+  bottom: 32em;
+  left: 2em;
   animation: 0.4s ${bubbleAppear} cubic-bezier(0.5, 0.9, 0.6, 1.5);
-
-  ${({ position }) =>
-    position === "left" &&
-    css`
-      transform-origin: right bottom;
-    `}
-
-  ${({ position }) =>
-    position === "right" &&
-    css`
-      transform-origin: left bottom;
-    `}
 
   &:after {
     content: "";
     height: 60px;
     width: 60px;
     position: absolute;
+    left: 50%;
     bottom: -40px;
     z-index: 1;
     background: radial-gradient(
-        50% 100% at ${({ position }) => (position === "left" ? "100%" : "0%")}
-          0%,
+        50% 100% at 100% 0%,
         #bce4ff 100%,
         transparent 100%
       ),
-      radial-gradient(
-        100% 100% at ${({ position }) => (position === "left" ? "100%" : "0%")}
-          0%,
-        #fafafa 100%,
-        transparent 100%
-      );
-
-    ${({ position }) =>
-      position === "left" &&
-      css`
-        left: 50%;
-      `};
-
-    ${({ position }) =>
-      position === "right" &&
-      css`
-        right: 50%;
-      `};
+      radial-gradient(100% 100% at 100% 0%, #fafafa 100%, transparent 100%);
   }
 
   &:before {
@@ -94,7 +65,7 @@ const Text = styled.div`
   align-items: center;
   text-align: center;
   font-weight: 800;
-  font-size: 20px;
+  font-size: 18px;
   text-transform: uppercase;
   padding: 15px;
 `;
