@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const o = "orange";
+const orange = "#EF8533";
 const darkOrange = "#e2970e";
 const darkOrange2 = "#d08a0c";
 const t = "transparent";
@@ -13,8 +14,10 @@ const grey2 = "#444444";
 const black = "black";
 const white = "#fff";
 const green = "#5ee65e";
+const green2 = "#D2F7A6";
 const pink = "#fa8072";
 const brown = "#f4a460";
+const blue = "#43A6DD";
 
 const topDesk = `
   linear-gradient(to bottom, ${t} 44%, ${darkOrange} 44%, ${darkOrange} 49%, ${t} 49%),
@@ -28,7 +31,7 @@ const footDesk = `
 `;
 
 const topLaptop = `
-linear-gradient(${white} 80%, ${t} 0) 50% 17% / 65% 60%,
+linear-gradient(#f4f4f4 80%, ${t} 0) 50% 17% / 65% 60%,
 linear-gradient(black 80%,transparent 0) 50% 2% / 65% 7%, //border top black screen
 linear-gradient(${black} 80%,transparent 0) 50% 19% / 72% 68%, // black screen
 radial-gradient(3em 3em at 82.6% 6.7%,${black} 39%,transparent 40%), // round top right 
@@ -135,11 +138,76 @@ const Cactus = styled.div`
   bottom: 22em;
 `;
 
+const YellowPostIt = styled.div`
+  width: 40px;
+  height: 40px;
+  background-color: yellow;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 15%;
+  left: 30%;
+`;
+
+const PinkPostIt = styled.div`
+  width: 45px;
+  height: 38px;
+  background-color: pink;
+  transform: rotate(15deg);
+  position: absolute;
+  top: 40%;
+  left: 30%;
+`;
+
+const BluePostIt = styled.div`
+  width: 45px;
+  height: 40px;
+  background-color: ${blue};
+  transform: rotate(5deg);
+  position: absolute;
+  top: 20%;
+  left: 20%;
+`;
+
+const GreenPostIt = styled.div`
+  width: 40px;
+  height: 40px;
+  background-color: ${green2};
+  transform: rotate(70deg);
+  position: absolute;
+  top: 8%;
+  left: 15%;
+`;
+
+const OrangePostIt = styled.div`
+  width: 44px;
+  height: 40px;
+  background-color: ${orange};
+  transform: rotate(-5deg);
+  position: absolute;
+  top: 40%;
+  left: 10%;
+`;
+
+const PostIt = styled.div`
+  width: 300px;
+  height: 100px;
+  position: absolute;
+  right: 5px;
+  bottom: 130px;
+`;
+
 const Desk = () => {
   return (
     <DeskStyle>
       <Laptop />
       <Cactus />
+      <PostIt>
+        <GreenPostIt />
+        <YellowPostIt />
+        <PinkPostIt />
+        <OrangePostIt />
+        <BluePostIt />
+      </PostIt>
     </DeskStyle>
   );
 };

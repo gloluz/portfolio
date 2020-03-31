@@ -3,6 +3,7 @@ import { Column } from "../Layout";
 import styled, { css } from "styled-components";
 import Icon from "../Icon";
 import Flex from "../Layout/Flex";
+import { ItemMenu } from "../Menu";
 
 interface IconStyledProps {
   show: boolean;
@@ -22,7 +23,11 @@ const IconStyled = styled(Icon)<IconStyledProps>`
 
 const blue = "#82bae0";
 
-const Skills = () => {
+interface SkillsProps {
+  selectedTab: ItemMenu;
+}
+
+const Skills = ({ selectedTab }: SkillsProps) => {
   const [icon1, setIcon1] = useState<boolean>(false);
   const [icon2, setIcon2] = useState<boolean>(false);
   const [icon3, setIcon3] = useState<boolean>(false);
@@ -31,13 +36,27 @@ const Skills = () => {
   const [icon6, setIcon6] = useState<boolean>(false);
 
   useEffect(() => {
-    setIcon1(true);
-    setTimeout(() => setIcon2(true), 200);
-    setTimeout(() => setIcon3(true), 400);
-    setTimeout(() => setIcon4(true), 600);
-    setTimeout(() => setIcon5(true), 800);
-    setTimeout(() => setIcon6(true), 1000);
-  }, []);
+    if (selectedTab === "skills") {
+      setIcon1(true);
+    } else {
+      setIcon1(false);
+    }
+
+    const timeout1 = setTimeout(() => setIcon2(true), 200);
+    const timeout2 = setTimeout(() => setIcon3(true), 400);
+    const timeout3 = setTimeout(() => setIcon4(true), 600);
+    const timeout4 = setTimeout(() => setIcon5(true), 800);
+    const timeout5 = setTimeout(() => setIcon6(true), 1000);
+
+    return () => {
+      clearTimeout(timeout1);
+      clearTimeout(timeout2);
+      clearTimeout(timeout3);
+      clearTimeout(timeout4);
+      clearTimeout(timeout5);
+    };
+  }, [selectedTab]);
+
   return (
     <Flex direction="row" justify="center" align="center" flex="1">
       <Column>

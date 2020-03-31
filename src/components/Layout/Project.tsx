@@ -1,5 +1,6 @@
 import React, { ReactNode } from "react";
-import { Link, Picture, Overlay, PictureTitle, PictureSubTite } from ".";
+import { Link, Overlay, PictureTitle, PictureSubTite, Picture } from ".";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 export interface ProjectProps {
   websiteUrl: string;
@@ -11,7 +12,7 @@ export interface ProjectProps {
 const Project = ({ websiteUrl, pictureSrc, title, subTitle }: ProjectProps) => {
   return (
     <Link href={websiteUrl}>
-      <Picture src={pictureSrc} alt={title} />
+      <Picture src={pictureSrc} alt={title} effect="blur" delayTime={300} />
       <Overlay>
         <PictureTitle>{title}</PictureTitle>
         <PictureSubTite>{subTitle}</PictureSubTite>

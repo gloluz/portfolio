@@ -59,7 +59,6 @@ const body = `
   2}em) ${topPositionBody + 14}em / 19em 19em,
   linear-gradient(50deg, ${r} 45%, transparent 10%) calc(50% + ${skirtWidth /
   2}em) ${topPositionBody + 14}em / 19em 19em
-  
 `;
 
 const foot = `
@@ -79,12 +78,11 @@ const Character = styled.div`
   font-size: 10px;
   height: 60em;
   width: 60em;
-  position: fixed;
-  bottom: 0em;
-  left: 4vw;
-  z-index: 4;
   transition: all 0.3s ease;
   transform-origin: bottom left;
+  z-index: 4;
+  position: relative;
+  margin: 10px -10px 0 50px;
 
   @media screen and (max-height: 720px) {
     transform: scale(0.8);

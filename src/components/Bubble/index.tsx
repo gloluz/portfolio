@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import styled, { css, keyframes } from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 export type LeftRight = "left" | "right";
 
@@ -17,11 +17,13 @@ const bubbleAppear = keyframes`
 `;
 
 const BubbleStyles = styled.div<BubbleStylesProps>`
-  height: 10em;
-  width: 18em;
-  position: fixed;
-  bottom: 32em;
-  left: 2em;
+  height: 210px;
+  width: 350px;
+  position: absolute;
+  top: 30px;
+  left: 80px;
+  margin-bottom: 50px;
+  z-index: 2;
   animation: 0.4s ${bubbleAppear} cubic-bezier(0.5, 0.9, 0.6, 1.5);
 
   &:after {
@@ -67,7 +69,7 @@ const Text = styled.div`
   font-weight: 800;
   font-size: 18px;
   text-transform: uppercase;
-  padding: 15px;
+  padding: 20px 35px;
 `;
 
 export interface BubbleProps {

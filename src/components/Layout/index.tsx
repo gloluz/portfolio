@@ -1,14 +1,26 @@
 import styled from "styled-components";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export const Container = styled.div`
   display: flex;
-  flex-direction: row;
-  overflow: auto;
-  position: fixed;
-  top: 140px;
-  bottom: 0;
-  right: 0;
-  width: 60%;
+  width: 1300px;
+  margin: 0 auto;
+`;
+
+export const MenuContainer = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px 40px 0 0;
+`;
+
+export const Sidebar = styled.div`
+  padding: 0 100px;
+`;
+
+export const Content = styled.div`
+  position: relative;
+  flex: 1;
+  margin-top: 20px;
 `;
 
 export const Title = styled.h2`
@@ -40,7 +52,7 @@ export const Paragraph = styled.p`
 `;
 
 export const ColumnProject = styled.div`
-  width: 50%;
+  width: calc(50% - 5px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -49,13 +61,6 @@ export const ColumnProject = styled.div`
 export const Column = styled.article`
   width: 70%;
   margin: 0 20px 20px 0;
-`;
-
-export const Picture = styled.img`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: 0.3s all ease;
 `;
 
 export const Overlay = styled.div`
@@ -70,7 +75,7 @@ export const Overlay = styled.div`
 `;
 
 export const PictureTitle = styled.span`
-  font-size: 20px;
+  font-size: 22px;
   font-weight: bold;
   line-height: 24px;
   text-transform: uppercase;
@@ -82,8 +87,8 @@ export const PictureTitle = styled.span`
 `;
 
 export const PictureSubTite = styled.span`
-  font-size: 16px;
-  line-height: 16px;
+  font-size: 18px;
+  line-height: 28px;
   color: #fff;
   transition: 0.4s all ease;
   position: absolute;
@@ -91,11 +96,19 @@ export const PictureSubTite = styled.span`
   left: 20px;
 `;
 
+export const Picture = styled(LazyLoadImage)`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.3s all ease !important;
+`;
+
 export const Link = styled.a`
   text-decoration: none;
   position: relative;
   line-height: 0;
   overflow: hidden;
+  margin-bottom: 10px;
 
   &:hover ${Overlay} {
     opacity: 1;
@@ -117,38 +130,52 @@ export const Link = styled.a`
 
 export const EducationStyled = styled.div`
   display: flex;
-  flex: 1;
   align-items: center;
-  margin-bottom: 60px;
+  padding-bottom: 60px;
+  position: relative;
 `;
 
-export const EducationTitle = styled.p`
+interface EducationTitleProps {
+  rotate: number;
+}
+
+export const EducationTitle = styled.h2<EducationTitleProps>`
   color: #82bae0;
   font-size: 22px;
   line-height: 36px;
   text-transform: uppercase;
   font-weight: 800;
   text-align: center;
-  width: 50%;
-  margin: 0 40px;
+  width: 45%;
+  margin: 0 140px;
+  background-color: #fff;
+  padding: 40px 30px;
+  transition: 0.2s all ease;
+  transform-origin: top;
+  transform: rotate(${({ rotate }) => rotate}deg);
+  position: relative;
+  z-index: 1;
 `;
 
 export const EducationResume = styled.p`
-  color: #4f4f4f;
-  font-size: 16px;
-  line-height: 40px;
-  font-weight: 400;
+  color: #fff;
+  font-size: 26px;
+  font-weight: 100;
   width: 50%;
-  margin: 0 40px;
+  margin: 20px 40px 0 40px;
+  padding: 20px;
+  font-family: "Vibur", cursive;
 `;
 
 export const HorizontalBorder = styled.div`
-  width: 3px;
-  background-color: #fff;
+  width: 6px;
+  height: 110%;
+  background: linear-gradient(45deg, #e87f79 28%, transparent 28%) 10px 10px /
+      10px 10px,
+    linear-gradient(45deg, transparent 50%, #e87f79 50%) 10px 10px / 10px 10px,
+    #dc119d;
   position: absolute;
-  top: 0;
+  top: -25px;
   bottom: 0;
-  right: 0;
-  left: 0;
-  margin: auto;
+  left: calc(30% - 20px);
 `;

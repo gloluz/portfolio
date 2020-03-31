@@ -57,7 +57,7 @@ const ScrollingTextBubble = ({
       if (scrollingTexts[currentText].length > nbLettersDisplayed) {
         setNbLettersDisplayed(nbLettersDisplayed + 1);
       }
-    }, 50);
+    }, 30);
 
     return () => {
       clearTimeout(timeout);

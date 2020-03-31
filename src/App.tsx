@@ -1,17 +1,14 @@
 import React, { useState } from "react";
-import styled, { createGlobalStyle } from "styled-components";
 
-import Avatar from "./components/Avatar";
-import Desk from "./components/Desk";
 import Menu, { ItemMenu } from "./components/Menu";
-import ScrollingTextBubble from "./components/ScrollingTextBubble";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Education from "./components/Education";
-import { Container } from "./components/Layout";
+import { Container, Content } from "./components/Layout";
+import Profile from "./components/Profile";
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
-  
   body {
     font-family: "Open Sans", sans-serif;
     margin: 0;
@@ -23,17 +20,6 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     margin: 0;
     list-style: none;
-  }
-`;
-
-const SplashScreen = styled.div`
-  position: relative;
-  background-color: #bce4ff;
-  min-height: 400px;
-
-  @media screen and (min-width: 768px) {
-    height: 100vh;
-    width: 100vw;
   }
 `;
 
@@ -53,54 +39,22 @@ function App() {
 
   return (
     <>
-      <SplashScreen>
-        <GlobalStyle />
-        <Avatar />
-        {showDesk && itemMenuSelected === "profile" && <Desk />}
+      <GlobalStyle />
 
-        <Menu onClick={handleClick} />
-        {itemMenuSelected === "profile" && (
-          <ScrollingTextBubble
-            position="left"
-            scrollingTexts={[
-              "Bonjour je m'appelle Gloria Luzio,",
-              "bienvenue sur mon portfolio !",
-              "anciennement infirmière, je me suis reconvertie",
-              "dans le domaine du développement web / mobile"
-            ]}
-          />
-        )}
-        {itemMenuSelected === "skills" && (
-          <ScrollingTextBubble
-            position="right"
-            scrollingTexts={[
-              "J'ai acquis plusieurs compétences durant ma formation",
-              "notamment en Javascript, React, React Native, Node Js, Mongo DB"
-            ]}
-          />
-        )}
-        {itemMenuSelected === "projects" && (
-          <ScrollingTextBubble
-            position="left"
-            scrollingTexts={[
-              "J'ai réalisé plusieurs projets que vous pouvez découvrir"
-            ]}
-          />
-        )}
-        {itemMenuSelected === "education" && (
-          <ScrollingTextBubble
-            position="right"
-            scrollingTexts={[
-              "J'ai suivi le bootcamp à Le Reacteur de janvier à mars 2020",
-              "Avant cela je travaillais en tant qu'infirmière à l'hôpital Robert Debré."
-            ]}
-          />
-        )}
-      </SplashScreen>
-      <Container>
-        {itemMenuSelected === "skills" && <Skills />}
-        {itemMenuSelected === "projects" && <Projects />}
-        {itemMenuSelected === "education" && <Education />}
+      <Menu onClick={handleClick} />
+      <Container className="container">
+        {showDesk && itemMenuSelected === "profile" && <Profile />}
+        <Content>
+          {itemMenuSelected === "skills" && (
+            <Skills selectedTab={itemMenuSelected} />
+          )}
+          {itemMenuSelected === "projects" && (
+            <Projects selectedTab={itemMenuSelected} />
+          )}
+          {itemMenuSelected === "education" && (
+            <Education selectedTab={itemMenuSelected} />
+          )}
+        </Content>
       </Container>
     </>
   );
