@@ -4,9 +4,10 @@ import Menu, { ItemMenu } from "./components/Menu";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Education from "./components/Education";
-import { Container, Content } from "./components/Layout";
+
 import Profile from "./components/Profile";
 import { createGlobalStyle } from "styled-components";
+import { Container, Content } from "./components/Layout";
 
 const GlobalStyle = createGlobalStyle`
   body {

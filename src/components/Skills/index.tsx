@@ -1,25 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { Column } from "../Layout";
-import styled, { css } from "styled-components";
-import Icon from "../Icon";
-import Flex from "../Layout/Flex";
+
 import { ItemMenu } from "../Menu";
-
-interface IconStyledProps {
-  show: boolean;
-}
-
-const IconStyled = styled(Icon)<IconStyledProps>`
-  margin: 30px 20px 30px 70px;
-  transform: translate(100vw);
-  transition: 0.4s all ease;
-
-  ${({ show }) =>
-    show &&
-    css`
-      transform: translate(0);
-    `}
-`;
+import { SkillsContainer } from "../Layout";
+import IconSkills from "../Layout/IconSkills";
 
 const blue = "#82bae0";
 
@@ -58,16 +41,44 @@ const Skills = ({ selectedTab }: SkillsProps) => {
   }, [selectedTab]);
 
   return (
-    <Flex direction="row" justify="center" align="center" flex="1">
-      <Column>
-        <IconStyled show={icon1} color={blue} size={80} icon="html-five" />
-        <IconStyled show={icon2} color={blue} size={80} icon="css3" />
-        <IconStyled show={icon3} color={blue} size={80} icon="react" />
-        <IconStyled show={icon4} color={blue} size={80} icon="javascript" />
-        <IconStyled show={icon5} color={blue} size={80} icon="node-dot-js" />
-        <IconStyled show={icon6} color={blue} size={80} icon="mongodb" />
-      </Column>
-    </Flex>
+    <SkillsContainer>
+      <IconSkills
+        backgroundColor="yellow"
+        show={icon1}
+        icon="html-five"
+        skillTitle="html"
+      />
+      <IconSkills
+        backgroundColor="pink"
+        show={icon2}
+        icon="css3"
+        skillTitle="css"
+      />
+      <IconSkills
+        backgroundColor="blue"
+        show={icon3}
+        icon="react"
+        skillTitle="React/React Native"
+      />
+      <IconSkills
+        backgroundColor="green"
+        show={icon4}
+        icon="javascript"
+        skillTitle="Javascript"
+      />
+      <IconSkills
+        backgroundColor="orange"
+        show={icon5}
+        icon="node-dot-js"
+        skillTitle="Node Js"
+      />
+      <IconSkills
+        backgroundColor="yellow"
+        show={icon6}
+        icon="mongodb"
+        skillTitle="Mongo DB"
+      />
+    </SkillsContainer>
   );
 };
 

@@ -1,9 +1,10 @@
 import React from "react";
-import { Sidebar } from "../Layout";
+
 import ScrollingTextBubble from "../ScrollingTextBubble";
 import Avatar from "../Avatar";
 import Desk from "../Desk";
 import styled from "styled-components";
+import { Sidebar } from "../Layout";
 
 const BlackBoard = styled.div`
   height: 180px;

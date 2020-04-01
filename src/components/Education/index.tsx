@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
-import {
-  EducationTitle,
-  EducationResume,
-  EducationStyled,
-  HorizontalBorder
-} from "../Layout";
 
 import PaperClip from "../PaperClip";
 import styled, { keyframes } from "styled-components";
 import { ItemMenu } from "../Menu";
+import {
+  EducationStyled,
+  HorizontalBorder,
+  EducationTitle,
+  EducationResume
+} from "../Layout";
 
 const blackboardAnimation = keyframes`
   0% {

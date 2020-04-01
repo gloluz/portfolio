@@ -1,6 +1,7 @@
 import React, { ReactNode } from "react";
-import { Link, Overlay, PictureTitle, PictureSubTite, Picture } from ".";
+
 import "react-lazy-load-image-component/src/effects/blur.css";
+import { Link, Picture, Overlay, PictureTitle, PictureSubTite } from ".";
 
 export interface ProjectProps {
   websiteUrl: string;

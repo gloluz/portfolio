@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { ColumnProject } from "../Layout";
+
 import TypeForm from "../../assets/Pictures/typeform.png";
 import Deliveroo from "../../assets/Pictures/deliveroo.png";
 import Tripadvisor from "../../assets/Pictures/tripadvisor.png";
@@ -7,6 +7,7 @@ import LeBonCoin from "../../assets/Pictures/leboncoin.png";
 import Project from "../Layout/Project";
 import styled, { css, keyframes } from "styled-components";
 import { ItemMenu } from "../Menu";
+import { ColumnProject } from "../Layout";
 
 const computerAnimation = keyframes`
   0% {
@@ -177,7 +178,7 @@ const Projects = ({ selectedTab }: ProjectProps) => {
                     />
 
                     <Project
-                      websiteUrl="https://boring-bardeen-4d94ae.netlify.com"
+                      websiteUrl="https://replique-tripadvisor.netlify.com"
                       pictureSrc={Tripadvisor}
                       title="Réplique d'une page Tripadvisor"
                       subTitle="Intégration HTML/CSS uniquement"
@@ -186,7 +187,7 @@ const Projects = ({ selectedTab }: ProjectProps) => {
 
                   <ColumnProject>
                     <Project
-                      websiteUrl="https://amazing-aryabhata-c805ca.netlify.com"
+                      websiteUrl="https://replique-leboncoin.netlify.com"
                       pictureSrc={LeBonCoin}
                       title="Réplique de LeBonCoin"
                       subTitle={
@@ -199,7 +200,7 @@ const Projects = ({ selectedTab }: ProjectProps) => {
                     />
 
                     <Project
-                      websiteUrl="https://dazzling-raman-a7be69.netlify.com"
+                      websiteUrl="https://replique-deliveroo.netlify.com"
                       pictureSrc={Deliveroo}
                       title="Réplique d'une page Deliveroo"
                       subTitle="Ajout/ suppression d'articles dans le panier"

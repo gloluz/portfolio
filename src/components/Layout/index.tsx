@@ -13,6 +13,13 @@ export const MenuContainer = styled.div`
   margin: 20px 40px 0 0;
 `;
 
+export const SkillsContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  width: 1300px;
+  margin: 0 auto;
+`;
+
 export const Sidebar = styled.div`
   padding: 0 100px;
 `;
@@ -109,19 +116,15 @@ export const Link = styled.a`
   line-height: 0;
   overflow: hidden;
   margin-bottom: 10px;
-
   &:hover ${Overlay} {
     opacity: 1;
   }
-
   &:hover ${Picture} {
     transform: scale(1.1);
   }
-
   &:hover ${PictureTitle} {
     bottom: 50%;
   }
-
   &:hover ${PictureSubTite} {
     bottom: 35%;
     line-height: 22px;
