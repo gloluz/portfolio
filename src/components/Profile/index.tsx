@@ -98,9 +98,25 @@ const BlackBoardText = styled.span`
   }
 `;
 
+const Informations = styled.div`
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #000;
+  font-size: 22px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
 const Profile = () => {
   return (
     <div>
+      {/* <div style={{ display: "flex", alignItems: "flex-end" }}>
+        <Informations>?</Informations>
+      </div> */}
       <Sidebar>
         <ScrollingTextBubble
           position="left"

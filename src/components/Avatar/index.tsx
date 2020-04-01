@@ -82,7 +82,7 @@ const Character = styled.div`
   transform-origin: bottom left;
   z-index: 4;
   position: relative;
-  margin: 10px -10px 0 50px;
+  margin: 10px -10px 0 70px;
 
   @media screen and (max-height: 720px) {
     transform: scale(0.8);

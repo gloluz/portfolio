@@ -7,7 +7,8 @@ import {
   EducationStyled,
   HorizontalBorder,
   EducationTitle,
-  EducationResume
+  EducationResume,
+  BoxedContainer
 } from "../Layout";
 
 const blackboardAnimation = keyframes`
@@ -76,63 +77,65 @@ const Education = ({ selectedTab }: EducationProps) => {
   }, [selectedTab]);
 
   return (
-    <BlackBoard>
-      <Pin />
+    <BoxedContainer>
+      <BlackBoard>
+        <Pin />
 
-      <div>
-        <EducationStyled>
-          <HorizontalBorder />
-          <EducationTitle rotate={rotate}>
-            <div>
-              <PaperClip />
-            </div>
-            2 au 13 mars 2020 : Développeuse front-end pour AKO - Paris
-          </EducationTitle>
-          <EducationResume>
-            Développement de l'application AKO, dans le cadre d'un Produit
-            Minimum Viable, en partenariat avec Koudetat/The Family. <br />
-            Cette application a pour but le partage de connaissances. Le
-            principe je donne un cours, je gagne des points pour prendre un
-            cours dans le domaine que je souhaite.
-          </EducationResume>
-        </EducationStyled>
+        <div>
+          <EducationStyled>
+            <HorizontalBorder />
+            <EducationTitle rotate={rotate}>
+              <div>
+                <PaperClip />
+              </div>
+              2 au 13 mars 2020 : Développeuse front-end pour AKO - Paris
+            </EducationTitle>
+            <EducationResume>
+              Développement de l'application AKO, dans le cadre d'un Produit
+              Minimum Viable, en partenariat avec Koudetat/The Family. <br />
+              Cette application a pour but le partage de connaissances. Le
+              principe je donne un cours, je gagne des points pour prendre un
+              cours dans le domaine que je souhaite.
+            </EducationResume>
+          </EducationStyled>
 
-        <EducationStyled>
-          <HorizontalBorder />
-          <EducationTitle rotate={rotate}>
-            <div>
-              <PaperClip />
-            </div>
-            Janvier - Mars 2020 : Formation développeur web et mobile à Le
-            Reacteur - Paris
-          </EducationTitle>
-          <EducationResume>
-            J'ai suivi cette formation intensive, axée sur React/React Native,
-            dans le cadre d'une reconversion professionnelle. <br />
-            Durant cette formation j'ai pu réaliser plusieurs projets aussi bien
-            front-end que back-end.
-          </EducationResume>
-        </EducationStyled>
+          <EducationStyled>
+            <HorizontalBorder />
+            <EducationTitle rotate={rotate}>
+              <div>
+                <PaperClip />
+              </div>
+              Janvier - Mars 2020 : Formation développeur web et mobile à Le
+              Reacteur - Paris
+            </EducationTitle>
+            <EducationResume>
+              J'ai suivi cette formation intensive, axée sur React/React Native,
+              dans le cadre d'une reconversion professionnelle. <br />
+              Durant cette formation j'ai pu réaliser plusieurs projets aussi
+              bien front-end que back-end.
+            </EducationResume>
+          </EducationStyled>
 
-        <EducationStyled>
-          <HorizontalBorder />
-          <EducationTitle rotate={rotate}>
-            <div>
-              <PaperClip />
-            </div>
-            Août 2014 - Janvier 2020 : Infirmière à l'hôpital Robert Debré -
-            Paris
-          </EducationTitle>
-          <EducationResume>
-            Durant ces années d'exercice je n'ai pas tapé une ligne de code. J'y
-            ai en revanche appris le travail en équipe, l'autonomie et la
-            rigueur. J'ai également pu améliorer mon relationnel. Enfin, j'ai
-            également dû apprendre à gérer mon stress dans ce métier qui ne
-            laisse pas sa place à l'erreur.
-          </EducationResume>
-        </EducationStyled>
-      </div>
-    </BlackBoard>
+          <EducationStyled>
+            <HorizontalBorder />
+            <EducationTitle rotate={rotate}>
+              <div>
+                <PaperClip />
+              </div>
+              Août 2014 - Janvier 2020 : Infirmière à l'hôpital Robert Debré -
+              Paris
+            </EducationTitle>
+            <EducationResume>
+              Durant ces années d'exercice je n'ai pas tapé une ligne de code.
+              J'y ai en revanche appris le travail en équipe, l'autonomie et la
+              rigueur. J'ai également pu améliorer mon relationnel. Enfin, j'ai
+              également dû apprendre à gérer mon stress dans ce métier qui ne
+              laisse pas sa place à l'erreur.
+            </EducationResume>
+          </EducationStyled>
+        </div>
+      </BlackBoard>
+    </BoxedContainer>
   );
 };
 

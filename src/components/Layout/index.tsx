@@ -3,6 +3,10 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export const Container = styled.div`
   display: flex;
+  margin: 0 auto;
+`;
+
+export const BoxedContainer = styled.div`
   width: 1300px;
   margin: 0 auto;
 `;
@@ -13,11 +17,12 @@ export const MenuContainer = styled.div`
   margin: 20px 40px 0 0;
 `;
 
-export const SkillsContainer = styled.div`
+export const PostItContainer = styled.div`
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
-  width: 1300px;
-  margin: 0 auto;
+  width: 800px;
 `;
 
 export const Sidebar = styled.div`

@@ -17,10 +17,10 @@ const bubbleAppear = keyframes`
 `;
 
 const BubbleStyles = styled.div<BubbleStylesProps>`
-  height: 210px;
+  height: 200px;
   width: 350px;
   position: absolute;
-  top: 30px;
+  top: 25px;
   left: 80px;
   margin-bottom: 50px;
   z-index: 2;

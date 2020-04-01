@@ -18,6 +18,7 @@ const green2 = "#D2F7A6";
 const pink = "#fa8072";
 const brown = "#f4a460";
 const blue = "#43A6DD";
+const darkBlue = "#124275";
 
 const topDesk = `
   linear-gradient(to bottom, ${t} 44%, ${darkOrange} 44%, ${darkOrange} 49%, ${t} 49%),
@@ -79,6 +80,12 @@ const cactus = `
   radial-gradient(9em 12em at calc(50%) calc(50% + 2.5em),${green} 38%,transparent 40%),
   radial-gradient(3em 4em at calc(50%) calc(50% + -2.5em),${pink} 38%,transparent 40%),
   radial-gradient(11em 2em at calc(50%) calc(50% + 6.9em),${brown} 38%,transparent 40%)
+`;
+
+const bodyPen = `
+linear-gradient(transparent 55%, ${grey} 85%,${grey} 97%, ${darkBlue} 97%),
+linear-gradient(90deg, ${grey} 30%, ${black} 40%,${black} 60%, ${grey} 70%)
+
 `;
 
 const DeskStyle = styled.div`
@@ -190,10 +197,43 @@ const OrangePostIt = styled.div`
 
 const PostIt = styled.div`
   width: 300px;
-  height: 100px;
+  height: 80px;
   position: absolute;
   right: 5px;
-  bottom: 130px;
+  bottom: 142px;
+`;
+
+const Pen = styled.div`
+  height: 80px;
+  width: 6px;
+  background: ${bodyPen};
+  position: absolute;
+  right: 140px;
+  bottom: 140px;
+  transform: rotate(-80deg);
+
+  &:before {
+    content: "";
+    display: block;
+    height: 23px;
+    background-color: ${darkBlue};
+    border-radius: 100% 100% 0 0;
+    position: absolute;
+    top: -6px;
+    left: -2px;
+    right: -2px;
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    height: 22px;
+    width: 3px;
+    background-color: ${darkBlue};
+    position: absolute;
+    top: 10px;
+    left: -2px;
+  }
 `;
 
 const Desk = () => {
@@ -201,13 +241,15 @@ const Desk = () => {
     <DeskStyle>
       <Laptop />
       <Cactus />
+
       <PostIt>
         <GreenPostIt />
         <YellowPostIt />
-        <PinkPostIt />
         <OrangePostIt />
         <BluePostIt />
+        <PinkPostIt />
       </PostIt>
+      <Pen />
     </DeskStyle>
   );
 };
