@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 
-import TypeForm from "../../assets/Pictures/typeform.png";
-import Deliveroo from "../../assets/Pictures/deliveroo.png";
-import Tripadvisor from "../../assets/Pictures/tripadvisor.png";
+import TypeForm from "../../assets/Pictures/typeform.jpg";
+import Deliveroo from "../../assets/Pictures/deliveroo.jpg";
+import Tripadvisor from "../../assets/Pictures/tripadvisor.jpg";
 import LeBonCoin from "../../assets/Pictures/leboncoin.png";
 import Project from "../Layout/Project";
 import styled, { css, keyframes } from "styled-components";
