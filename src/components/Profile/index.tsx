@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 
 import ScrollingTextBubble from "../ScrollingTextBubble";
 import Avatar from "../Avatar";
 import Desk from "../Desk";
 import styled from "styled-components";
 import { Sidebar } from "../Layout";
+import Modal from "../Modal";
 
 const BlackBoard = styled.div`
   height: 180px;
@@ -99,6 +100,7 @@ const BlackBoardText = styled.span`
 `;
 
 const Informations = styled.div`
+  cursor: pointer;
   height: 60px;
   width: 60px;
   border-radius: 50%;
@@ -109,14 +111,26 @@ const Informations = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+
+  &:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  }
 `;
 
 const Profile = () => {
+  const [showModal, setShowModal] = useState(false);
+
   return (
     <div>
-      {/* <div style={{ display: "flex", alignItems: "flex-end" }}>
-        <Informations>?</Informations>
-      </div> */}
+      {showModal && (
+        <Modal onClose={() => setShowModal(false)}>
+          Toutes les illustrations présentes dans ce site sont faites uniquement
+          en CSS .
+        </Modal>
+      )}
       <Sidebar>
         <ScrollingTextBubble
           position="left"
@@ -133,6 +147,7 @@ const Profile = () => {
           </BlackBoardText>
         </BlackBoard>
         <Avatar />
+        <Informations onClick={() => setShowModal(true)}>?</Informations>
         <Desk />
       </Sidebar>
     </div>
