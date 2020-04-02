@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Menu, { ItemMenu } from "./components/Menu";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
-import Education from "./components/Education";
+import Experiences from "./components/Experiences";
 
 import Profile from "./components/Profile";
 import { createGlobalStyle } from "styled-components";
@@ -53,7 +53,7 @@ function App() {
             <Projects selectedTab={itemMenuSelected} />
           )}
           {itemMenuSelected === "education" && (
-            <Education selectedTab={itemMenuSelected} />
+            <Experiences selectedTab={itemMenuSelected} />
           )}
         </Content>
       </Container>

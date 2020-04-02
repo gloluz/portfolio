@@ -105,6 +105,7 @@ const Informations = styled.div`
   width: 60px;
   border-radius: 50%;
   background-color: #fff;
+  border: 1px solid #d9d9d9;
   color: #000;
   font-size: 22px;
   font-weight: bold;
