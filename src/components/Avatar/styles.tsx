@@ -74,20 +74,20 @@ export const Character = styled.div`
     ${curly}, ${hair};
   background-repeat: no-repeat;
   font-size: 10px;
-  height: 60em;
-  width: 60em;
+  height: 600px;
+  width: 600px;
   transition: all 0.3s ease;
   transform-origin: bottom left;
   z-index: 4;
-  position: relative;
+  position: fixed;
+  bottom: 0;
+  left: 0;
   margin: 10px -10px 0 70px;
-
-  @media screen and (max-height: 720px) {
-    transform: scale(0.8);
-  }
+  transform: scale(0.7);
 
   @media screen and (max-width: 768px) {
     transform: scale(0.5);
+    margin: 0 0 0 12px;
   }
 `;
 
@@ -105,6 +105,10 @@ export const PaperSheet = styled.div`
   bottom: 25%;
   left: 15px;
   transform: rotate(-10deg);
+
+  @media screen and (max-width: 768px) {
+    transform: rotate(-10deg) scale(1.2) translateY(-20px);
+  }
 `;
 
 interface LineProps {
@@ -181,7 +185,7 @@ export const CV = styled.a`
 
   &:hover {
     color: #fff;
-    background-color: #000;
+    background-color: #444444;
 
     ${DownloadContainer} {
       border-bottom-color: #fff;

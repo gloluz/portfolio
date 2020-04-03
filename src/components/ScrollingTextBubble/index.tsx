@@ -31,6 +31,7 @@ const ButtonArrow = styled.button`
   cursor: pointer;
   position: absolute;
   bottom: 15px;
+  left: calc(50% - 20px);
   height: 40px;
   width: 40px;
   animation: 0.5s ${arrowMove} ease infinite;

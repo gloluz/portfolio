@@ -7,7 +7,7 @@ import Experiences from "./components/Experiences";
 
 import Profile from "./components/Profile";
 import { createGlobalStyle } from "styled-components";
-import { Container, Content } from "./components/Layout";
+import { Container } from "./components/Layout";
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -45,17 +45,15 @@ function App() {
       <Menu onClick={handleClick} />
       <Container className="container">
         {showDesk && itemMenuSelected === "profile" && <Profile />}
-        <Content>
-          {itemMenuSelected === "skills" && (
-            <Skills selectedTab={itemMenuSelected} />
-          )}
-          {itemMenuSelected === "projects" && (
-            <Projects selectedTab={itemMenuSelected} />
-          )}
-          {itemMenuSelected === "education" && (
-            <Experiences selectedTab={itemMenuSelected} />
-          )}
-        </Content>
+        {itemMenuSelected === "skills" && (
+          <Skills selectedTab={itemMenuSelected} />
+        )}
+        {itemMenuSelected === "projects" && (
+          <Projects selectedTab={itemMenuSelected} />
+        )}
+        {itemMenuSelected === "education" && (
+          <Experiences selectedTab={itemMenuSelected} />
+        )}
       </Container>
     </>
   );

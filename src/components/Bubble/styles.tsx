@@ -18,26 +18,34 @@ export const BubbleStyles = styled.div<BubbleStylesProps>`
   height: 200px;
   width: 350px;
   position: absolute;
-  top: 25px;
+
+  bottom: 420px;
   left: 80px;
   margin-bottom: 50px;
   z-index: 2;
   animation: 0.4s ${bubbleAppear} cubic-bezier(0.5, 0.9, 0.6, 1.5);
+
+  @media screen and (max-width: 768px) {
+    height: 150px;
+    width: 280px;
+    bottom: 300px;
+    left: 10px;
+  }
 
   &:after {
     content: "";
     height: 60px;
     width: 60px;
     position: absolute;
-    left: 50%;
+    left: calc(50% - 30px);
     bottom: -40px;
     z-index: 1;
     background: radial-gradient(
         50% 100% at 100% 0%,
-        #bce4ff 100%,
-        transparent 100%
+        #bce4ff 99%,
+        transparent 99%
       ),
-      radial-gradient(100% 100% at 100% 0%, #fafafa 100%, transparent 100%);
+      radial-gradient(100% 100% at 100% 0%, #fafafa 99%, transparent 99%);
   }
 
   &:before {
@@ -68,4 +76,8 @@ export const Text = styled.div`
   font-size: 18px;
   text-transform: uppercase;
   padding: 20px 35px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 14px;
+  }
 `;

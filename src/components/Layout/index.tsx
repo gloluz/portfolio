@@ -7,13 +7,14 @@ export const Container = styled.div`
 
 export const BoxedContainer = styled.div`
   width: 1300px;
+  max-width: 100%;
   margin: 0 auto;
 `;
 
 export const MenuContainer = styled.div`
   display: flex;
   justify-content: flex-end;
-  margin: 20px 40px 0 0;
+  margin: 20px 40px 20px 0;
 `;
 
 export const PostItContainer = styled.div`
@@ -22,16 +23,6 @@ export const PostItContainer = styled.div`
   align-items: center;
   flex-wrap: wrap;
   width: 800px;
-`;
-
-export const Sidebar = styled.div`
-  padding: 0 100px;
-`;
-
-export const Content = styled.div`
-  position: relative;
-  flex: 1;
-  margin-top: 20px;
 `;
 
 export const Title = styled.h2`

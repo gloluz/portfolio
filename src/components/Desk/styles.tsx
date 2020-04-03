@@ -97,13 +97,10 @@ export const DeskStyle = styled.div`
   bottom: 0;
   right: 0;
   transform-origin: bottom right;
+  transform: scale(0.8);
 
-  @media screen and (max-height: 720px) {
-    transform: scale(0.8);
-  }
-
-  @media screen and (max-width: 768px) {
-    transform: scale(0.5);
+  @media screen and (max-width: 1024px) {
+    display: none;
   }
 `;
 
@@ -138,7 +135,6 @@ export const Cactus = styled.div`
   background-repeat: no-repeat;
   width: 20em;
   height: 30em;
-
   position: absolute;
   right: 6em;
   bottom: 22em;
