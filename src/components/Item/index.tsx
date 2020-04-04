@@ -1,28 +1,34 @@
 import React, { ReactNode } from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-interface ListItemProps {
-  rotate: string;
-}
-
-const ListItem = styled.div<ListItemProps>`
+const ListItem = styled.div`
   display: flex;
   justify-content: center;
-  transform: rotate(${({ rotate }) => rotate}deg);
 `;
 
-const Button = styled.button`
+interface ButtonProps {
+  selected: boolean;
+}
+
+const Button = styled.button<ButtonProps>`
+  outline: none;
   cursor: pointer;
   border-radius: 5px;
   border: none;
-  background: #fff;
-  margin: 20px 40px 20px 0;
+  background: transparent;
+  margin: 20px 10px;
   color: #000;
   font-size: 22px;
   text-transform: uppercase;
   font-weight: 800;
   padding: 10px 20px;
   transition: all 0.3s ease;
+
+  ${({ selected }) =>
+    selected &&
+    css`
+      background: #fff;
+    `}
 
   &:hover {
     transform: scale(1.1);
@@ -32,13 +38,15 @@ const Button = styled.button`
 export interface ItemProps {
   children: ReactNode;
   onClick: () => any;
-  rotate: string;
+  selected: boolean;
 }
 
-const Item = ({ children, onClick, rotate }: ItemProps) => {
+const Item = ({ children, onClick, selected }: ItemProps) => {
   return (
-    <ListItem rotate={rotate}>
-      <Button onClick={onClick}>{children}</Button>
+    <ListItem>
+      <Button onClick={onClick} selected={selected}>
+        {children}
+      </Button>
     </ListItem>
   );
 };

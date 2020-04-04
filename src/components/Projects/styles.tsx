@@ -63,8 +63,9 @@ export const computerAnimation = keyframes`
 
 export const Computer = styled.div`
   display: flex;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 130px);
   animation: ${computerAnimation} ease 0.4s;
+  position: relative;
 `;
 
 export const Screen = styled.div`

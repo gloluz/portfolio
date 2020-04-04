@@ -1,7 +1,8 @@
 import styled from "styled-components";
+import { overlayAnimation } from "../Menu/styles";
 
 export const Overlay = styled.div`
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.7);
   position: fixed;
   top: 0;
   right: 0;
@@ -10,7 +11,8 @@ export const Overlay = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 100;
+  z-index: 105;
+  animation: ${overlayAnimation} ease 0.4s;
 `;
 
 export const ModalContainer = styled.div`

@@ -14,12 +14,14 @@ import {
   ProfilContainer
 } from "./styles";
 import Icon from "../Icon";
+import Lamp from "../Lamp";
 
 const Profile = () => {
   const [showModal, setShowModal] = useState(false);
 
   return (
     <ProfilContainer>
+      <Lamp />
       {showModal && (
         <Modal onClose={() => setShowModal(false)}>
           Toutes les illustrations présentes dans ce site sont faites uniquement
@@ -54,11 +56,11 @@ const Profile = () => {
           href="https://www.linkedin.com/in/gloria-luzio-a7b05819b/"
           target="_blanck"
         >
-          <Icon size={25} icon="linkedin2" />
+          <Icon size={24} icon="linkedin2" />
         </LinkLogo>
 
         <LinkLogo href="https://github.com/gloluz" target="_blanck">
-          <Icon size={25} icon="github" />
+          <Icon size={24} icon="github" />
         </LinkLogo>
       </SocialNetworkContainer>
     </ProfilContainer>

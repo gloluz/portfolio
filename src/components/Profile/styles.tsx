@@ -22,11 +22,13 @@ export const BlackBoard = styled.div`
 
   @media screen and (max-width: 1024px) {
     left: 60vw;
+    bottom: 240px;
+    transform: scale(0.7);
   }
 
   @media screen and (max-width: 768px) {
     transform: scale(0.6);
-    bottom: 130px;
+    bottom: 200px;
     left: 60vw;
     right: 0px;
     margin-right: -55px;
@@ -115,11 +117,11 @@ export const BlackBoardText = styled.span`
 
 export const Informations = styled.div`
   cursor: pointer;
-  height: 40px;
-  width: 40px;
+  height: 42px;
+  width: 42px;
   border-radius: 50%;
   background-color: #fff;
-  border: 1px solid #d9d9d9;
+  box-sizing: border-box;
   color: #000;
   font-size: 22px;
   font-weight: bold;
@@ -131,7 +133,7 @@ export const Informations = styled.div`
   left: 20px;
 
   &:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
 `;
 
@@ -149,10 +151,15 @@ export const LinkLogo = styled.a`
   margin-right: 20px;
   border-radius: 50%;
   background-color: #fff;
-  border: 1px solid #d9d9d9;
-  padding: 10px;
+  box-sizing: border-box;
+  height: 42px;
+  width: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s all ease;
 
   &:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
 `;

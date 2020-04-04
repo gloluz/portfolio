@@ -14,7 +14,14 @@ export const BoxedContainer = styled.div`
 export const MenuContainer = styled.div`
   display: flex;
   justify-content: flex-end;
-  margin: 20px 40px 20px 0;
+  margin: 20px;
+  position: relative;
+  z-index: 100;
+  height: 90px;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const PostItContainer = styled.div`
@@ -23,6 +30,10 @@ export const PostItContainer = styled.div`
   align-items: center;
   flex-wrap: wrap;
   width: 800px;
+
+  @media screen and (max-width: 600px) {
+    width: 100%;
+  }
 `;
 
 export const Title = styled.h2`

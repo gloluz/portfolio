@@ -25,6 +25,10 @@ const ArrowBottom = styled.div`
   height: 0;
   width: 0;
   margin-top: 10px;
+
+  @media screen and (max-width: 320px) {
+    margin-top: 26px;
+  }
 `;
 
 const ButtonArrow = styled.button`

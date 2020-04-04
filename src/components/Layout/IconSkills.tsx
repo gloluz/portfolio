@@ -20,6 +20,13 @@ const PostItSkill = styled.div<PostItSkillProps>`
   transition: 0.4s all ease;
   background-color: #fff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  transform-origin: right;
+
+  @media screen and (max-width: 600px) {
+    width: 150px;
+    height: 150px;
+    margin: 0;
+  }
 
   &:nth-child(3n) {
     margin-top: 20px;
@@ -50,6 +57,10 @@ const TextSkill = styled.p`
   letter-spacing: 2px;
   text-align: center;
   margin: 20px 0 0 0;
+
+  @media screen and (max-width: 600px) {
+    font-size: 16px;
+  }
 `;
 
 interface IconSkillsProps {

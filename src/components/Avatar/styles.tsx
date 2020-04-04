@@ -85,15 +85,28 @@ export const Character = styled.div`
   margin: 10px -10px 0 70px;
   transform: scale(0.7);
 
+  @media screen and (max-width: 1024px) {
+    transform: scale(0.6);
+  }
+
   @media screen and (max-width: 768px) {
+    left: 20px;
     transform: scale(0.5);
     margin: 0 0 0 12px;
+  }
+
+  @media screen and (max-width: 600px) {
+    left: 12px;
+  }
+
+  @media screen and (max-width: 320px) {
+    transform: scale(0.45);
   }
 `;
 
 export const PaperSheet = styled.div`
-  height: 180px;
-  width: 150px;
+  height: 190px;
+  width: 170px;
   background-color: #fff;
   padding: 10px;
   box-sizing: border-box;
@@ -103,11 +116,12 @@ export const PaperSheet = styled.div`
   text-transform: uppercase;
   position: absolute;
   bottom: 25%;
-  left: 15px;
+  left: 0px;
   transform: rotate(-10deg);
 
-  @media screen and (max-width: 768px) {
-    transform: rotate(-10deg) scale(1.2) translateY(-20px);
+  @media screen and (max-width: 1024px) {
+    transform: scale(1.1) rotate(-10deg);
+    bottom: 28%;
   }
 `;
 
@@ -125,7 +139,7 @@ export const Line = styled.div<LineProps>`
 export const Arrow = styled.div`
   width: 3px;
   height: 13px;
-  background-color: #000;
+  background-color: #444444;
   margin: 0 auto;
   transition: 0.3s all ease;
 
@@ -134,7 +148,7 @@ export const Arrow = styled.div`
     display: block;
     width: 3px;
     height: 10px;
-    background-color: #000;
+    background-color: #444444;
     transform: rotate(45deg) translateX(1px);
     position: absolute;
     transform-origin: bottom left;
@@ -146,7 +160,7 @@ export const Arrow = styled.div`
     display: block;
     width: 3px;
     height: 10px;
-    background-color: #000;
+    background-color: #444444;
     transform: rotate(-45deg) translateX(-1px);
     position: absolute;
     transform-origin: bottom right;
@@ -157,25 +171,26 @@ export const Arrow = styled.div`
 export const DownloadContainer = styled.div`
   width: 17px;
   height: 16px;
-  border-bottom: 3px solid #000;
+  border-bottom: 3px solid #444444;
   position: relative;
   transition: 0.3s all ease;
 `;
 
 export const CV = styled.a`
-  width: 120px;
-  height: 50px;
+  width: 135px;
+  height: 60px;
   margin: 15px 5px;
   padding: 10px 5px;
   box-sizing: border-box;
   border-radius: 10px;
-  border: 2px solid black;
+  border: 2px solid #444444;
   color: black;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: space-around;
   text-transform: uppercase;
+  color: #444444;
   font-size: 15px;
   font-weight: bold;
   line-height: 26px;

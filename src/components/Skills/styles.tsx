@@ -16,7 +16,7 @@ export const SkillsContainer = styled.div`
   flex-wrap: wrap;
   background-color: #d08a0c;
   width: 100%;
-  height: 600px;
+  height: calc(100vh - 130px);
   animation: ${deskAnimation} ease 0.4s;
   position: relative;
   overflow: hidden;
@@ -41,6 +41,10 @@ export const Pen = styled.div<PenProps>`
   transform: translate(100vw);
   transition: 0.3s all ease;
   z-index: 1;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 
   ${({ show }) =>
     show &&

@@ -42,7 +42,7 @@ function App() {
     <>
       <GlobalStyle />
 
-      <Menu onClick={handleClick} />
+      <Menu onClick={handleClick} currentPage={itemMenuSelected} />
       <Container className="container">
         {showDesk && itemMenuSelected === "profile" && <Profile />}
         {itemMenuSelected === "skills" && (

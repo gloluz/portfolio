@@ -100,6 +100,14 @@ export const DeskStyle = styled.div`
   transform: scale(0.8);
 
   @media screen and (max-width: 1024px) {
+    transform: scale(0.6);
+  }
+
+  @media screen and (max-width: 768px) {
+    transform: scale(0.5);
+  }
+
+  @media screen and (max-width: 600px) {
     display: none;
   }
 `;
