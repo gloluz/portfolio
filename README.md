@@ -18,4 +18,4 @@ then
 
 `yarn start`
 
-Or with this link: [https://gifted-hugle-d505fd.netlify.com/]
+Or with this link: [https://gloria-luzio.netlify.com/]
