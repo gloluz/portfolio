@@ -9,7 +9,7 @@ import { Context } from "entities";
 import html from "./html";
 import App from "../client/App";
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 const app = express();
 
 app.use(express.static("dist"));
@@ -39,5 +39,5 @@ app.get("*", (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log("🚀  listening on url http://localhost:3000 !");
+  console.log(`🚀  listening on url http://localhost:${port} !`);
 });
