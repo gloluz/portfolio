@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "start": "npm run build",
     "dev": "concurrently -n \"building,server\" \"npm run dev:build\" \"npm run dev:server\"",
     "dev:build": "webpack --watch",
     "dev:server": "cross-env NODE_ENV=development && nodemon dist/server.js",
