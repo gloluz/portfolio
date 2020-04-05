@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
-import ScrollingTextBubble from "../ScrollingTextBubble";
-import Avatar from "../Avatar";
-import Desk from "../Desk";
-import Modal from "../Modal";
+import ScrollingTextBubble from "../../components/ScrollingTextBubble";
+import Avatar from "../../components/Avatar";
+import Desk from "../../components/Desk";
+import Modal from "../../components/Modal";
 import {
   BlackBoardPostIt,
   BlackBoardText,
@@ -15,8 +15,8 @@ import {
   ModalList,
   ListStyle
 } from "./styles";
-import Icon from "../Icon";
-import Lamp from "../Lamp";
+import Icon from "../../components/Icon";
+import Lamp from "../../components/Lamp";
 
 const Profile = () => {
   const [showModal, setShowModal] = useState(false);

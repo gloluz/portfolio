@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
-import PaperClip from "../PaperClip";
-import { BoxedContainer } from "../Layout";
+import PaperClip from "../../components/PaperClip";
+import { BoxedContainer } from "../../components/Layout";
 import {
   BlackBoard,
   Pin,
