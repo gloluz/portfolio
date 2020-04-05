@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 
 import PaperClip from "../PaperClip";
-import { ItemMenu } from "../Menu";
 import { BoxedContainer } from "../Layout";
 import {
   BlackBoard,
@@ -12,18 +11,10 @@ import {
   HorizontalBorder
 } from "./styles";
 
-interface ExperiencesProps {
-  selectedTab: ItemMenu;
-}
-
-const Experiences = ({ selectedTab }: ExperiencesProps) => {
+const Experiences = () => {
   const [rotate, setRotate] = useState(-10);
 
   useEffect(() => {
-    if (selectedTab !== "education") {
-      return;
-    }
-
     const timeout1 = setTimeout(() => setRotate(10), 200);
     const timeout2 = setTimeout(() => setRotate(-8), 400);
     const timeout3 = setTimeout(() => setRotate(6), 600);
@@ -39,7 +30,7 @@ const Experiences = ({ selectedTab }: ExperiencesProps) => {
       clearTimeout(timeout5);
       clearTimeout(timeout6);
     };
-  }, [selectedTab]);
+  }, []);
 
   return (
     <BoxedContainer>

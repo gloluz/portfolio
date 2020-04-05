@@ -1,5 +1,7 @@
 import React, { ReactNode } from "react";
+import { useRouteMatch } from "react-router-dom";
 import styled, { css } from "styled-components";
+import { Link } from "react-router-dom";
 
 const ListItem = styled.div`
   display: flex;
@@ -10,7 +12,8 @@ interface ButtonProps {
   selected: boolean;
 }
 
-const Button = styled.button<ButtonProps>`
+const Button = styled(Link)<ButtonProps>`
+  text-decoration: none;
   outline: none;
   cursor: pointer;
   border-radius: 5px;
@@ -37,14 +40,20 @@ const Button = styled.button<ButtonProps>`
 
 export interface ItemProps {
   children: ReactNode;
-  onClick: () => any;
-  selected: boolean;
+  path: string;
 }
 
-const Item = ({ children, onClick, selected }: ItemProps) => {
+const Item = ({ children, path }: ItemProps) => {
+  let match = Boolean(
+    useRouteMatch({
+      path,
+      exact: true
+    })
+  );
+
   return (
     <ListItem>
-      <Button onClick={onClick} selected={selected}>
+      <Button to={path} selected={match}>
         {children}
       </Button>
     </ListItem>

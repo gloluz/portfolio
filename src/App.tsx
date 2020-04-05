@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import Menu, { ItemMenu } from "./components/Menu";
 import Skills from "./components/Skills";
@@ -18,37 +19,32 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 function App() {
-  const [itemMenuSelected, setItemMenuSelected] = useState<ItemMenu>("profile");
-  const [showDesk, setShowDesk] = useState<boolean>(true);
-
-  const handleClick = (itemMenu: ItemMenu) => {
-    setItemMenuSelected(itemMenu);
-
-    if (itemMenu === "profile") {
-      setShowDesk(true);
-    } else {
-      setShowDesk(false);
-    }
-  };
-
   return (
-    <>
+    <Router>
       <GlobalStyle />
 
-      <Menu onClick={handleClick} currentPage={itemMenuSelected} />
+      <Menu />
+
       <Container className="container">
-        {showDesk && itemMenuSelected === "profile" && <Profile />}
-        {itemMenuSelected === "skills" && (
-          <Skills selectedTab={itemMenuSelected} />
-        )}
-        {itemMenuSelected === "projects" && (
-          <Projects selectedTab={itemMenuSelected} />
-        )}
-        {itemMenuSelected === "education" && (
-          <Experiences selectedTab={itemMenuSelected} />
-        )}
+        <Switch>
+          <Route exact path="/">
+            <Profile />
+          </Route>
+
+          <Route exact path="/competences">
+            <Skills />
+          </Route>
+
+          <Route exact path="/projets">
+            <Projects />
+          </Route>
+
+          <Route exact path="/experiences">
+            <Experiences />
+          </Route>
+        </Switch>
       </Container>
-    </>
+    </Router>
   );
 }
 

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import Item from "../Item";
+import Item from "./Item";
 import { MenuContainer } from "../Layout";
 import {
   LogoBurgerMenu,
@@ -11,40 +11,16 @@ import {
 
 export type ItemMenu = "skills" | "projects" | "education" | "profile";
 
-export interface MenuProps {
-  onClick: (itemMenu: ItemMenu) => any;
-  currentPage: ItemMenu;
-}
-
-const Menu = ({ onClick, currentPage }: MenuProps) => {
+const Menu = () => {
   const [showMenu, setShowMenu] = useState(false);
+
   return (
     <>
       <MenuContainer>
-        <Item
-          onClick={() => onClick("profile")}
-          selected={currentPage === "profile"}
-        >
-          Profil
-        </Item>
-        <Item
-          onClick={() => onClick("skills")}
-          selected={currentPage === "skills"}
-        >
-          Compétences
-        </Item>
-        <Item
-          onClick={() => onClick("projects")}
-          selected={currentPage === "projects"}
-        >
-          Projets
-        </Item>
-        <Item
-          onClick={() => onClick("education")}
-          selected={currentPage === "education"}
-        >
-          Expériences
-        </Item>
+        <Item path="/">Profil</Item>
+        <Item path="/competences">Compétences</Item>
+        <Item path="/projets">Projets</Item>
+        <Item path="/experiences">Expériences</Item>
       </MenuContainer>
 
       <BurgerMenuContainer>
@@ -55,30 +31,10 @@ const Menu = ({ onClick, currentPage }: MenuProps) => {
 
       {showMenu && (
         <OverlayMenu onClick={() => setShowMenu(false)}>
-          <Item
-            onClick={() => onClick("profile")}
-            selected={currentPage === "profile"}
-          >
-            Profil
-          </Item>
-          <Item
-            onClick={() => onClick("skills")}
-            selected={currentPage === "skills"}
-          >
-            Compétences
-          </Item>
-          <Item
-            onClick={() => onClick("projects")}
-            selected={currentPage === "projects"}
-          >
-            Projets
-          </Item>
-          <Item
-            onClick={() => onClick("education")}
-            selected={currentPage === "education"}
-          >
-            Expériences
-          </Item>
+          <Item path="/">Profil</Item>
+          <Item path="/competences">Compétences</Item>
+          <Item path="/projets">Projets</Item>
+          <Item path="/experiences">Expériences</Item>
         </OverlayMenu>
       )}
     </>

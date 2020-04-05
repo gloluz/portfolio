@@ -64,7 +64,7 @@ const Profile = () => {
           Family.
         </BlackBoardText>
 
-        <BlackBoardText top={70}>
+        <BlackBoardText top={72}>
           Bootcamp à Le Reacteur de janvier à mars 2020 axé sur React/React
           Native.
         </BlackBoardText>

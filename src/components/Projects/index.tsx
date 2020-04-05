@@ -5,7 +5,6 @@ import Deliveroo from "../../assets/Pictures/deliveroo.jpg";
 import Tripadvisor from "../../assets/Pictures/tripadvisor.jpg";
 import LeBonCoin from "../../assets/Pictures/leboncoin.png";
 import Project from "../Layout/Project";
-import { ItemMenu } from "../Menu";
 import { ColumnProject, BoxedContainer } from "../Layout";
 import {
   Computer,
@@ -20,19 +19,11 @@ import {
   ProjectContainer
 } from "./styles";
 
-export interface ProjectProps {
-  selectedTab: ItemMenu;
-}
-
-const Projects = ({ selectedTab }: ProjectProps) => {
+const Projects = () => {
   const [showWindow, setShowWindow] = useState(false);
   const [showPictures, setShowPictures] = useState(false);
 
   useEffect(() => {
-    if (selectedTab !== "projects") {
-      return;
-    }
-
     const timeout1 = setTimeout(() => setShowWindow(true), 400);
     const timeout2 = setTimeout(() => setShowPictures(true), 500);
 
@@ -40,7 +31,7 @@ const Projects = ({ selectedTab }: ProjectProps) => {
       clearTimeout(timeout1);
       clearTimeout(timeout2);
     };
-  }, [selectedTab]);
+  }, []);
 
   return (
     <BoxedContainer>

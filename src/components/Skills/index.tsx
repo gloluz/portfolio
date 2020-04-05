@@ -1,15 +1,10 @@
 import React, { useEffect, useState } from "react";
 
-import { ItemMenu } from "../Menu";
 import { PostItContainer } from "../Layout";
 import { SkillsContainer, Pen } from "./styles";
 import IconSkills from "../Layout/IconSkills";
 
-interface SkillsProps {
-  selectedTab: ItemMenu;
-}
-
-const Skills = ({ selectedTab }: SkillsProps) => {
+const Skills = () => {
   const [icon1, setIcon1] = useState<boolean>(false);
   const [icon2, setIcon2] = useState<boolean>(false);
   const [icon3, setIcon3] = useState<boolean>(false);
@@ -19,11 +14,7 @@ const Skills = ({ selectedTab }: SkillsProps) => {
   const [showPen, SetShowPen] = useState<boolean>(false);
 
   useEffect(() => {
-    if (selectedTab === "skills") {
-      setIcon1(true);
-    } else {
-      setIcon1(false);
-    }
+    setIcon1(true);
 
     const timeout1 = setTimeout(() => setIcon2(true), 500);
     const timeout2 = setTimeout(() => setIcon3(true), 700);
@@ -40,7 +31,7 @@ const Skills = ({ selectedTab }: SkillsProps) => {
       clearTimeout(timeout5);
       clearTimeout(timeout6);
     };
-  }, [selectedTab]);
+  }, []);
 
   return (
     <SkillsContainer>
