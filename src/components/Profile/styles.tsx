@@ -131,6 +131,7 @@ export const Informations = styled.div`
   position: fixed;
   bottom: 20px;
   left: 20px;
+  z-index: 50;
 
   &:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);

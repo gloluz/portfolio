@@ -50,10 +50,10 @@ const bottomLaptop = `
   radial-gradient(1em 1em at 4.3% 93%,${darkGrey} 40%,transparent 40%),
   linear-gradient(${darkGrey} 89%,transparent 0) 50% 94.6% / 91% 2.5%,
  
-  linear-gradient(${grey2},${grey2}) 50.5% 64% / 59.5% 2%, //border top keyboard
-  linear-gradient(black,black) 50% 74% / 60% 13%, //main keyboard
-  linear-gradient(64deg,${black} 10%,transparent 0%) 121% 54% / 34% 50%, //right side keyboard
-  linear-gradient(-64deg,${black} 10%,transparent 0%) -17% 54% / 32% 50%, //left side keyboard
+  linear-gradient(${grey2},${grey2}) 50% 64% / 60% 2%, //border top keyboard
+  linear-gradient(black,black) 50% 74% / 60% 14%, //main keyboard
+  linear-gradient(64deg,${black} 10%,transparent 0%) 120% 55% / 34% 50%, //right side keyboard
+  linear-gradient(-64deg,${black} 10%,transparent 0%) -17% 55% / 32% 50%, //left side keyboard
   
   linear-gradient(64deg,${grey} 21%,${t} 0%) 127% 82% / 32% 50%, 
   linear-gradient(-64deg,${grey} 21%,${t} 0%) -27% 82% / 32% 50%,
@@ -63,7 +63,7 @@ const bottomLaptop = `
 
 const pot = `
   radial-gradient(12em 3em at calc(50%) calc(50% + 6.5em), ${be2} 38%, transparent 40%), // round top pot
-  radial-gradient(12em 3em at calc(50%) calc(50% + 13em), ${be} 37%, transparent 40%),// round bottom pot
+  radial-gradient(12em 3em at calc(50%) calc(50% + 13em), ${be} 40%, transparent 40%),// round bottom pot
   linear-gradient(${be},${be}) 50% 91% / 47% 21% // main pot
 `;
 
@@ -76,7 +76,7 @@ const cactus = `
   radial-gradient(0.5em 0.5em at calc(48%) calc(50% + 2em), ${white} 38%, transparent 40%),
   radial-gradient(0.5em 0.5em at calc(54%) calc(50% + 5em), ${white} 38%, transparent 40%),
   radial-gradient(0.5em 0.5em at calc(50%) calc(50% + 6.5em), ${white} 38%, transparent 40%),
-  radial-gradient(9em 12em at calc(50%) calc(50% + 2.5em),${green} 38%,transparent 40%),
+  radial-gradient(9em 12em at calc(50%) calc(50% + 2.5em),${green} 40%,transparent 40%),
   radial-gradient(3em 4em at calc(50%) calc(50% + -2.5em),${pink} 38%,transparent 40%),
   radial-gradient(11em 2em at calc(50%) calc(50% + 6.9em),${brown} 38%,transparent 40%)
 `;

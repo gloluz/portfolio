@@ -19,7 +19,16 @@ export const SkillsContainer = styled.div`
   height: calc(100vh - 130px);
   animation: ${deskAnimation} ease 0.4s;
   position: relative;
-  overflow: hidden;
+  overflow: auto;
+
+  @media screen and (max-width: 768px) {
+    height: calc(100vh - 102px);
+    padding: 12px;
+  }
+
+  @media screen and (max-width: 600px) {
+    height: calc(100vh - 102px);
+  }
 `;
 
 const bodyPen = `linear-gradient(transparent 75%, #d9d9d9 75%,#d9d9d9 97%, blue 97%),

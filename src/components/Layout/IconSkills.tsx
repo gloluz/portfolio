@@ -26,10 +26,29 @@ const PostItSkill = styled.div<PostItSkillProps>`
     width: 150px;
     height: 150px;
     margin: 0;
+
+    svg {
+      max-height: 70px;
+      max-width: 70px;
+    }
+  }
+
+  @media screen and (max-width: 320px) {
+    width: 120px;
+    height: 120px;
+
+    svg {
+      max-height: 40px;
+      max-width: 40px;
+    }
   }
 
   &:nth-child(3n) {
     margin-top: 20px;
+
+    @media screen and (max-width: 320px) {
+      margin-top: 10px;
+    }
   }
 
   &:last-child &:nth-child(4n) {
@@ -60,6 +79,10 @@ const TextSkill = styled.p`
 
   @media screen and (max-width: 600px) {
     font-size: 16px;
+  }
+
+  @media screen and (max-width: 320px) {
+    margin: 12px 0 0 0;
   }
 `;
 

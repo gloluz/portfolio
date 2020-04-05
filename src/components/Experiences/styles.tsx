@@ -17,6 +17,12 @@ export const BlackBoard = styled.div`
   border-radius: 10px;
   position: relative;
   animation: ${blackboardAnimation} 0.4s ease;
+
+  @media screen and (max-width: 768px) {
+    border-left-width: 0;
+    border-right-width: 0;
+    border-radius: 0;
+  }
 `;
 
 export const Pin = styled.div`
@@ -34,6 +40,10 @@ export const Pin = styled.div`
     radial-gradient(20px 20px at 28px 20px, #e43d34 38%, transparent 40%),
     linear-gradient(25deg, transparent 42%, grey 45%, grey 55%, transparent 58%)
       no-repeat 30px 18px / 15px 15px;
+
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
 `;
 
 export const ExperienceStyled = styled.div`
@@ -41,6 +51,10 @@ export const ExperienceStyled = styled.div`
   align-items: center;
   padding-bottom: 60px;
   position: relative;
+
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+  }
 `;
 
 interface EducationTitleProps {
@@ -63,6 +77,16 @@ export const ExperienceTitle = styled.h2<EducationTitleProps>`
   transform: rotate(${({ rotate }) => rotate}deg);
   position: relative;
   z-index: 1;
+
+  @media screen and (max-width: 768px) {
+    font-size: 18px;
+    margin: 40px;
+    padding: 20px;
+  }
+
+  @media screen and (max-width: 600px) {
+    width: 70%;
+  }
 `;
 
 export const ExperienceResume = styled.p`
@@ -73,6 +97,16 @@ export const ExperienceResume = styled.p`
   margin: 20px 40px 0 40px;
   padding: 20px;
   font-family: "Vibur", cursive;
+
+  @media screen and (max-width: 768px) {
+    font-size: 22px;
+    padding: 0;
+  }
+
+  @media screen and (max-width: 600px) {
+    width: 70%;
+    margin-top: 0;
+  }
 `;
 
 export const HorizontalBorder = styled.div`
@@ -86,4 +120,11 @@ export const HorizontalBorder = styled.div`
   top: -25px;
   bottom: 0;
   left: calc(30% - 20px);
+
+  @media screen and (max-width: 600px) {
+    height: 6px;
+    width: 100%;
+    left: 0;
+    top: 36px;
+  }
 `;

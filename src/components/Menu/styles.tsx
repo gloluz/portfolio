@@ -4,12 +4,14 @@ export const BurgerMenuContainer = styled.div`
   display: none;
   position: relative;
   justify-content: flex-end;
-  margin: 20px;
+  padding: 20px;
   height: 90px;
   z-index: 101;
 
   @media screen and (max-width: 768px) {
     display: flex;
+    height: 54px;
+    padding: 12px;
   }
 `;
 

@@ -51,28 +51,28 @@ const Skills = ({ selectedTab }: SkillsProps) => {
           show={icon1}
           icon="javascript"
           skillTitle="Javascript"
-          rotate={-30}
+          rotate={-10}
         />
         <IconSkills
           backgroundColor="#D2F7A6"
           show={icon2}
           icon="html5"
           skillTitle="HTML"
-          rotate={-10}
+          rotate={1}
         />
         <IconSkills
           backgroundColor="yellow"
           show={icon3}
           icon="css3"
           skillTitle="CSS"
-          rotate={10}
+          rotate={6}
         />
         <IconSkills
           backgroundColor="#EF8533"
           show={icon4}
           icon="mongodb"
           skillTitle="MongoDB"
-          rotate={-40}
+          rotate={3}
         />
         <IconSkills
           backgroundColor="#43A6DD"
@@ -86,7 +86,7 @@ const Skills = ({ selectedTab }: SkillsProps) => {
           show={icon6}
           icon="react"
           skillTitle="React / React Native"
-          rotate={40}
+          rotate={10}
         />
       </PostItContainer>
     </SkillsContainer>

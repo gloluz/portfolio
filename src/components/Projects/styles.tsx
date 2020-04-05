@@ -9,19 +9,26 @@ export const PictureTitle = styled.span`
   text-transform: uppercase;
   color: #fff;
   transition: 0.3s all ease;
-  position: absolute;
-  bottom: -30px;
-  left: 20px;
+  margin-bottom: 20px;
+  transform: translateY(200px);
+
+  @media screen and (max-width: 768px) {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
 `;
 
 export const PictureSubTite = styled.span`
   font-size: 18px;
-  line-height: 28px;
   color: #fff;
   transition: 0.4s all ease;
-  position: absolute;
-  bottom: -30px;
-  left: 20px;
+  line-height: 22px;
+  transform: translateY(200px);
+
+  @media screen and (max-width: 768px) {
+    font-size: 16px;
+    line-height: 16px;
+  }
 `;
 
 export const Picture = styled(LazyLoadImage)`
@@ -29,6 +36,16 @@ export const Picture = styled(LazyLoadImage)`
   height: 100%;
   object-fit: cover;
   transition: 0.3s all ease !important;
+
+  @media screen and (max-width: 768px) {
+    width: 615px;
+    height: 385px;
+  }
+
+  @media screen and (max-width: 600px) {
+    width: 100%;
+    height: 228px;
+  }
 `;
 
 export const Link = styled.a`
@@ -37,18 +54,17 @@ export const Link = styled.a`
   line-height: 0;
   overflow: hidden;
   margin-bottom: 10px;
+
   &:hover ${Overlay} {
     opacity: 1;
   }
+
   &:hover ${Picture} {
     transform: scale(1.1);
   }
-  &:hover ${PictureTitle} {
-    bottom: 50%;
-  }
-  &:hover ${PictureSubTite} {
-    bottom: 35%;
-    line-height: 22px;
+
+  &:hover ${PictureTitle}, &:hover ${PictureSubTite} {
+    transform: translateY(0);
   }
 `;
 
@@ -66,6 +82,10 @@ export const Computer = styled.div`
   height: calc(100vh - 130px);
   animation: ${computerAnimation} ease 0.4s;
   position: relative;
+
+  @media screen and (max-width: 768px) {
+    height: calc(100vh - 74px);
+  }
 `;
 
 export const Screen = styled.div`
@@ -80,6 +100,12 @@ export const Screen = styled.div`
   position: relative;
   width: 100%;
   background-color: #f4f4f4;
+
+  @media screen and (max-width: 768px) {
+    border-right-width: 0;
+    border-left-width: 0;
+    border-radius: 0;
+  }
 `;
 
 export const Camera = styled.div`
@@ -176,4 +202,8 @@ export const Scrollable = styled.div`
 export const ProjectContainer = styled.div`
   display: flex;
   justify-content: space-between;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 `;

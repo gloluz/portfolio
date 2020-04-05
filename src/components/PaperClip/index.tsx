@@ -29,6 +29,10 @@ export const StyledPaperClip = styled.div`
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
   }
+
+  @media screen and (max-width: 768px) {
+    left: 50%;
+  }
 `;
 
 const PaperClip = () => {

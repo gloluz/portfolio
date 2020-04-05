@@ -69,6 +69,10 @@ export const ColumnProject = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 export const Column = styled.article`
@@ -85,4 +89,8 @@ export const Overlay = styled.div`
   top: 0;
   background-color: rgba(0, 0, 0, 0.6);
   transition: 0.3s all ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
 `;
