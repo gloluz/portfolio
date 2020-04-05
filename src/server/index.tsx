@@ -1,10 +1,13 @@
 import React from "react";
+import dotenv from "dotenv";
 import express from "express";
 import { renderToString } from "react-dom/server";
 import { ServerStyleSheet } from "styled-components";
 import { StaticRouter as Router } from "react-router-dom";
 
 import { Context } from "entities";
+
+dotenv.config();
 
 import html from "./html";
 import App from "../client/App";
