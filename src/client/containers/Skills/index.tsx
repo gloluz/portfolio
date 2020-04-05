@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 
-import { PostItContainer } from "../Layout";
+import { PostItContainer } from "../../components/Layout";
 import { SkillsContainer, Pen } from "./styles";
-import IconSkills from "../Layout/IconSkills";
+import IconSkills from "../../components/Layout/IconSkills";
 
 const Skills = () => {
   const [icon1, setIcon1] = useState<boolean>(false);

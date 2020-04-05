@@ -1,6 +1,5 @@
 import styled, { keyframes, css } from "styled-components";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import { Overlay } from "../Layout";
+import { Overlay } from "../../components/Layout";
 
 export const PictureTitle = styled.span`
   font-size: 22px;
@@ -31,7 +30,7 @@ export const PictureSubTite = styled.span`
   }
 `;
 
-export const Picture = styled(LazyLoadImage)`
+export const Picture = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;

@@ -4,8 +4,8 @@ import TypeForm from "../../assets/Pictures/typeform.jpg";
 import Deliveroo from "../../assets/Pictures/deliveroo.jpg";
 import Tripadvisor from "../../assets/Pictures/tripadvisor.jpg";
 import LeBonCoin from "../../assets/Pictures/leboncoin.png";
-import Project from "../Layout/Project";
-import { ColumnProject, BoxedContainer } from "../Layout";
+import Project from "./Project";
+import { ColumnProject, BoxedContainer } from "../../components/Layout";
 import {
   Computer,
   Camera,
@@ -16,7 +16,7 @@ import {
   Window,
   GreenButton,
   Scrollable,
-  ProjectContainer
+  ProjectContainer,
 } from "./styles";
 
 const Projects = () => {

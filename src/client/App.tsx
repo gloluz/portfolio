@@ -1,12 +1,13 @@
-import React, { useState } from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import React from "react";
+import { Switch, Route } from "react-router-dom";
 
-import Menu, { ItemMenu } from "./components/Menu";
-import Skills from "./components/Skills";
-import Projects from "./components/Projects";
-import Experiences from "./components/Experiences";
+import Menu from "./components/Menu";
+import Skills from "./containers/Skills";
+import Projects from "./containers/Projects";
+import Experiences from "./containers/Experiences";
+import NoRoute from "./containers/NoRoute";
 
-import Profile from "./components/Profile";
+import Profile from "./containers/Profile";
 import { createGlobalStyle } from "styled-components";
 import { Container } from "./components/Layout";
 
@@ -20,7 +21,7 @@ const GlobalStyle = createGlobalStyle`
 
 function App() {
   return (
-    <Router>
+    <>
       <GlobalStyle />
 
       <Menu />
@@ -42,9 +43,11 @@ function App() {
           <Route exact path="/experiences">
             <Experiences />
           </Route>
+
+          <Route component={NoRoute} />
         </Switch>
       </Container>
-    </Router>
+    </>
   );
 }
 
