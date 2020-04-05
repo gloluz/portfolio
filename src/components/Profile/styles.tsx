@@ -92,27 +92,18 @@ export const BlackBoardPostIt = styled.div`
   }
 `;
 
-export const BlackBoardText = styled.span`
+interface BlackBoardTextProps {
+  top: number;
+}
+
+export const BlackBoardText = styled.span<BlackBoardTextProps>`
   width: 100px;
   position: absolute;
-  top: 20px;
+  top: ${({ top }) => top}px;
   right: 10%;
   color: #fff;
   font-family: cursive;
   font-size: 6px;
-
-  &:before {
-    content: "Bootcamp à Le Reacteur de janvier à mars 2020 axé sur React/React Native.";
-    position: absolute;
-    top: 55px;
-  }
-
-  &:after {
-    content: "Infirmière à l'hôpital Robert Debré, j'y ai appris le travail en équipe et la gestion du stress.";
-    position: absolute;
-    top: 110px;
-    right: 10%;
-  }
 `;
 
 export const Informations = styled.div`
@@ -162,5 +153,49 @@ export const LinkLogo = styled.a`
 
   &:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+`;
+
+export const ModalList = styled.ul`
+  font-weight: 400;
+  padding: 10px 0 0 0;
+  list-style: none;
+`;
+
+export const ListStyle = styled.li`
+  padding: 0px 10px 20px 25px;
+  position: relative;
+  font-size: 16px;
+
+  a {
+    text-decoration: none;
+    color: #777;
+    border-bottom: 1px dotted #777;
+
+    &:hover {
+      border-bottom: none;
+    }
+  }
+
+  &:before,
+  &:after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 10px;
+    background-color: #000;
+    position: absolute;
+    left: 0;
+    top: 10px;
+  }
+
+  &:before {
+    transform-origin: right;
+    transform: rotate(45deg);
+  }
+
+  &:after {
+    transform-origin: right;
+    transform: rotate(-45deg);
   }
 `;

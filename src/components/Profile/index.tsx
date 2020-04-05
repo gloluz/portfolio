@@ -11,7 +11,9 @@ import {
   BlackBoard,
   SocialNetworkContainer,
   LinkLogo,
-  ProfilContainer
+  ProfilContainer,
+  ModalList,
+  ListStyle
 } from "./styles";
 import Icon from "../Icon";
 import Lamp from "../Lamp";
@@ -24,8 +26,26 @@ const Profile = () => {
       <Lamp />
       {showModal && (
         <Modal onClose={() => setShowModal(false)}>
-          Toutes les illustrations présentes dans ce site sont faites uniquement
-          en CSS .
+          <div>Détails Techniques</div>
+
+          <ModalList>
+            <ListStyle>
+              Excepté les logos et les miniatures des projets, aucune image n'a
+              été utilisée. Les illustrations sont développées uniquement en
+              CSS.
+            </ListStyle>
+
+            <ListStyle>
+              Ce portfolio est développé en React et Typescript.
+            </ListStyle>
+
+            <ListStyle>
+              Vous pouvez consulter le code source{" "}
+              <a href="https://github.com/gloluz/portfolio" target="_blank">
+                ici
+              </a>
+            </ListStyle>
+          </ModalList>
         </Modal>
       )}
 
@@ -39,9 +59,19 @@ const Profile = () => {
 
       <BlackBoard>
         <BlackBoardPostIt />
-        <BlackBoardText>
+        <BlackBoardText top={20}>
           Développement de l'application AKO en partenariat avec Koudetat/The
           Family.
+        </BlackBoardText>
+
+        <BlackBoardText top={70}>
+          Bootcamp à Le Reacteur de janvier à mars 2020 axé sur React/React
+          Native.
+        </BlackBoardText>
+
+        <BlackBoardText top={128}>
+          Infirmière à l'hôpital Robert Debré, j'y ai appris le travail en
+          équipe et la gestion du stress.
         </BlackBoardText>
       </BlackBoard>
 

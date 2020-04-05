@@ -58,9 +58,7 @@ const Experiences = ({ selectedTab }: ExperiencesProps) => {
             <ExperienceResume>
               Développement de l'application AKO, dans le cadre d'un Produit
               Minimum Viable, en partenariat avec Koudetat/The Family. <br />
-              Cette application a pour but le partage de connaissances. Le
-              principe je donne un cours, je gagne des points pour prendre un
-              cours dans le domaine que je souhaite.
+              Cette application a pour but le partage de connaissances.
             </ExperienceResume>
           </ExperienceStyled>
 

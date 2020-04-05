@@ -14,13 +14,6 @@ const GlobalStyle = createGlobalStyle`
     font-family: "Open Sans", sans-serif;
     margin: 0;
     background-color: #bce4ff;
-
-  }
-
-  ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
   }
 `;
 
