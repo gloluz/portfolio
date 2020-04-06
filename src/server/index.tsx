@@ -12,7 +12,7 @@ dotenv.config();
 import html from "./html";
 import App from "../client/App";
 
-const port = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 const app = express();
 
 app.use(express.static("dist"));
@@ -41,6 +41,6 @@ app.get("*", (req, res) => {
   res.send(html(body));
 });
 
-app.listen(port, () => {
-  console.log(`🚀  listening on url http://localhost:${port} !`);
+app.listen(PORT, () => {
+  console.log(`🚀  listening on url http://localhost:${PORT} !`);
 });
