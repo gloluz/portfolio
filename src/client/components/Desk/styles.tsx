@@ -110,6 +110,10 @@ export const DeskStyle = styled.div`
   @media screen and (max-width: 600px) {
     display: none;
   }
+
+  @media screen and (max-height: 380px) {
+    transform: scale(0.5);
+  }
 `;
 
 export const Laptop = styled.div`

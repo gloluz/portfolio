@@ -34,6 +34,10 @@ export const BlackBoard = styled.div`
     margin-right: -55px;
   }
 
+  @media screen and (max-height: 600px) {
+    display: none;
+  }
+
   &:after {
     content: "";
     display: block;

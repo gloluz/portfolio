@@ -6,7 +6,7 @@ import {
   LogoBurgerMenu,
   BurgerMenuContainer,
   MenuButton,
-  OverlayMenu
+  OverlayMenu,
 } from "./styles";
 
 export type ItemMenu = "skills" | "projects" | "education" | "profile";

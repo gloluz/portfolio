@@ -3,6 +3,7 @@ const { CheckerPlugin } = require("awesome-typescript-loader");
 
 module.exports = () => {
   const base = {
+    mode: process.env.NODE_ENV || "production",
     resolve: {
       extensions: [".ts", ".tsx", ".js", ".jsx", ".json"],
     },

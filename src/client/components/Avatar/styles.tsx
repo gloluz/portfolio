@@ -51,12 +51,15 @@ const skirtWidth = 16;
 
 const body = `
   radial-gradient(${widthBody}em ${widthBody}em at 50% 14em, ${r} 50%, ${t} 50%) 50% ${topPositionBody}em,
-  linear-gradient(${r}, ${r}) 50% ${topPositionBody +
-  14}em / ${widthBody}em 18em,
-  linear-gradient(-50deg, ${r} 45%, transparent 10%) calc(50% - ${skirtWidth /
-  2}em) ${topPositionBody + 14}em / 19em 19em,
-  linear-gradient(50deg, ${r} 45%, transparent 10%) calc(50% + ${skirtWidth /
-  2}em) ${topPositionBody + 14}em / 19em 19em
+  linear-gradient(${r}, ${r}) 50% ${
+  topPositionBody + 14
+}em / ${widthBody}em 18em,
+  linear-gradient(-50deg, ${r} 45%, transparent 10%) calc(50% - ${
+  skirtWidth / 2
+}em) ${topPositionBody + 14}em / 19em 19em,
+  linear-gradient(50deg, ${r} 45%, transparent 10%) calc(50% + ${
+  skirtWidth / 2
+}em) ${topPositionBody + 14}em / 19em 19em
 `;
 
 const foot = `
@@ -100,6 +103,10 @@ export const Character = styled.div`
   }
 
   @media screen and (max-width: 320px) {
+    transform: scale(0.45);
+  }
+
+  @media screen and (max-height: 380px) {
     transform: scale(0.45);
   }
 `;

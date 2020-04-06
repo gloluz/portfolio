@@ -46,6 +46,10 @@ export const BubbleStyles = styled.div<BubbleStylesProps>`
     left: 10px;
   }
 
+  @media screen and (max-height: 675px) and (min-width: 480px) {
+    display: none;
+  }
+
   &:after {
     content: "";
     height: 60px;
