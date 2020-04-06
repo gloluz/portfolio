@@ -25,13 +25,14 @@ const client = {
   target: "web",
   entry: path.resolve(__dirname, "src/client/index.tsx"),
   output: {
-    filename: "server.js",
+    filename: "[name].js",
     path: path.resolve(__dirname, "dist"),
   },
   externals: {
-    react: "react",
-    "react-dom": "reactDOM",
+    react: "React",
+    "react-dom": "ReactDOM",
     "react-router-dom": "ReactRouterDOM",
+    "styled-components": "styled",
   },
   module: {
     rules: [
@@ -57,7 +58,7 @@ const server = {
   target: "node",
   entry: path.resolve(__dirname, "src/server/index.tsx"),
   output: {
-    filename: "server.js",
+    filename: "[name].js",
     path: path.resolve(__dirname, "dist"),
   },
   module: {
