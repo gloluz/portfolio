@@ -7,13 +7,11 @@
     "node": "13.8.x"
   },
   "scripts": {
-    "start": "npm run build",
+    "start": "npm run build && node node dist/server.js",
+    "build": "cross-env NODE_ENV=production && webpack",
     "dev": "concurrently -n \"building,server\" \"npm run dev:build\" \"npm run dev:server\"",
     "dev:build": "webpack --watch",
-    "dev:server": "cross-env NODE_ENV=development && nodemon dist/server.js",
-    "prod:build": "cross-env NODE_ENV=production && webpack",
-    "prod:server": "node dist/server.js",
-    "build": "npm run prod:build && npm run prod:server"
+    "dev:server": "cross-env NODE_ENV=development && nodemon dist/server.js"
   },
   "dependencies": {
     "@types/spdy": "^3.4.4",
