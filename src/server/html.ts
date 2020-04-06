@@ -21,7 +21,6 @@ const html = (body: string) => {
     <script defer src="//cdnjs.cloudflare.com/ajax/libs/react/16.12.0/umd/react.production.min.js"></script>
     <script defer src="//cdnjs.cloudflare.com/ajax/libs/react-dom/16.12.0/umd/react-dom.production.min.js"></script>
     <script defer src="//cdnjs.cloudflare.com/ajax/libs/react-router-dom/5.1.2/react-router-dom.min.js"></script>
-    <script defer src="//cdnjs.cloudflare.com/ajax/libs/styled-components/5.0.1/styled-components.min.js"></script>
     <script defer src="/client.js"></script>
   </body>
 </html>`;

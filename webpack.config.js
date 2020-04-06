@@ -12,11 +12,6 @@ const commonLoaders = [
   {
     test: /\.tsx?$/,
     loader: "ts-loader",
-    options: {
-      onlyCompileBundledFiles: true,
-      transpileOnly: true,
-      happyPackMode: true,
-    },
   },
 ];
 
@@ -32,7 +27,6 @@ const client = {
     react: "React",
     "react-dom": "ReactDOM",
     "react-router-dom": "ReactRouterDOM",
-    "styled-components": "styled",
   },
   module: {
     rules: [
