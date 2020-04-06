@@ -25,7 +25,7 @@ const client = {
   target: "web",
   entry: path.resolve(__dirname, "src/client/index.tsx"),
   output: {
-    filename: "[name].js",
+    filename: "client.js",
     path: path.resolve(__dirname, "dist"),
   },
   externals: {
@@ -58,7 +58,7 @@ const server = {
   target: "node",
   entry: path.resolve(__dirname, "src/server/index.tsx"),
   output: {
-    filename: "[name].js",
+    filename: "server.js",
     path: path.resolve(__dirname, "dist"),
   },
   module: {
