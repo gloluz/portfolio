@@ -1,9 +1,9 @@
 import React from "react";
-import dotenv from "dotenv";
 import express from "express";
 import { renderToString } from "react-dom/server";
 import { ServerStyleSheet } from "styled-components";
 import { StaticRouter as Router } from "react-router-dom";
+import dotenv from "dotenv";
 
 import { Context } from "entities";
 
@@ -13,6 +13,7 @@ import html from "./html";
 import App from "../client/App";
 
 const PORT = process.env.PORT || 3000;
+
 const app = express();
 
 app.use(express.static("dist"));
@@ -42,5 +43,5 @@ app.get("*", (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`🚀  listening on url http://localhost:${PORT} !`);
+  console.log(`🚀 Listening on http://localhost:${PORT}`);
 });
