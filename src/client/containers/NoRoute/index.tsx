@@ -1,6 +1,5 @@
 import React from "react";
 import { Context } from "entities";
-import Flex from "../../components/Layout/Flex";
 import { Container } from "../../components/Layout";
 
 export interface NoRouteProps {
@@ -12,14 +11,9 @@ export default ({ staticContext = {} }: NoRouteProps) => {
 
   return (
     <Container>
-      <Flex
-        direction="column"
-        align="center"
-        justify="center"
-        style={{ fontSize: 20, fontWeight: "bold" }}
-      >
+      <div style={{ fontWeight: "bold", fontSize: 24, marginTop: 20 }}>
         Oops, rien sur cette page!
-      </Flex>
+      </div>
     </Container>
   );
 };

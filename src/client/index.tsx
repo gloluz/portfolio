@@ -1,7 +1,7 @@
 import React from "react";
 import { render } from "react-dom";
 import { BrowserRouter as Router } from "react-router-dom";
-import "core-js/modules/es.array.find";
+import "core-js";
 
 import App from "./App";
 

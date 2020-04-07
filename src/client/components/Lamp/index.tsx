@@ -21,7 +21,11 @@ export const Wire = styled.div`
     left: -2px;
   }
 
-  @media screen and (max-width: 768px) and (min-height: 650px) {
+  @media screen and (max-width: 768px) and (min-height: 600px) {
+    display: block;
+  }
+
+  @media screen and (min-width: 1500px) {
     display: block;
   }
 `;

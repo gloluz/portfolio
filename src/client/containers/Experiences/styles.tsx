@@ -23,6 +23,10 @@ export const BlackBoard = styled.div`
     border-right-width: 0;
     border-radius: 0;
   }
+
+  @media screen and (max-width: 830px) {
+    overflow: auto;
+  }
 `;
 
 export const Pin = styled.div`
