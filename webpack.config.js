@@ -36,7 +36,7 @@ const client = {
         use: ["style-loader", "css-loader"],
       },
       {
-        test: /\.(png|jpe?g|gif)$/i,
+        test: /\.(png|jpe?g|gif|pdf)$/i,
         use: [
           {
             loader: "file-loader",
@@ -64,6 +64,10 @@ const server = {
       },
       {
         test: /\.(png|jpe?g|gif)$/i,
+        use: ["ignore-loader"],
+      },
+      {
+        test: /\.pdf$/i,
         use: ["ignore-loader"],
       },
     ],

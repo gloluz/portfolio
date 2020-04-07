@@ -1,12 +1,14 @@
 import React from "react";
 
+import Resume from "../../assets/CV.pdf";
+
 import {
   Character,
   PaperSheet,
   Line,
   CV,
   DownloadContainer,
-  Arrow
+  Arrow,
 } from "./styles";
 
 const Avatar = () => {
@@ -20,7 +22,7 @@ const Avatar = () => {
           <Line width={80} />
           <Line width={60} />
           <Line width={100} />
-          <CV href="/CV.pdf" target="_blank">
+          <CV href={Resume} target="_blank">
             <DownloadContainer>
               <Arrow />
             </DownloadContainer>

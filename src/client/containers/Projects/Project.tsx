@@ -12,7 +12,7 @@ export interface ProjectProps {
 
 const Project = ({ websiteUrl, pictureSrc, title, subTitle }: ProjectProps) => {
   return (
-    <Link href={websiteUrl}>
+    <Link href={websiteUrl} target="_blank">
       <Picture src={pictureSrc} alt={title} />
       <Overlay>
         <PictureTitle>{title}</PictureTitle>

@@ -1,21 +1,17 @@
 # My Portfolio
 
-Work in progress !
+This is my portfolio. You can see it [here](https://www.glorialuzio.fr).
 
-This is my portfolio, picture was only made with css.
+## Installation
 
-Desktop version only.
+To install this project, just run :
 
-To do : finish this website and do the responsive.
+`yarn`
 
-## Read
-
-In the project directory, you can run:
-
-`yarn add`
-
-then
+## To run production server
 
 `yarn start`
 
-Or with this link: [https://gloria-luzio.netlify.com/]
+## To run development server
+
+`yarn dev`
