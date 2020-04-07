@@ -13,7 +13,7 @@ import {
   LinkLogo,
   ProfilContainer,
   ModalList,
-  ListStyle
+  ListStyle,
 } from "./styles";
 import Icon from "../../components/Icon";
 import Lamp from "../../components/Lamp";
@@ -53,26 +53,17 @@ const Profile = () => {
         position="left"
         scrollingTexts={[
           "Bonjour je m'appelle Gloria Luzio, bienvenue sur mon portfolio !",
-          "anciennement infirmière, je me suis reconvertie dans le domaine du développement web / mobile"
+          "anciennement infirmière, je me suis reconvertie dans le domaine du développement web / mobile",
         ]}
       />
 
       <BlackBoard>
         <BlackBoardPostIt />
-        <BlackBoardText top={20}>
-          Développement de l'application AKO en partenariat avec Koudetat/The
-          Family.
-        </BlackBoardText>
+        <BlackBoardText top={24} />
 
-        <BlackBoardText top={72}>
-          Bootcamp à Le Reacteur de janvier à mars 2020 axé sur React/React
-          Native.
-        </BlackBoardText>
+        <BlackBoardText top={76} />
 
-        <BlackBoardText top={128}>
-          Infirmière à l'hôpital Robert Debré, j'y ai appris le travail en
-          équipe et la gestion du stress.
-        </BlackBoardText>
+        <BlackBoardText top={132} />
       </BlackBoard>
 
       <Avatar />

@@ -1,7 +1,7 @@
 const path = require("path");
 
 const commons = {
-  mode: process.env.NODE_ENV || "production",
+  mode: "production",
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".jsx", ".json"],
   },

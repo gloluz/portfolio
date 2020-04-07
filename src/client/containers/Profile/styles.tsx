@@ -102,12 +102,33 @@ interface BlackBoardTextProps {
 
 export const BlackBoardText = styled.span<BlackBoardTextProps>`
   width: 100px;
+  height: 2px;
   position: absolute;
   top: ${({ top }) => top}px;
   right: 10%;
-  color: #fff;
-  font-family: cursive;
-  font-size: 6px;
+  background-color: #fff;
+
+  &:before {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 70px;
+    background-color: #fff;
+    top: 10px;
+    left: 0;
+    position: absolute;
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 40px;
+    background-color: #fff;
+    top: 20px;
+    left: 0;
+    position: absolute;
+  }
 `;
 
 export const Informations = styled.div`
