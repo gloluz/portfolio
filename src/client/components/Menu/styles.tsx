@@ -1,4 +1,5 @@
 import styled, { css, keyframes } from "styled-components";
+import { MEDIA } from "../../constant";
 
 export const BurgerMenuContainer = styled.div`
   display: none;
@@ -8,10 +9,13 @@ export const BurgerMenuContainer = styled.div`
   height: 90px;
   z-index: 101;
 
-  @media screen and (max-width: 768px) {
+  ${MEDIA.MAX.s} {
     display: flex;
     height: 54px;
     padding: 12px;
+    width: 50px;
+    position: fixed;
+    right: 0;
   }
 `;
 

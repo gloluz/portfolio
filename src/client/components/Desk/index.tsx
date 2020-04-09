@@ -1,4 +1,5 @@
 import React from "react";
+
 import {
   DeskStyle,
   Laptop,
@@ -9,7 +10,7 @@ import {
   OrangePostIt,
   BluePostIt,
   PinkPostIt,
-  Pen
+  Pen,
 } from "./styles";
 
 const Desk = () => {

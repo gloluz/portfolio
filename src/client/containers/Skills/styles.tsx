@@ -1,4 +1,5 @@
 import styled, { keyframes, css } from "styled-components";
+import { MEDIA } from "../../constant";
 
 export const deskAnimation = keyframes`
   0% {
@@ -21,12 +22,12 @@ export const SkillsContainer = styled.div`
   position: relative;
   overflow: auto;
 
-  @media screen and (max-width: 768px) {
+  ${MEDIA.MAX.s} {
     height: calc(100vh - 102px);
     padding: 12px;
   }
 
-  @media screen and (max-width: 600px) {
+  ${MEDIA.MAX.xs} {
     height: calc(100vh - 102px);
   }
 `;
@@ -51,7 +52,7 @@ export const Pen = styled.div<PenProps>`
   transition: 0.3s all ease;
   z-index: 1;
 
-  @media screen and (max-width: 768px) {
+  ${MEDIA.MAX.s} {
     display: none;
   }
 

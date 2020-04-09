@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { MEDIA } from "../../constant";
 
 export const Container = styled.div`
   display: flex;
@@ -19,7 +20,7 @@ export const MenuContainer = styled.div`
   z-index: 100;
   height: 90px;
 
-  @media screen and (max-width: 768px) {
+  ${MEDIA.MAX.s} {
     display: none;
   }
 `;
@@ -31,7 +32,7 @@ export const PostItContainer = styled.div`
   flex-wrap: wrap;
   width: 800px;
 
-  @media screen and (max-width: 600px) {
+  ${MEDIA.MAX.xs} {
     width: 100%;
   }
 `;
@@ -70,7 +71,7 @@ export const ColumnProject = styled.div`
   flex-direction: column;
   align-items: center;
 
-  @media screen and (max-width: 768px) {
+  ${MEDIA.MAX.s} {
     width: 100%;
   }
 `;

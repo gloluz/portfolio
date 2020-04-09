@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Bubble, { LeftRight } from "../Bubble";
 import styled, { keyframes } from "styled-components";
+import { MEDIA } from "../../constant";
 
 export interface ScrollingTextBubbleProps {
   scrollingTexts: string[];
@@ -26,7 +27,7 @@ const ArrowBottom = styled.div`
   width: 0;
   margin-top: 10px;
 
-  @media screen and (max-width: 320px) {
+  ${MEDIA.MAX.xxs} {
     margin-top: 26px;
   }
 `;
@@ -45,7 +46,7 @@ const ButtonArrow = styled.button`
 
 const ScrollingTextBubble = ({
   scrollingTexts,
-  position
+  position,
 }: ScrollingTextBubbleProps) => {
   const [nbLettersDisplayed, setNbLettersDisplayed] = useState(1);
   const [currentText, setCurrentText] = useState(0);

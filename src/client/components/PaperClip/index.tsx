@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { MEDIA } from "../../constant";
 
 export const StyledPaperClip = styled.div`
   background: transparent;
@@ -30,7 +31,7 @@ export const StyledPaperClip = styled.div`
     border-bottom-left-radius: 0;
   }
 
-  @media screen and (max-width: 768px) {
+  ${MEDIA.MAX.s} {
     left: 50%;
   }
 `;

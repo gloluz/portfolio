@@ -7,6 +7,7 @@ const client = {
     port: 3000,
     contentBase: path.join(__dirname, "dev"),
     historyApiFallback: true,
+    host: "0.0.0.0",
   },
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".jsx", ".json"],

@@ -1,5 +1,6 @@
 import styled, { keyframes } from "styled-components";
 import { LeftRight } from ".";
+import { MEDIA } from "../../constant";
 
 interface BubbleStylesProps {
   position: LeftRight;
@@ -24,25 +25,29 @@ export const BubbleStyles = styled.div<BubbleStylesProps>`
   z-index: 2;
   animation: 0.4s ${bubbleAppear} cubic-bezier(0.5, 0.9, 0.6, 1.5);
 
-  @media screen and (max-width: 1024px) {
+  ${MEDIA.MAX.m} {
     height: 150px;
     width: 280px;
     bottom: 380px;
   }
 
-  @media screen and (max-width: 768px) {
+  ${MEDIA.MIN.l} {
+    bottom: 500px;
+  }
+
+  ${MEDIA.MIN.xl} {
+    bottom: 600px;
+  }
+
+  ${MEDIA.MAX.s} {
     bottom: 300px;
     left: 10px;
   }
 
-  @media screen and (max-width: 600px) {
-    left: 40px;
-  }
-
-  @media screen and (max-width: 320px) {
+  ${MEDIA.MAX.xxs} {
     height: 130px;
     width: 220px;
-    bottom: 250px;
+    bottom: 270px;
     left: 10px;
   }
 
@@ -65,7 +70,7 @@ export const BubbleStyles = styled.div<BubbleStylesProps>`
       ),
       radial-gradient(100% 100% at 100% 0%, #fafafa 99%, transparent 99%);
 
-    @media screen and (max-width: 320px) {
+    ${MEDIA.MAX.xxs} {
       transform: scale(0.5);
     }
   }
@@ -99,11 +104,11 @@ export const Text = styled.div`
   text-transform: uppercase;
   padding: 20px 35px;
 
-  @media screen and (max-width: 1024px) {
+  ${MEDIA.MAX.m} {
     font-size: 14px;
   }
 
-  @media screen and (max-width: 320px) {
+  ${MEDIA.MAX.xxs} {
     font-size: 12px;
   }
 `;

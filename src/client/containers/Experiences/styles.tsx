@@ -1,4 +1,5 @@
 import styled, { keyframes } from "styled-components";
+import { MEDIA } from "../../constant";
 
 export const blackboardAnimation = keyframes`
   0% {
@@ -18,7 +19,7 @@ export const BlackBoard = styled.div`
   position: relative;
   animation: ${blackboardAnimation} 0.4s ease;
 
-  @media screen and (max-width: 768px) {
+  ${MEDIA.MAX.s} {
     border-left-width: 0;
     border-right-width: 0;
     border-radius: 0;
@@ -45,7 +46,7 @@ export const Pin = styled.div`
     linear-gradient(25deg, transparent 42%, grey 45%, grey 55%, transparent 58%)
       no-repeat 30px 18px / 15px 15px;
 
-  @media screen and (max-width: 600px) {
+  ${MEDIA.MAX.xs} {
     display: none;
   }
 `;
@@ -56,7 +57,7 @@ export const ExperienceStyled = styled.div`
   padding-bottom: 60px;
   position: relative;
 
-  @media screen and (max-width: 600px) {
+  ${MEDIA.MAX.xs} {
     flex-direction: column;
   }
 `;
@@ -82,13 +83,13 @@ export const ExperienceTitle = styled.h2<EducationTitleProps>`
   position: relative;
   z-index: 1;
 
-  @media screen and (max-width: 768px) {
+  ${MEDIA.MAX.s} {
     font-size: 18px;
     margin: 40px;
     padding: 20px;
   }
 
-  @media screen and (max-width: 600px) {
+  ${MEDIA.MAX.xs} {
     width: 70%;
   }
 `;
@@ -102,12 +103,12 @@ export const ExperienceResume = styled.p`
   padding: 20px;
   font-family: "Vibur", cursive;
 
-  @media screen and (max-width: 768px) {
+  ${MEDIA.MAX.s} {
     font-size: 22px;
     padding: 0;
   }
 
-  @media screen and (max-width: 600px) {
+  ${MEDIA.MAX.xs} {
     width: 70%;
     margin-top: 0;
   }
@@ -125,7 +126,7 @@ export const HorizontalBorder = styled.div`
   bottom: 0;
   left: calc(30% - 20px);
 
-  @media screen and (max-width: 600px) {
+  ${MEDIA.MAX.xs} {
     height: 6px;
     width: 100%;
     left: 0;

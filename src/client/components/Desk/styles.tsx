@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { MEDIA } from "../../constant";
 
 const o = "orange";
 const orange = "#EF8533";
@@ -93,22 +94,33 @@ export const DeskStyle = styled.div`
   font-size: 10px;
   height: 25em;
   width: 80em;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   right: 0;
   transform-origin: bottom right;
   transform: scale(0.8);
 
-  @media screen and (max-width: 1024px) {
+  ${MEDIA.MAX.xs} {
+    display: none;
+  }
+
+  ${MEDIA.MAX.s} {
+    transform: scale(0.5);
+  }
+  ${MEDIA.MAX.m} {
     transform: scale(0.6);
   }
 
-  @media screen and (max-width: 768px) {
-    transform: scale(0.5);
+  ${MEDIA.MIN.l} {
+    transform: scale(0.9);
   }
 
-  @media screen and (max-width: 600px) {
-    display: none;
+  ${MEDIA.MIN.xl} {
+    transform: scale(1);
+  }
+
+  ${MEDIA.MIN.xxl} {
+    transform: scale(1.1);
   }
 
   @media screen and (max-height: 380px) {

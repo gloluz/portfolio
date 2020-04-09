@@ -1,6 +1,7 @@
 import React from "react";
 import styled, { css } from "styled-components";
 import Icon from "../Icon";
+import { MEDIA } from "../../constant";
 
 interface PostItSkillProps {
   show: boolean;
@@ -22,7 +23,7 @@ const PostItSkill = styled.div<PostItSkillProps>`
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
   transform-origin: right;
 
-  @media screen and (max-width: 600px) {
+  ${MEDIA.MAX.xs} {
     width: 150px;
     height: 150px;
     margin: 0;
@@ -33,7 +34,7 @@ const PostItSkill = styled.div<PostItSkillProps>`
     }
   }
 
-  @media screen and (max-width: 320px) {
+  ${MEDIA.MAX.xxs} {
     width: 120px;
     height: 120px;
 
@@ -46,7 +47,7 @@ const PostItSkill = styled.div<PostItSkillProps>`
   &:nth-child(3n) {
     margin-top: 20px;
 
-    @media screen and (max-width: 320px) {
+    ${MEDIA.MAX.xxs} {
       margin-top: 10px;
     }
   }
@@ -77,11 +78,11 @@ const TextSkill = styled.p`
   text-align: center;
   margin: 20px 0 0 0;
 
-  @media screen and (max-width: 600px) {
+  ${MEDIA.MAX.xs} {
     font-size: 16px;
   }
 
-  @media screen and (max-width: 320px) {
+  ${MEDIA.MAX.xxs} {
     margin: 12px 0 0 0;
   }
 `;
@@ -99,7 +100,7 @@ const IconSkills = ({
   show,
   icon,
   skillTitle,
-  rotate
+  rotate,
 }: IconSkillsProps) => {
   return (
     <PostItSkill backgroundColor={backgroundColor} show={show} rotate={rotate}>

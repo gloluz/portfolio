@@ -1,14 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 export const Wire = styled.div`
   width: 4px;
-  background-color: #000;
+  height: 100%;
   position: absolute;
-  top: 0;
-  bottom: 600px;
-  left: 50%;
-  display: none;
+  background-color: #000;
 
   &:before {
     content: "";
@@ -20,32 +17,30 @@ export const Wire = styled.div`
     bottom: 0;
     left: -2px;
   }
-
-  @media screen and (max-width: 768px) and (min-height: 600px) {
-    display: block;
-  }
-
-  @media screen and (min-width: 1500px) {
-    display: block;
-  }
 `;
 
 export const Halo = styled.div`
   height: 200px;
   width: 200px;
   border-radius: 50%;
-  background: radial-gradient(#ffffff, #bce4fd 68%);
+  background: radial-gradient(#ffffff, rgba(255, 255, 255, 0) 68%);
   position: absolute;
   left: -98px;
   bottom: -140px;
   z-index: -1;
 `;
 
-export const Bulb = styled.div`
+interface BulbProps {
+  isOn: boolean;
+}
+
+export const Bulb = styled.div<BulbProps>`
+  cursor: pointer;
   height: 60px;
   width: 60px;
   border-radius: 50%;
-  background-color: #fffdb9;
+  background-color: ${({ isOn }) =>
+    isOn ? "#fffdb9" : "rgba(255, 255, 255, 0.3)"};
   position: absolute;
   left: -28px;
   bottom: -60px;
@@ -54,7 +49,7 @@ export const Bulb = styled.div`
   &:before {
     content: "";
     display: block;
-    background-color: #ffd891;
+    background-color: ${({ isOn }) => (isOn ? "#ffd891" : "#777")};
     width: 4px;
     height: 20px;
     position: absolute;
@@ -65,7 +60,7 @@ export const Bulb = styled.div`
   &:after {
     content: "";
     display: block;
-    border: 3px solid #ffd891;
+    border: 3px solid ${({ isOn }) => (isOn ? "#ffd891" : "#777")};
     box-sizing: border-box;
     width: 12px;
     height: 12px;
@@ -77,10 +72,11 @@ export const Bulb = styled.div`
 `;
 
 const Lamp = () => {
+  const [lightOn, setLightOn] = useState(true);
   return (
     <Wire>
-      <Halo />
-      <Bulb />
+      {lightOn && <Halo />}
+      <Bulb onClick={() => setLightOn(!lightOn)} isOn={lightOn} />
     </Wire>
   );
 };

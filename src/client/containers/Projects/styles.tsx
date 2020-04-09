@@ -1,5 +1,6 @@
 import styled, { keyframes, css } from "styled-components";
 import { Overlay } from "../../components/Layout";
+import { MEDIA } from "../../constant";
 
 export const PictureTitle = styled.span`
   font-size: 22px;
@@ -11,7 +12,7 @@ export const PictureTitle = styled.span`
   margin-bottom: 20px;
   transform: translateY(200px);
 
-  @media screen and (max-width: 768px) {
+  ${MEDIA.MAX.s} {
     font-size: 18px;
     margin-bottom: 10px;
   }
@@ -24,7 +25,7 @@ export const PictureSubTite = styled.span`
   line-height: 22px;
   transform: translateY(200px);
 
-  @media screen and (max-width: 768px) {
+  ${MEDIA.MAX.s} {
     font-size: 16px;
     line-height: 16px;
   }
@@ -36,12 +37,12 @@ export const Picture = styled.img`
   object-fit: cover;
   transition: 0.3s all ease !important;
 
-  @media screen and (max-width: 768px) {
+  ${MEDIA.MAX.s} {
     width: 615px;
     height: 385px;
   }
 
-  @media screen and (max-width: 600px) {
+  ${MEDIA.MAX.xs} {
     width: 100%;
     height: 228px;
   }
@@ -82,7 +83,7 @@ export const Computer = styled.div`
   animation: ${computerAnimation} ease 0.4s;
   position: relative;
 
-  @media screen and (max-width: 768px) {
+  ${MEDIA.MAX.s} {
     height: calc(100vh - 74px);
   }
 `;
@@ -100,7 +101,7 @@ export const Screen = styled.div`
   width: 100%;
   background-color: #f4f4f4;
 
-  @media screen and (max-width: 768px) {
+  ${MEDIA.MAX.s} {
     border-right-width: 0;
     border-left-width: 0;
     border-radius: 0;
@@ -202,7 +203,7 @@ export const ProjectContainer = styled.div`
   display: flex;
   justify-content: space-between;
 
-  @media screen and (max-width: 768px) {
+  ${MEDIA.MAX.s} {
     flex-direction: column;
   }
 `;

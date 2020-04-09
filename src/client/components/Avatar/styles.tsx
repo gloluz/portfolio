@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { MEDIA } from "../../constant";
 
 const r = "#E32934";
 const br = "#442525";
@@ -51,15 +52,12 @@ const skirtWidth = 16;
 
 const body = `
   radial-gradient(${widthBody}em ${widthBody}em at 50% 14em, ${r} 50%, ${t} 50%) 50% ${topPositionBody}em,
-  linear-gradient(${r}, ${r}) 50% ${
-  topPositionBody + 14
-}em / ${widthBody}em 18em,
-  linear-gradient(-50deg, ${r} 45%, transparent 10%) calc(50% - ${
-  skirtWidth / 2
-}em) ${topPositionBody + 14}em / 19em 19em,
-  linear-gradient(50deg, ${r} 45%, transparent 10%) calc(50% + ${
-  skirtWidth / 2
-}em) ${topPositionBody + 14}em / 19em 19em
+  linear-gradient(${r}, ${r}) 50% ${topPositionBody +
+  14}em / ${widthBody}em 18em,
+  linear-gradient(-50deg, ${r} 45%, transparent 10%) calc(50% - ${skirtWidth /
+  2}em) ${topPositionBody + 14}em / 19em 19em,
+  linear-gradient(50deg, ${r} 45%, transparent 10%) calc(50% + ${skirtWidth /
+  2}em) ${topPositionBody + 14}em / 19em 19em
 `;
 
 const foot = `
@@ -82,32 +80,40 @@ export const Character = styled.div`
   transition: all 0.3s ease;
   transform-origin: bottom left;
   z-index: 4;
-  position: fixed;
+  position: absolute;
   bottom: 0;
   left: 0;
   margin: 10px -10px 0 70px;
   transform: scale(0.7);
 
-  @media screen and (max-width: 1024px) {
+  ${MEDIA.MAX.m} {
     transform: scale(0.6);
   }
 
-  @media screen and (max-width: 768px) {
+  ${MEDIA.MAX.s} {
     left: 20px;
     transform: scale(0.5);
     margin: 0 0 0 12px;
   }
 
-  @media screen and (max-width: 600px) {
+  ${MEDIA.MAX.xs} {
     left: 12px;
   }
 
-  @media screen and (max-width: 320px) {
-    transform: scale(0.45);
+  ${MEDIA.MIN.l} {
+    transform: scale(0.8);
   }
 
-  @media screen and (max-height: 380px) {
-    transform: scale(0.45);
+  ${MEDIA.MIN.xl} {
+    transform: scale(0.9);
+  }
+
+  ${MEDIA.MIN.xxl} {
+    transform: scale(1);
+  }
+
+  @media screen and (max-height: 450px) {
+    transform: scale(0.5);
   }
 `;
 
@@ -126,7 +132,7 @@ export const PaperSheet = styled.div`
   left: 0px;
   transform: rotate(-10deg);
 
-  @media screen and (max-width: 1024px) {
+  ${MEDIA.MAX.m} {
     transform: scale(1.1) rotate(-10deg);
     bottom: 28%;
   }
@@ -204,6 +210,8 @@ export const CV = styled.a`
   cursor: pointer;
   transition: 0.3s all ease;
   text-decoration: none;
+  position: relative;
+  z-index: 20;
 
   &:hover {
     color: #fff;

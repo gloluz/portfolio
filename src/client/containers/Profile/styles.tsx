@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { MEDIA } from "../../constant";
 
 export const ProfilContainer = styled.div`
   position: fixed;
@@ -20,18 +21,31 @@ export const BlackBoard = styled.div`
   bottom: 300px;
   left: 40vw;
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
     left: 60vw;
     bottom: 240px;
     transform: scale(0.7);
   }
 
-  @media screen and (max-width: 768px) {
+  ${MEDIA.MAX.s} {
     transform: scale(0.6);
     bottom: 200px;
     left: 60vw;
     right: 0px;
     margin-right: -55px;
+  }
+
+  ${MEDIA.MIN.l} {
+    transform: scale(1.1);
+  }
+
+  ${MEDIA.MIN.xl} {
+    transform: scale(1.2);
+    left: 45vw;
+  }
+
+  ${MEDIA.MIN.xxl} {
+    transform: scale(1.3);
   }
 
   @media screen and (max-height: 600px) {
