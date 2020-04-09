@@ -22,31 +22,45 @@ import { MEDIA } from "../../constant";
 import styled from "styled-components";
 
 const calc = (x: number, y: number) => {
+  if (typeof window === "undefined") {
+    return [0, 0];
+  }
+
   return [x - window.innerWidth / 2, y - window.innerHeight / 2];
 };
 
 const lampTrans = (...[x, y]: any) => {
-  if (window.innerWidth <= 768) return `translate3d(0,0,0)`;
+  if (typeof window === "undefined" || window.innerWidth <= 768)
+    return `translate3d(0,0,0)`;
+
   return `translate3d(${x / 12}px,${y / 12 - 60}px,0)`;
 };
 
 const bubbleTrans = (...[x, y]: any) => {
-  if (window.innerWidth <= 768) return `translate3d(0,0,0)`;
+  if (typeof window === "undefined" || window.innerWidth <= 768)
+    return `translate3d(0,0,0)`;
+
   return `translate3d(${x / 50}px,${y / 50}px,0)`;
 };
 
 const avatarTrans = (...[x, y]: any) => {
-  if (window.innerWidth <= 768) return `translate3d(0,0,0)`;
+  if (typeof window === "undefined" || window.innerWidth <= 768)
+    return `translate3d(0,0,0)`;
+
   return `translate3d(${x / 15 + 10}px,${y / 15 + 25}px,0)`;
 };
 
 const blackBoardTrans = (...[x, y]: any) => {
-  if (window.innerWidth <= 768) return `translate3d(0,0,0)`;
+  if (typeof window === "undefined" || window.innerWidth <= 768)
+    return `translate3d(0,0,0)`;
+
   return `translate3d(${x / 30}px,${y / 30}px,0)`;
 };
 
 const deskTrans = (...[x, y]: any) => {
-  if (window.innerWidth <= 768) return `translate3d(0,0,0)`;
+  if (typeof window === "undefined" || window.innerWidth <= 768)
+    return `translate3d(0,0,0)`;
+
   return `translate3d(${x / 20 + 50}px,${y / 20 + 20}px,0)`;
 };
 
