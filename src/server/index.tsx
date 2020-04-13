@@ -22,9 +22,12 @@ const app = express();
 /**
  * Handle https redirection
  */
-if (SCHEME === "https") {
-  app.use(sslRedirect());
-}
+app.use((req, res, next) => {
+  if (req.headers["x-forwarded-proto"] !== SCHEME) {
+    res.redirect(301, SCHEME + "://" + req.headers.host + req.url);
+  }
+  next();
+});
 
 app.use(express.static("dist"));
 
