@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 
 import { PostItContainer } from "../../components/Layout";
 import { SkillsContainer, Pen } from "./styles";
 import IconSkills from "../../components/Layout/IconSkills";
+import { SITE_TITLE } from "../../constant";
 
 const Skills = () => {
   const [icon1, setIcon1] = useState<boolean>(false);
@@ -35,6 +37,24 @@ const Skills = () => {
 
   return (
     <SkillsContainer>
+      <Helmet>
+        <title>Compétences - {SITE_TITLE}</title>
+        <meta name="description" content="Portfolio de Gloria Luzio" />
+
+        <meta
+          property="og:title"
+          content="Compétences | Gloria Luzio - développeuse Javascript"
+        />
+        <meta
+          property="og:description"
+          content="Découvrez mes différentes compétences dans le développement web et mobile."
+        />
+        <meta
+          property="og:url"
+          content="https://www.glorialuzio.fr/competences"
+        />
+      </Helmet>
+
       <Pen show={showPen} />
       <PostItContainer>
         <IconSkills

@@ -3,16 +3,16 @@ const path = require("path");
 const commons = {
   mode: "production",
   resolve: {
-    extensions: [".ts", ".tsx", ".js", ".jsx", ".json"],
+    extensions: [".ts", ".tsx", ".js", ".jsx", ".json"]
   },
-  devtool: "source-map",
+  devtool: "source-map"
 };
 
 const commonLoaders = [
   {
     test: /\.tsx?$/,
-    loader: "ts-loader",
-  },
+    loader: "ts-loader"
+  }
 ];
 
 const client = {
@@ -21,30 +21,30 @@ const client = {
   entry: path.resolve(__dirname, "src/client/index.tsx"),
   output: {
     filename: "client.js",
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "dist")
   },
   externals: {
     react: "React",
     "react-dom": "ReactDOM",
-    "react-router-dom": "ReactRouterDOM",
+    "react-router-dom": "ReactRouterDOM"
   },
   module: {
     rules: [
       ...commonLoaders,
       {
         test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
+        use: ["style-loader", "css-loader"]
       },
       {
         test: /\.(png|jpe?g|gif|pdf)$/i,
         use: [
           {
-            loader: "file-loader",
-          },
-        ],
-      },
-    ],
-  },
+            loader: "file-loader"
+          }
+        ]
+      }
+    ]
+  }
 };
 
 const server = {
@@ -53,25 +53,25 @@ const server = {
   entry: path.resolve(__dirname, "src/server/index.tsx"),
   output: {
     filename: "server.js",
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "dist")
   },
   module: {
     rules: [
       ...commonLoaders,
       {
         test: /\.css$/i,
-        use: ["ignore-loader"],
+        use: ["ignore-loader"]
       },
       {
         test: /\.(png|jpe?g|gif)$/i,
-        use: ["ignore-loader"],
+        use: ["ignore-loader"]
       },
       {
         test: /\.pdf$/i,
-        use: ["ignore-loader"],
-      },
-    ],
-  },
+        use: ["ignore-loader"]
+      }
+    ]
+  }
 };
 
 module.exports = [client, server];

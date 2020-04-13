@@ -1,4 +1,5 @@
 import React, { useState, CSSProperties } from "react";
+import { Helmet } from "react-helmet";
 
 import ScrollingTextBubble from "../../components/ScrollingTextBubble";
 import Avatar from "../../components/Avatar";
@@ -13,12 +14,12 @@ import {
   LinkLogo,
   ProfilContainer,
   ModalList,
-  ListStyle,
+  ListStyle
 } from "./styles";
 import Icon from "../../components/Icon";
 import Lamp from "../../components/Lamp";
 import { useSpring, animated } from "react-spring";
-import { MEDIA } from "../../constant";
+import { MEDIA, SITE_TITLE } from "../../constant";
 import styled from "styled-components";
 
 const calc = (x: number, y: number) => {
@@ -91,7 +92,7 @@ const Profile = () => {
 
   const [props, set] = useSpring<{ xy: number[] }>(() => ({
     xy: [0, 0],
-    config: { mass: 5, tension: 300, friction: 100 },
+    config: { mass: 5, tension: 300, friction: 100 }
   }));
 
   const style: CSSProperties = {
@@ -100,102 +101,119 @@ const Profile = () => {
     bottom: 0,
     right: 0,
     left: 0,
-    zIndex: 1,
+    zIndex: 1
   };
 
   return (
-    <ProfilContainer
-      onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}
-    >
-      <animated.div
-        style={{ ...style, transform: props.xy.interpolate(blackBoardTrans) }}
-      >
-        <BlackBoard>
-          <BlackBoardPostIt />
-          <BlackBoardText top={24} />
-          <BlackBoardText top={76} />
-          <BlackBoardText top={132} />
-        </BlackBoard>
-      </animated.div>
+    <>
+      <Helmet>
+        <title>Profil - {SITE_TITLE}</title>
+        <meta name="description" content="Portfolio de Gloria Luzio" />
 
-      <animated.div
-        style={{ ...style, transform: props.xy.interpolate(deskTrans) }}
-      >
-        <Desk />
-      </animated.div>
-
-      <animated.div
-        style={{ ...style, transform: props.xy.interpolate(bubbleTrans) }}
-      >
-        <ScrollingTextBubble
-          position="left"
-          scrollingTexts={[
-            "Bonjour je m'appelle Gloria Luzio, bienvenue sur mon portfolio !",
-            "anciennement infirmière, je me suis reconvertie dans le domaine du développement web / mobile",
-          ]}
+        <meta
+          property="og:title"
+          content="Profil | Gloria Luzio - développeuse Javascript"
         />
-      </animated.div>
+        <meta
+          property="og:description"
+          content="Découvrez mon profil à travers mon portfolio."
+        />
+        <meta property="og:url" content="https://www.glorialuzio.fr" />
+      </Helmet>
 
-      <animated.div
-        style={{
-          ...style,
-          top: undefined,
-          transform: props.xy.interpolate(avatarTrans),
-        }}
+      <ProfilContainer
+        onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}
       >
-        <Avatar />
-      </animated.div>
+        <animated.div
+          style={{ ...style, transform: props.xy.interpolate(blackBoardTrans) }}
+        >
+          <BlackBoard>
+            <BlackBoardPostIt />
+            <BlackBoardText top={24} />
+            <BlackBoardText top={76} />
+            <BlackBoardText top={132} />
+          </BlackBoard>
+        </animated.div>
 
-      <LampContainer>
+        <animated.div
+          style={{ ...style, transform: props.xy.interpolate(deskTrans) }}
+        >
+          <Desk />
+        </animated.div>
+
+        <animated.div
+          style={{ ...style, transform: props.xy.interpolate(bubbleTrans) }}
+        >
+          <ScrollingTextBubble
+            position="left"
+            scrollingTexts={[
+              "Bonjour je m'appelle Gloria Luzio, bienvenue sur mon portfolio !",
+              "anciennement infirmière, je me suis reconvertie dans le domaine du développement web / mobile"
+            ]}
+          />
+        </animated.div>
+
         <animated.div
           style={{
-            flex: 1,
-            transform: props.xy.interpolate(lampTrans),
+            ...style,
+            top: undefined,
+            transform: props.xy.interpolate(avatarTrans)
           }}
         >
-          <Lamp />
+          <Avatar />
         </animated.div>
-      </LampContainer>
 
-      <SocialNetworkContainer>
-        <LinkLogo
-          href="https://www.linkedin.com/in/gloria-luzio-a7b05819b/"
-          target="_blanck"
-        >
-          <Icon size={24} icon="linkedin2" />
-        </LinkLogo>
+        <LampContainer>
+          <animated.div
+            style={{
+              flex: 1,
+              transform: props.xy.interpolate(lampTrans)
+            }}
+          >
+            <Lamp />
+          </animated.div>
+        </LampContainer>
 
-        <LinkLogo href="https://github.com/gloluz" target="_blanck">
-          <Icon size={24} icon="github" />
-        </LinkLogo>
-      </SocialNetworkContainer>
+        <SocialNetworkContainer>
+          <LinkLogo
+            href="https://www.linkedin.com/in/gloria-luzio-a7b05819b/"
+            target="_blanck"
+          >
+            <Icon size={24} icon="linkedin2" />
+          </LinkLogo>
 
-      {showModal && (
-        <Modal onClose={() => setShowModal(false)}>
-          <div>Détails Techniques</div>
+          <LinkLogo href="https://github.com/gloluz" target="_blanck">
+            <Icon size={24} icon="github" />
+          </LinkLogo>
+        </SocialNetworkContainer>
 
-          <ModalList>
-            <ListStyle>
-              Excepté les logos et les miniatures des projets, aucune image n'a
-              été utilisée. Les illustrations sont développées uniquement en
-              CSS.
-            </ListStyle>
+        {showModal && (
+          <Modal onClose={() => setShowModal(false)}>
+            <div>Détails Techniques</div>
 
-            <ListStyle>
-              Ce portfolio est développé en React et Typescript.
-            </ListStyle>
+            <ModalList>
+              <ListStyle>
+                Excepté les logos et les miniatures des projets, aucune image
+                n'a été utilisée. Les illustrations sont développées uniquement
+                en CSS.
+              </ListStyle>
 
-            <ListStyle>
-              Vous pouvez consulter le code source{" "}
-              <a href="https://github.com/gloluz/portfolio" target="_blank">
-                ici
-              </a>
-            </ListStyle>
-          </ModalList>
-        </Modal>
-      )}
-      <Informations onClick={() => setShowModal(true)}>?</Informations>
-    </ProfilContainer>
+              <ListStyle>
+                Ce portfolio est développé en React et Typescript.
+              </ListStyle>
+
+              <ListStyle>
+                Vous pouvez consulter le code source{" "}
+                <a href="https://github.com/gloluz/portfolio" target="_blank">
+                  ici
+                </a>
+              </ListStyle>
+            </ModalList>
+          </Modal>
+        )}
+        <Informations onClick={() => setShowModal(true)}>?</Informations>
+      </ProfilContainer>
+    </>
   );
 };
 

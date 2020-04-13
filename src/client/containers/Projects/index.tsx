@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Helmet } from "react-helmet";
 
 import TypeForm from "../../assets/Pictures/typeform.jpg";
 import Deliveroo from "../../assets/Pictures/deliveroo.jpg";
@@ -16,8 +17,9 @@ import {
   Window,
   GreenButton,
   Scrollable,
-  ProjectContainer,
+  ProjectContainer
 } from "./styles";
+import { SITE_TITLE } from "../../constant";
 
 const Projects = () => {
   const [showWindow, setShowWindow] = useState(false);
@@ -35,6 +37,21 @@ const Projects = () => {
 
   return (
     <BoxedContainer>
+      <Helmet>
+        <title>Projets - {SITE_TITLE}</title>
+        <meta name="description" content="Portfolio de Gloria Luzio" />
+
+        <meta
+          property="og:title"
+          content="Projets | Gloria Luzio - développeuse Javascript"
+        />
+        <meta
+          property="og:description"
+          content="Découvrez les différents projets que j'ai pu réaliser."
+        />
+        <meta property="og:url" content="https://www.glorialuzio.fr/projets" />
+      </Helmet>
+
       <Computer>
         <Camera />
         <Screen>

@@ -4,6 +4,7 @@ import { renderToString } from "react-dom/server";
 import { ServerStyleSheet } from "styled-components";
 import { StaticRouter as Router } from "react-router-dom";
 import dotenv from "dotenv";
+import { Helmet } from "react-helmet";
 
 import { Context } from "entities";
 
@@ -31,6 +32,8 @@ app.get("*", (req, res) => {
       )
     ) + sheet.getStyleTags();
 
+  const helmet = Helmet.renderStatic();
+
   if (context.url) {
     res.writeHead(302, { Location: context.url });
   }
@@ -39,7 +42,7 @@ app.get("*", (req, res) => {
     res.status(context.status);
   }
 
-  res.send(html(body));
+  res.send(html(helmet, body));
 });
 
 app.listen(PORT, () => {

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Helmet } from "react-helmet";
 
 import PaperClip from "../../components/PaperClip";
 import { BoxedContainer } from "../../components/Layout";
@@ -10,6 +11,7 @@ import {
   ExperienceResume,
   HorizontalBorder
 } from "./styles";
+import { SITE_TITLE } from "../../constant";
 
 const Experiences = () => {
   const [rotate, setRotate] = useState(-10);
@@ -34,6 +36,24 @@ const Experiences = () => {
 
   return (
     <BoxedContainer>
+      <Helmet>
+        <title>Expériences - {SITE_TITLE}</title>
+        <meta name="description" content="Portfolio de Gloria Luzio" />
+
+        <meta
+          property="og:title"
+          content="Expériences | Gloria Luzio - développeuse Javascript"
+        />
+        <meta
+          property="og:description"
+          content="Découvrez mon parcours à travers cette page."
+        />
+        <meta
+          property="og:url"
+          content="https://www.glorialuzio.fr/experiences"
+        />
+      </Helmet>
+
       <BlackBoard>
         <Pin />
 

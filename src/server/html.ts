@@ -1,19 +1,14 @@
-const html = (body: string) => {
+import { HelmetData } from "react-helmet";
+
+const html = (helmet: HelmetData, body: string) => {
   return `<!DOCTYPE html>
-<html lang="en">
+<html lang="en" ${helmet.htmlAttributes.toString()}>
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="to do" />
-
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:400,800|Vibur&display=swap"
-      rel="stylesheet"
-    />
-
-    <title>Gloria LUZIO</title>
+    ${helmet.title.toString()}
+    ${helmet.meta.toString()}
+    ${helmet.link.toString()}
   </head>
-  <body>
+  <body ${helmet.bodyAttributes.toString()}>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root">${body}</div>
     <div id="modal-root"></div>

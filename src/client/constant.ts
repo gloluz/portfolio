@@ -18,3 +18,5 @@ export const MEDIA = {
     xxl: "@media screen and (min-width: 2560px)",
   },
 };
+
+export const SITE_TITLE = "Gloria Luzio, développeuse Javascript";
