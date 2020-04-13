@@ -11,7 +11,7 @@ import NoRoute from "./containers/NoRoute";
 import Profile from "./containers/Profile";
 import { createGlobalStyle } from "styled-components";
 import { Container } from "./components/Layout";
-import PictureSplashScreen from "../client/assets/Pictures/splashScreen.jpg";
+import PictureSplashScreen from "-!file-loader!../client/assets/Pictures/splashScreen.jpg";
 
 const GlobalStyle = createGlobalStyle`
   body {
