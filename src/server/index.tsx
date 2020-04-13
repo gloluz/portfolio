@@ -15,7 +15,7 @@ import html from "./html";
 import App from "../client/App";
 
 const PORT = process.env.PORT || 3000;
-const SCHEME = process.env.SCHEME || "http";
+const SSL = process.env.SSL ? true : false;
 
 const app = express();
 
@@ -23,8 +23,8 @@ const app = express();
  * Handle https redirection
  */
 app.use((req, res, next) => {
-  if (req.headers["x-forwarded-proto"] !== SCHEME) {
-    res.redirect(301, SCHEME + "://" + req.headers.host + req.url);
+  if (SSL && req.headers["x-forwarded-proto"] === "http") {
+    res.redirect(301, "https://" + req.headers.host + req.url);
   }
   next();
 });
