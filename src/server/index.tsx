@@ -5,7 +5,6 @@ import { ServerStyleSheet } from "styled-components";
 import { StaticRouter as Router } from "react-router-dom";
 import dotenv from "dotenv";
 import { Helmet } from "react-helmet";
-import sslRedirect from "heroku-ssl-redirect";
 
 import { Context } from "entities";
 
