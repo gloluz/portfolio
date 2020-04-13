@@ -8,8 +8,8 @@
   },
   "scripts": {
     "start": "yarn clean:js && npm run build:prod && node dist/server.js",
-    "build:prod": "cross-env && webpack",
-    "dev": "webpack-dev-server --watch --config webpack.dev.js",
+    "build:prod": "cross-env NODE_ENV=production && webpack",
+    "dev": "cross-env NODE_ENV=development && webpack-dev-server --watch --config webpack.dev.js",
     "clean:js": "rimraf ./dist"
   },
   "dependencies": {

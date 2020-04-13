@@ -17,6 +17,17 @@ const PORT = process.env.PORT || 3000;
 
 const app = express();
 
+/**
+ * Handle https redirection
+ */
+app.use((request, response, next) => {
+  if (process.env.SCHEME === "https" && !request.secure) {
+    response.redirect(301, "https://" + request.headers.host + request.url);
+  }
+
+  next();
+});
+
 app.use(express.static("dist"));
 
 app.get("*", (req, res) => {

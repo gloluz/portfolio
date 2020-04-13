@@ -112,7 +112,7 @@ const Profile = () => {
 
         <meta
           property="og:title"
-          content="Profil | Gloria Luzio - développeuse Javascript"
+          content="Gloria Luzio - développeuse Javascript"
         />
         <meta
           property="og:description"

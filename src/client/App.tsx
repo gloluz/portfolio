@@ -11,6 +11,7 @@ import NoRoute from "./containers/NoRoute";
 import Profile from "./containers/Profile";
 import { createGlobalStyle } from "styled-components";
 import { Container } from "./components/Layout";
+import PictureSplashScreen from "../client/assets/Pictures/splashScreen.jpg";
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -37,10 +38,7 @@ function App() {
 
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="fr_FR"></meta>
-        <meta
-          property="og:image"
-          content="../client/assets/Pictures/splashScreen.jpg"
-        />
+        <meta property="og:image" content={PictureSplashScreen} />
       </Helmet>
 
       <Container className="container">
