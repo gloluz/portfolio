@@ -23,12 +23,12 @@ export const SkillsContainer = styled.div`
   overflow: auto;
 
   ${MEDIA.MAX.s} {
-    height: calc(100vh - 102px);
+    height: calc(100vh - 20px);
     padding: 12px;
   }
 
   ${MEDIA.MAX.xs} {
-    height: calc(100vh - 102px);
+    height: calc(100vh - 20px);
   }
 `;
 

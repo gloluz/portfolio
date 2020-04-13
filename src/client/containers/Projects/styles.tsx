@@ -85,6 +85,7 @@ export const Computer = styled.div`
 
   ${MEDIA.MAX.s} {
     height: calc(100vh - 74px);
+    margin-top: 80px;
   }
 `;
 

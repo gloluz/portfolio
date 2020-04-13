@@ -23,6 +23,7 @@ export const BlackBoard = styled.div`
     border-left-width: 0;
     border-right-width: 0;
     border-radius: 0;
+    margin-top: 80px;
   }
 
   @media screen and (max-width: 830px) {

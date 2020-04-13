@@ -14,15 +14,16 @@ import html from "./html";
 import App from "../client/App";
 
 const PORT = process.env.PORT || 3000;
+const SCHEME = process.env.SCHEME || "http";
 
 const app = express();
 
 /**
  * Handle https redirection
  */
-app.use((request, response, next) => {
-  if (process.env.SCHEME === "https" && !request.secure) {
-    response.redirect(301, "https://" + request.headers.host + request.url);
+app.use((req, res, next) => {
+  if (req.protocol !== SCHEME) {
+    res.redirect(301, SCHEME + "://" + req.headers.host + req.url);
   }
 
   next();
