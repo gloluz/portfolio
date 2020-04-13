@@ -5,6 +5,7 @@ import { ServerStyleSheet } from "styled-components";
 import { StaticRouter as Router } from "react-router-dom";
 import dotenv from "dotenv";
 import { Helmet } from "react-helmet";
+import sslRedirect from "heroku-ssl-redirect";
 
 import { Context } from "entities";
 
@@ -21,13 +22,9 @@ const app = express();
 /**
  * Handle https redirection
  */
-app.use((req, res, next) => {
-  if (req.protocol !== SCHEME) {
-    res.redirect(301, SCHEME + "://" + req.headers.host + req.url);
-  }
-
-  next();
-});
+if (SCHEME === "https") {
+  app.use(sslRedirect());
+}
 
 app.use(express.static("dist"));
 
