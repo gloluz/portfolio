@@ -9,17 +9,17 @@ const be = "#eacaad";
 const w = "#ffffff";
 
 const hair = `
-  radial-gradient(28em 20em at 50% 14em, ${br} 50%, ${t} 50%) 50% -4em,
+  radial-gradient(28em 20em at 50% 14em, ${br} 49.5%, ${br}00 50%) 50% -4em,
   linear-gradient(${br}, ${br}) 50% 9em / 24em 24em
 `;
 
 const curly = `
-  radial-gradient(6em 6em at 50% 14em, ${br} 50%, ${t} 50%) -11.6em 4em,
-  radial-gradient(6em 6em at 50% 14em, ${br} 50%, ${t} 50%) 11.6em 4em,
-  radial-gradient(6em 6em at 50% 14em, ${br} 50%, ${t} 50%) -11.6em 10em,
-  radial-gradient(6em 6em at 50% 14em, ${br} 50%, ${t} 50%) 11.6em 10em,
-  radial-gradient(6em 6em at 50% 14em, ${br} 50%, ${t} 50%) 11.6em 16em,
-  radial-gradient(6em 6em at 50% 14em, ${br} 50%, ${t} 50%) -11.6em 16em
+  radial-gradient(6em 6em at 50% 14em, ${br} 48.5%, ${br}00 50%) -11.6em 4em,
+  radial-gradient(6em 6em at 50% 14em, ${br} 48.5%, ${br}00 50%) 11.6em 4em,
+  radial-gradient(6em 6em at 50% 14em, ${br} 48.5%, ${br}00 50%) -11.6em 10em,
+  radial-gradient(6em 6em at 50% 14em, ${br} 48.5%, ${br}00 50%) 11.6em 10em,
+  radial-gradient(6em 6em at 50% 14em, ${br} 48.5%, ${br}00 50%) 11.6em 16em,
+  radial-gradient(6em 6em at 50% 14em, ${br} 48.5%, ${br}00 50%) -11.6em 16em
 `;
 
 const face = `
@@ -42,8 +42,8 @@ const mouth = `
 `;
 
 const strand = `
-  radial-gradient(10em 6em at 14.8rem 7em, ${br} 50%, ${t} 50%),
-  radial-gradient(8em 8em at 16rem 5.4em, ${br} 50%, ${t} 50%)
+  radial-gradient(10em 6em at 14.8rem 7em, ${br} 49%, ${br}00 50%),
+  radial-gradient(8em 8em at 16rem 5.4em, ${br} 49%, ${br}00 50%)
 `;
 
 const widthBody = 17;

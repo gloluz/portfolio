@@ -44,11 +44,11 @@ linear-gradient(${grey} 80%,transparent 0) 50% 23% / 75% 79%
 `;
 
 const bottomLaptop = `
-  radial-gradient(1em 1em at 95.5% 91%,${grey} 40%,transparent 40%), // round bottom right
-  radial-gradient(1em 1em at 4.5% 91%,${grey} 40%,transparent 40%), // round bottom left
+  radial-gradient(1em 1em at 95.5% 91%,${grey} 39%,${grey}00 40%), // round bottom right
+  radial-gradient(1em 1em at 4.5% 91%,${grey} 39%,${grey}00 40%), // round bottom left
   linear-gradient(${grey} 89%,transparent 0) 50% 92.6% / 91% 2.5%, //border bottom
-  radial-gradient(1em 1em at 95.8% 93%,${darkGrey} 40%,transparent 40%),
-  radial-gradient(1em 1em at 4.3% 93%,${darkGrey} 40%,transparent 40%),
+  radial-gradient(1em 1em at 95.8% 93%,${darkGrey} 38%,${darkGrey}00 40%),
+  radial-gradient(1em 1em at 4.3% 93%,${darkGrey} 38%,${darkGrey}00 40%),
   linear-gradient(${darkGrey} 89%,transparent 0) 50% 94.6% / 91% 2.5%,
  
   linear-gradient(${grey2},${grey2}) 50% 64% / 60% 2%, //border top keyboard
@@ -63,8 +63,8 @@ const bottomLaptop = `
 `;
 
 const pot = `
-  radial-gradient(12em 3em at calc(50%) calc(50% + 6.5em), ${be2} 38%, transparent 40%), // round top pot
-  radial-gradient(12em 3em at calc(50%) calc(50% + 13em), ${be} 40%, transparent 40%),// round bottom pot
+  radial-gradient(12em 3em at calc(50%) calc(50% + 6.5em), ${be2} 38%, ${be2}00 40%), // round top pot
+  radial-gradient(12em 3em at calc(50%) calc(50% + 13em), ${be} 38%, ${be}00 40%),// round bottom pot
   linear-gradient(${be},${be}) 50% 91% / 47% 21% // main pot
 `;
 
@@ -77,9 +77,9 @@ const cactus = `
   radial-gradient(0.5em 0.5em at calc(48%) calc(50% + 2em), ${white} 38%, transparent 40%),
   radial-gradient(0.5em 0.5em at calc(54%) calc(50% + 5em), ${white} 38%, transparent 40%),
   radial-gradient(0.5em 0.5em at calc(50%) calc(50% + 6.5em), ${white} 38%, transparent 40%),
-  radial-gradient(9em 12em at calc(50%) calc(50% + 2.5em),${green} 40%,transparent 40%),
-  radial-gradient(3em 4em at calc(50%) calc(50% + -2.5em),${pink} 38%,transparent 40%),
-  radial-gradient(11em 2em at calc(50%) calc(50% + 6.9em),${brown} 38%,transparent 40%)
+  radial-gradient(9em 12em at calc(50%) calc(50% + 2.5em),${green} 38%,${green}00 40%),
+  radial-gradient(3em 4em at calc(50%) calc(50% + -2.5em),${pink} 38%,${pink}00 40%),
+  radial-gradient(11em 2em at calc(50%) calc(50% + 6.9em),${brown} 38%,${brown}00 40%)
 `;
 
 const bodyPen = `

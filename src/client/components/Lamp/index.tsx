@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
+
+import LightContext from "../../Context/LightContext";
 
 export const Wire = styled.div`
   width: 4px;
@@ -72,11 +74,12 @@ export const Bulb = styled.div<BulbProps>`
 `;
 
 const Lamp = () => {
-  const [lightOn, setLightOn] = useState(true);
+  const context = useContext(LightContext);
+
   return (
     <Wire>
-      {lightOn && <Halo />}
-      <Bulb onClick={() => setLightOn(!lightOn)} isOn={lightOn} />
+      {context.lightOn && <Halo />}
+      <Bulb onClick={context.switch} isOn={context.lightOn} />
     </Wire>
   );
 };

@@ -4,6 +4,8 @@ import { MEDIA } from "../../constant";
 
 interface BubbleStylesProps {
   position: LeftRight;
+  isOn: boolean;
+  bgColor?: string;
 }
 
 export const bubbleAppear = keyframes`
@@ -24,6 +26,7 @@ export const BubbleStyles = styled.div<BubbleStylesProps>`
   margin-bottom: 50px;
   z-index: 2;
   animation: 0.4s ${bubbleAppear} cubic-bezier(0.5, 0.9, 0.6, 1.5);
+  transition: all 0.5s ease;
 
   ${MEDIA.MAX.m} {
     height: 150px;
@@ -65,7 +68,7 @@ export const BubbleStyles = styled.div<BubbleStylesProps>`
     z-index: 1;
     background: radial-gradient(
         50% 100% at 100% 0%,
-        #bce4ff 99%,
+        ${({ bgColor }) => bgColor || "#bce4ff"} 99%,
         transparent 99%
       ),
       radial-gradient(100% 100% at 100% 0%, #fafafa 99%, transparent 99%);

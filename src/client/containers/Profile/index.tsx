@@ -14,7 +14,7 @@ import {
   LinkLogo,
   ProfilContainer,
   ModalList,
-  ListStyle
+  ListStyle,
 } from "./styles";
 import Icon from "../../components/Icon";
 import Lamp from "../../components/Lamp";
@@ -92,7 +92,7 @@ const Profile = () => {
 
   const [props, set] = useSpring<{ xy: number[] }>(() => ({
     xy: [0, 0],
-    config: { mass: 5, tension: 300, friction: 100 }
+    config: { mass: 5, tension: 300, friction: 100 },
   }));
 
   const style: CSSProperties = {
@@ -101,7 +101,7 @@ const Profile = () => {
     bottom: 0,
     right: 0,
     left: 0,
-    zIndex: 1
+    zIndex: -1,
   };
 
   return (
@@ -125,7 +125,10 @@ const Profile = () => {
         onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}
       >
         <animated.div
-          style={{ ...style, transform: props.xy.interpolate(blackBoardTrans) }}
+          style={{
+            ...style,
+            transform: props.xy.interpolate(blackBoardTrans),
+          }}
         >
           <BlackBoard>
             <BlackBoardPostIt />
@@ -148,7 +151,7 @@ const Profile = () => {
             position="left"
             scrollingTexts={[
               "Bonjour je m'appelle Gloria Luzio, bienvenue sur mon portfolio !",
-              "anciennement infirmière, je me suis reconvertie dans le domaine du développement web / mobile"
+              "anciennement infirmière, je me suis reconvertie dans le domaine du développement web / mobile",
             ]}
           />
         </animated.div>
@@ -157,7 +160,7 @@ const Profile = () => {
           style={{
             ...style,
             top: undefined,
-            transform: props.xy.interpolate(avatarTrans)
+            transform: props.xy.interpolate(avatarTrans),
           }}
         >
           <Avatar />
@@ -167,7 +170,7 @@ const Profile = () => {
           <animated.div
             style={{
               flex: 1,
-              transform: props.xy.interpolate(lampTrans)
+              transform: props.xy.interpolate(lampTrans),
             }}
           >
             <Lamp />

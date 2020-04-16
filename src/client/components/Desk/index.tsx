@@ -12,11 +12,14 @@ import {
   PinkPostIt,
   Pen,
 } from "./styles";
+import { Link } from "react-router-dom";
 
 const Desk = () => {
   return (
     <DeskStyle>
-      <Laptop></Laptop>
+      <Link to="/projets" style={{ cursor: "pointer" }}>
+        <Laptop></Laptop>
+      </Link>
       <Cactus />
 
       <PostIt>

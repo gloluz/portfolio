@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Switch, Route } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
@@ -7,27 +7,31 @@ import Skills from "./containers/Skills";
 import Projects from "./containers/Projects";
 import Experiences from "./containers/Experiences";
 import NoRoute from "./containers/NoRoute";
-
 import Profile from "./containers/Profile";
-import { createGlobalStyle } from "styled-components";
 import { Container } from "./components/Layout";
 import PictureSplashScreen from "-!file-loader!../client/assets/Pictures/splashScreen.jpg";
+import { createGlobalStyle } from "styled-components";
+import LightContext from "./Context/LightContext";
 
-const GlobalStyle = createGlobalStyle`
+interface GlobalStyleProps {
+  background?: string;
+}
+
+export const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
   body {
     font-family: "Open Sans", sans-serif;
     margin: 0;
-    background-color: #bce4ff;
+    background-color: ${(p) => p.background || "#bce4ff"};
     overflow-x: hidden;
+    transition: all 0.5s ease;
   }
 `;
 
 function App() {
+  const [lightOn, setLightOn] = useState(true);
+
   return (
     <>
-      <GlobalStyle />
-
-      <Menu />
       <Helmet>
         <link rel="Gloria Luzio" href="https://www.glorialuzio.fr" />
         <meta charSet="utf-8" />
@@ -42,27 +46,35 @@ function App() {
         <meta property="og:image" content={PictureSplashScreen} />
       </Helmet>
 
-      <Container className="container">
-        <Switch>
-          <Route exact path="/">
-            <Profile />
-          </Route>
+      <LightContext.Provider
+        value={{ lightOn, switch: () => setLightOn(!lightOn) }}
+      >
+        <Menu />
 
-          <Route exact path="/competences">
-            <Skills />
-          </Route>
+        <GlobalStyle background={!lightOn ? "#97b9d0" : undefined} />
 
-          <Route exact path="/projets">
-            <Projects />
-          </Route>
+        <Container className="container">
+          <Switch>
+            <Route exact path="/">
+              <Profile />
+            </Route>
 
-          <Route exact path="/experiences">
-            <Experiences />
-          </Route>
+            <Route exact path="/competences">
+              <Skills />
+            </Route>
 
-          <Route component={NoRoute} />
-        </Switch>
-      </Container>
+            <Route exact path="/projets">
+              <Projects />
+            </Route>
+
+            <Route exact path="/experiences">
+              <Experiences />
+            </Route>
+
+            <Route component={NoRoute} />
+          </Switch>
+        </Container>
+      </LightContext.Provider>
     </>
   );
 }
