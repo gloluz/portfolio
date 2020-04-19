@@ -43,7 +43,7 @@ const Skills = () => {
 
         <meta
           property="og:title"
-          content="Compétences | Gloria Luzio - développeuse Javascript"
+          content="Compétences | Gloria Luzio - développeuse Javascript React"
         />
         <meta
           property="og:description"

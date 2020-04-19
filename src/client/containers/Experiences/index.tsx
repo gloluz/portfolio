@@ -9,7 +9,7 @@ import {
   ExperienceStyled,
   ExperienceTitle,
   ExperienceResume,
-  HorizontalBorder
+  HorizontalBorder,
 } from "./styles";
 import { SITE_TITLE } from "../../constant";
 
@@ -42,7 +42,7 @@ const Experiences = () => {
 
         <meta
           property="og:title"
-          content="Expériences | Gloria Luzio - développeuse Javascript"
+          content="Expériences | Gloria Luzio - développeuse Javascript React"
         />
         <meta
           property="og:description"

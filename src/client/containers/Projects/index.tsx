@@ -17,7 +17,7 @@ import {
   Window,
   GreenButton,
   Scrollable,
-  ProjectContainer
+  ProjectContainer,
 } from "./styles";
 import { SITE_TITLE } from "../../constant";
 
@@ -43,7 +43,7 @@ const Projects = () => {
 
         <meta
           property="og:title"
-          content="Projets | Gloria Luzio - développeuse Javascript"
+          content="Projets | Gloria Luzio - développeuse Javascript React"
         />
         <meta
           property="og:description"

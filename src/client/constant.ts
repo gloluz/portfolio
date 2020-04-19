@@ -19,4 +19,4 @@ export const MEDIA = {
   },
 };
 
-export const SITE_TITLE = "Gloria Luzio, développeuse Javascript";
+export const SITE_TITLE = "Gloria Luzio, développeuse Javascript React";
