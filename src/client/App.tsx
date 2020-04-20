@@ -30,6 +30,8 @@ export const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
 function App() {
   const [lightOn, setLightOn] = useState(true);
 
+  const url = process.env.PUBLIC_URL || "";
+
   return (
     <>
       <Helmet>
@@ -43,7 +45,7 @@ function App() {
 
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="fr_FR"></meta>
-        <meta property="og:image" content={PictureSplashScreen} />
+        <meta property="og:image" content={url + PictureSplashScreen} />
       </Helmet>
 
       <LightContext.Provider
