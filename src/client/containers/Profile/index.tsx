@@ -182,11 +182,11 @@ const Profile = () => {
             href="https://www.linkedin.com/in/gloria-luzio-a7b05819b/"
             target="_blanck"
           >
-            <Icon size={24} icon="linkedin2" />
+            <Icon size='24px' icon="linkedin" />
           </LinkLogo>
 
           <LinkLogo href="https://github.com/gloluz" target="_blanck">
-            <Icon size={24} icon="github" />
+            <Icon size='24px' icon="github" />
           </LinkLogo>
         </SocialNetworkContainer>
 

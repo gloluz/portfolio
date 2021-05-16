@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { css } from "styled-components";
-import Icon from "../Icon";
 import { MEDIA } from "../../constant";
+import Icon from '../Icon'
 
 interface PostItSkillProps {
   show: boolean;
@@ -90,7 +90,8 @@ const TextSkill = styled.p`
 interface IconSkillsProps {
   show: boolean;
   backgroundColor: string;
-  icon: string;
+  size?: string;
+  icon: 'javascript' | 'gatsby' | 'github' | 'html' | 'linkedin' | 'nodejs' | 'react' | 'typescript';
   skillTitle: string;
   rotate: number;
 }
@@ -99,12 +100,13 @@ const IconSkills = ({
   backgroundColor,
   show,
   icon,
+  size = '100px',
   skillTitle,
   rotate,
 }: IconSkillsProps) => {
   return (
     <PostItSkill backgroundColor={backgroundColor} show={show} rotate={rotate}>
-      <Icon color="#124275" size={100} icon={icon} />
+      <Icon icon={icon} size={size}/>
       <TextSkill>{skillTitle}</TextSkill>
     </PostItSkill>
   );

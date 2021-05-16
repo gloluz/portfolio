@@ -5,6 +5,7 @@ import TypeForm from "../../assets/Pictures/typeform.jpg";
 import Deliveroo from "../../assets/Pictures/deliveroo.jpg";
 import Tripadvisor from "../../assets/Pictures/tripadvisor.jpg";
 import LeBonCoin from "../../assets/Pictures/leboncoin.png";
+import Epycure from  "../../assets/Pictures/epycure.png";
 import Project from "./Project";
 import { ColumnProject, BoxedContainer } from "../../components/Layout";
 import {
@@ -65,6 +66,12 @@ const Projects = () => {
                 {showPictures && (
                   <ProjectContainer>
                     <ColumnProject>
+                      <Project
+                        websiteUrl="https://epycure.com"
+                        pictureSrc={Epycure}
+                        title="Site e-commerce"
+                        subTitle="Refonte du site en React/ TypeScript/ Gatsby"
+                      />
                       <Project
                         websiteUrl="https://typeform-certif.netlify.com"
                         pictureSrc={TypeForm}

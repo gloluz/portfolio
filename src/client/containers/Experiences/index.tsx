@@ -58,13 +58,26 @@ const Experiences = () => {
         <Pin />
 
         <div>
+        <ExperienceStyled>
+            <HorizontalBorder />
+            <ExperienceTitle rotate={rotate}>
+              <div>
+                <PaperClip />
+              </div>
+              2 juin 2020 à aujourd'hui : Développeuse front-end - Epycure - Paris
+            </ExperienceTitle>
+            <ExperienceResume>
+              Refonte totale du site Epycure en React/ Gatsby/ TypeScript.<br />
+              Développement de la page d'accueil, du shop, des pages produits, blog, pages ingrédients, experts, objectfis, FAQ, page résultat.
+            </ExperienceResume>
+          </ExperienceStyled>
           <ExperienceStyled>
             <HorizontalBorder />
             <ExperienceTitle rotate={rotate}>
               <div>
                 <PaperClip />
               </div>
-              2 au 13 mars 2020 : Développeuse front-end pour AKO - Paris
+              2 au 13 mars 2020 : Développeuse front-end - AKO - Paris
             </ExperienceTitle>
             <ExperienceResume>
               Développement de l'application AKO, dans le cadre d'un Produit

@@ -1,23 +1,39 @@
 import React from "react";
 
-import IcomoonReact from "icomoon-react";
-import iconSet from "../../assets/icomoon/selection.json";
+import javascript from '../../assets/Svg/javascript.svg';
+import gatsby from '../../assets/Svg/gatsby.svg';
+import github from '../../assets/Svg/github.svg';
+import html from '../../assets/Svg/html.svg';
+import linkedin from '../../assets/Svg/linkedin.svg';
+import nodejs from '../../assets/Svg/nodejs.svg';
+import react from '../../assets/Svg/react.svg';
+import typescript from '../../assets/Svg/typescript.svg';
 
 const Icon: React.FC<{
   color?: string;
-  size: string | number;
-  icon: string;
+  size: string;
+  icon: 'javascript' | 'gatsby' | 'github' | 'html' | 'linkedin' | 'nodejs' | 'react' | 'typescript';
   className?: string;
 }> = props => {
-  const { color, size = "100%", icon, className = "" } = props;
+  const { color, size, icon, className = "" } = props;
+
+ const icons = {
+   javascript,
+   gatsby,
+   github,
+   html,
+   linkedin,
+   nodejs,
+   react,
+   typescript
+ }
+
 
   return (
-    <IcomoonReact
+    <div 
+      dangerouslySetInnerHTML={{__html: icons[icon]}}
+      style={{color: color, height: size, width: size}}
       className={className}
-      iconSet={iconSet}
-      color={color}
-      size={size}
-      icon={icon}
     />
   );
 };

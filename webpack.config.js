@@ -69,6 +69,10 @@ const server = {
       {
         test: /\.pdf$/i,
         use: ["ignore-loader"]
+      },
+      {
+        test: /\.svg$/,
+        loader: 'svg-inline-loader'
       }
     ]
   }

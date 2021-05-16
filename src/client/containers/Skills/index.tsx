@@ -25,6 +25,7 @@ const Skills = () => {
     const timeout5 = setTimeout(() => setIcon6(true), 1300);
     const timeout6 = setTimeout(() => SetShowPen(true), 1500);
 
+
     return () => {
       clearTimeout(timeout1);
       clearTimeout(timeout2);
@@ -67,28 +68,28 @@ const Skills = () => {
         <IconSkills
           backgroundColor="#D2F7A6"
           show={icon2}
-          icon="html5"
-          skillTitle="HTML"
+          icon="html"
+          skillTitle="HTML/CSS"
           rotate={1}
         />
         <IconSkills
           backgroundColor="yellow"
           show={icon3}
-          icon="css3"
-          skillTitle="CSS"
+          icon="gatsby"
+          skillTitle="Gatsby"
           rotate={6}
         />
         <IconSkills
           backgroundColor="#EF8533"
           show={icon4}
-          icon="mongodb"
-          skillTitle="MongoDB"
+          icon="typescript"
+          skillTitle="TypeScript"
           rotate={3}
         />
         <IconSkills
           backgroundColor="#43A6DD"
           show={icon5}
-          icon="node-dot-js"
+          icon="nodejs"
           skillTitle="Node JS"
           rotate={-5}
         />
