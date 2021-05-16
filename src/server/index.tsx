@@ -29,6 +29,7 @@ app.use((req, res, next) => {
 });
 
 app.use(express.static("dist"));
+app.use(express.static("public"));
 
 app.get("*", (req, res) => {
   const sheet = new ServerStyleSheet();
