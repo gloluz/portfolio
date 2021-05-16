@@ -38,7 +38,7 @@ const Experiences = () => {
     <BoxedContainer>
       <Helmet>
         <title>Expériences - {SITE_TITLE}</title>
-        <meta name="description" content="Portfolio de Gloria Luzio" />
+        <meta name="description" content="Découvrez le parcours de Gloria Luzio, développeuse React chez Epycure depuis 2020." />
 
         <meta
           property="og:title"
@@ -46,7 +46,7 @@ const Experiences = () => {
         />
         <meta
           property="og:description"
-          content="Découvrez mon parcours à travers cette page."
+          content="Découvrez le parcours de Gloria Luzio, développeuse React chez Epycure depuis 2020."
         />
         <meta
           property="og:url"

@@ -40,7 +40,7 @@ const Projects = () => {
     <BoxedContainer>
       <Helmet>
         <title>Projets - {SITE_TITLE}</title>
-        <meta name="description" content="Portfolio de Gloria Luzio" />
+        <meta name="description" content="Découvrez les différents projets de Gloria Luzio, de l'intégration au développement web/mobile." />
 
         <meta
           property="og:title"
@@ -48,7 +48,7 @@ const Projects = () => {
         />
         <meta
           property="og:description"
-          content="Découvrez les différents projets que j'ai pu réaliser."
+          content="Découvrez les différents projets de Gloria Luzio, de l'intégration au développement web/mobile."
         />
         <meta property="og:url" content="https://www.glorialuzio.fr/projets" />
       </Helmet>

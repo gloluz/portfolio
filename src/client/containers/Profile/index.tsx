@@ -108,7 +108,7 @@ const Profile = () => {
     <>
       <Helmet>
         <title>Profil - {SITE_TITLE}</title>
-        <meta name="description" content="Portfolio de Gloria Luzio" />
+        <meta name="description" content="Découvrez le profil de Gloria Luzio, développeuse React autodidacte et passionnée depuis 2019" />
 
         <meta
           property="og:title"
@@ -116,7 +116,7 @@ const Profile = () => {
         />
         <meta
           property="og:description"
-          content="Découvrez mon profil à travers mon portfolio."
+          content="Découvrez le profil de Gloria Luzio, développeuse React autodidacte et passionnée depuis 2019"
         />
         <meta property="og:url" content="https://www.glorialuzio.fr" />
       </Helmet>

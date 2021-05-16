@@ -40,7 +40,7 @@ const Skills = () => {
     <SkillsContainer>
       <Helmet>
         <title>Compétences - {SITE_TITLE}</title>
-        <meta name="description" content="Portfolio de Gloria Luzio" />
+        <meta name="description" content="Découvrez les différentes compétences de Gloria Luzio dans le développement web, mobile, et plus particulièrement React" />
 
         <meta
           property="og:title"
@@ -48,7 +48,7 @@ const Skills = () => {
         />
         <meta
           property="og:description"
-          content="Découvrez mes différentes compétences dans le développement web et mobile."
+          content="Découvrez les différentes compétences de Gloria Luzio dans le développement web, mobile, et plus particulièrement React"
         />
         <meta
           property="og:url"
