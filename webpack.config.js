@@ -36,6 +36,10 @@ const client = {
         use: ["style-loader", "css-loader"]
       },
       {
+        test: /\.svg$/,
+        loader: 'svg-inline-loader'
+      },
+      {
         test: /\.(png|jpe?g|gif|pdf)$/i,
         use: [
           {

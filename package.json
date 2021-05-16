@@ -26,7 +26,6 @@
     "dotenv": "^8.2.0",
     "express": "^5.0.0-alpha.8",
     "file-loader": "^6.0.0",
-    "icomoon-react": "^2.0.16",
     "ignore-loader": "^0.1.2",
     "json-loader": "^0.5.7",
     "react": "^16.12.0",
