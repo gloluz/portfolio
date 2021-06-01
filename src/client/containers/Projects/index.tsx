@@ -44,7 +44,7 @@ const Projects = () => {
 
         <meta
           property="og:title"
-          content="Projets | Gloria Luzio - développeuse Javascript React"
+          content="Projets | Gloria Luzio - développeuse Javascript React - Paris"
         />
         <meta
           property="og:description"

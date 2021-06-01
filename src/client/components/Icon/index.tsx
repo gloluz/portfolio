@@ -32,7 +32,7 @@ const Icon: React.FC<{
   return (
     <div 
       dangerouslySetInnerHTML={{__html: icons[icon]}}
-      style={{color: color, height: size, width: size}}
+      style={{color: color, height: size, width: size, display: 'flex', alignItems: 'center', justifyContent: 'center'}}
       className={className}
     />
   );

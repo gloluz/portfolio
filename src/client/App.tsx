@@ -38,7 +38,6 @@ function App() {
         <link rel="Gloria Luzio" href="https://www.glorialuzio.fr" />
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="google-site-verification" content="Iw0TmDSpmWOQSvq3ve0MRkT_F5Yj773nhaANq6eoHjI" />
         <link
           href="https://fonts.googleapis.com/css?family=Open+Sans:400,800|Vibur&display=swap"
           rel="stylesheet"

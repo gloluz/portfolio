@@ -42,7 +42,7 @@ const Experiences = () => {
 
         <meta
           property="og:title"
-          content="Expériences | Gloria Luzio - développeuse Javascript React"
+          content="Expériences | Gloria Luzio - développeuse Javascript React - Paris"
         />
         <meta
           property="og:description"
