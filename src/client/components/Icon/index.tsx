@@ -28,7 +28,6 @@ const Icon: React.FC<{
    typescript
  }
 
-
   return (
     <div 
       dangerouslySetInnerHTML={{__html: icons[icon]}}

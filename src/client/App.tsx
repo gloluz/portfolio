@@ -42,7 +42,7 @@ function App() {
           href="https://fonts.googleapis.com/css?family=Open+Sans:400,800|Vibur&display=swap"
           rel="stylesheet"
         />
-
+        <meta name="google-site-verification" content="-EWsw_AxjRTEKBu8AqwcWTkvFIi6Hw0p2nX55taEppE" />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="fr_FR"></meta>
         <meta property="og:image" content={url + PictureSplashScreen} />
